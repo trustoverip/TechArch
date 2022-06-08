@@ -25,7 +25,7 @@ When creating a new specification, you can select 'trustoverip/toip-spec-templat
 1. Edit the [specification](spec.md) using markdown.
 2. Commit and push your changes
 
-A HTML version of the spec is automatically generated and available at https://trustoverip.github.io/TechArch-Repo
+A HTML version of the spec is automatically generated and available at https://trustoverip.github.io/TechArch
 
 
 #### Previewing locally
