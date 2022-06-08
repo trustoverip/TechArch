@@ -1,0 +1,69 @@
+:root {
+    color-scheme: light dark;
+    --background-color: #fff;
+    --text-color: #222;
+    --title-color: #191919;
+    --link-color: #2a6496;
+    --highlight-color: #f9f9f9;
+    --line-color: #eee;
+    --small-font-size: 14.5px;
+    --font-mono: 'Courier New', monospace;
+    scrollbar-color: #bbb #eee;
+}
+
+body {
+    max-width: 600px;
+    margin: 75px auto;
+    padding: 0 5px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 600;
+    margin: 0.8em 0 0.3em;
+    font-size-adjust: 0.5;
+    color: var(--title-color);
+}
+
+h1, h2, h3 {
+    font-size: 22px;
+    line-height: 27px;
+}
+
+h4, h5, h6 {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+pre > code {
+    font-size: 16px;
+    line-height: 0;
+    font-family: 'Courier New', monospace;
+}
+
+p {
+    font: 16px/22px 'Georgia', serif;
+    padding: 0;
+    margin: 0.5em 0;
+    text-align: left;
+}
+
+div {
+    margin: 0;
+}
+
+ol, ul {
+    padding: 0;
+    margin: 0 0 0.5em 2em;
+}
+
+ol ol, ul ul, ol ul, ul ol {
+    margin-left: 1em;
+}
+
+li {
+    margin: 0 0 0.25em 0;
+}

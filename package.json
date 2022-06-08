@@ -1,0 +1,25 @@
+{
+  "name": "test-spec",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js",
+    "preview": "npm run build && http-serve ./docs/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m00sey/test-spec.git"
+  },
+  "author": "Kevin Griffin",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/m00sey/test-spec/issues"
+  },
+  "homepage": "https://github.com/m00sey/test-spec#readme",
+  "dependencies": {
+    "http-serve": "^1.0.1",
+    "replace-in-file": "^6.3.2",
+    "showdown": "^2.0.3"
+  }
+}
