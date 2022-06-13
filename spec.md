@@ -25,6 +25,11 @@ As with all ToIP deliverables, the ToIP Foundation invites your feedback and sug
 
 ## Terminology
 
+In this document, the key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL", when appearing in ALL CAPITALS, are to be interpreted as described in [IETF RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
+
+All other terms in **bold** are defined in [ToIP Core Glossary](https://trustoverip.github.io/toip/glossary) following the [terms wiki](https://wiki.trustoverip.org/display/HOME/Terms+Wikis) process defined by the [ToIP Concepts and Terminology Working Group](https://wiki.trustoverip.org/pages/viewpage.action?pageId=65700).
+
+
 ## Motivations and Use Cases
 
 ## Reference Architecture
