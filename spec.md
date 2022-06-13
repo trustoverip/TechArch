@@ -1,39 +1,39 @@
-# title: "Trust over IP (ToIP) Technology Architecture Specification"
+# Trust over IP (ToIP) Technology Architecture Specification
 
-##### Revision History
-##### Editors:
-##### Contributors:
+#### Revision History
+#### Editors:
+#### Contributors:
 
 *Copyright: *
 
-# Introduction
+## Introduction
 
-# Terminology
+## Terminology
 
-# Motivations and Use Cases
+## Motivations and Use Cases
 
-# Reference Architecture
+## Reference Architecture
 
-## Overview
+### Overview
 
-## End Systems
+### End Systems
 
-## End System to End System Protocol
+### End System to End System Protocol
 
-## Supporting Systems
+### Supporting Systems
 
 ## Intermediary Systems
 
-# Interoperability
+## Interoperability
 
-# Layer Specific Requirements
+## Layer Specific Requirements
 
-# Considerations for the Trust over IP Governance Stack
+## Considerations for the Trust over IP Governance Stack
 
-# References
+## References
 
-## Normative References
+### Normative References
 
-## Informative References
+### Informative References
 
-# Acknowledgements
+## Acknowledgements
