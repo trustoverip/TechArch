@@ -1,49 +1,39 @@
-# title: "TODO - Your title"
+# title: "Trust over IP (ToIP) Technology Architecture Specification"
 
-### docname: draft-todo-your-doc-name 
-    
-    v: 3 
-    area: AREA 
-    workgroup: WG Working Group 
-    keywords: KEYWORDS venue:
+##### Revision History
+##### Editors:
+##### Contributors:
 
-    group: WG
-    type: Working Group
-    mail: WG@example.com
-    arch: https://example.com/WG
-    github: USER/REPO
-    latest: https://example.com/LATEST
-
-## author:
-
-    fullname: Your Name Here
-    organization: Your Organization Here
-    email: your.email@example.com
-
-## normative:
-
-## informative:
-
-## Abstract
-
-TODO Abstract
+*Copyright: *
 
 # Introduction
 
-TODO Introduction
+# Terminology
 
-# Conventions and Definitions
+# Motivations and Use Cases
 
-TODO Conventions and Definitions
+# Reference Architecture
 
-# Security Considerations
+## Overview
 
-TODO Security
+## End Systems
 
-# IANA Considerations
+## End System to End System Protocol
 
-This document has no IANA actions.
+## Supporting Systems
 
-# Acknowledgments
+## Intermediary Systems
 
-TODO acknowledge.
+# Interoperability
+
+# Layer Specific Requirements
+
+# Considerations for the Trust over IP Governance Stack
+
+# References
+
+## Normative References
+
+## Informative References
+
+# Acknowledgements
