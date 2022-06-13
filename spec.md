@@ -8,7 +8,8 @@
 
 ## Introduction
 
-This document is the normative specification for the overall technical architecture of the ToIP Technology Sstack. A conceptual diagram of this four-layer, two-sided architecture for decentralized digital trust infrastructure is shown in ![Figure 1](/images/ToIPDualStack.jpeg "Figure 1: Conceptial Diagram of the ToIP Stack").
+This document is the normative specification for the overall technical architecture of the ToIP Technology Sstack. A conceptual diagram of this four-layer, two-sided architecture for decentralized digital trust infrastructure is shown in Figure 1: ![Figure 1](/images/ToIPDualStack.jpeg).
+**Figure 1: Conceptial Diagram of the ToIP Stack**
 
 This specification is a deliverable of the [Technology Stack Working Group](https://wiki.trustoverip.org/display/HOME/Technology+Stack+Working+Group) at the [Trust oover IP (ToIP) Foundation](https://www.trustoverip.org/). It is recommended to read this document in conjunction with three other deliverables from the ToIP Foundation:
 
