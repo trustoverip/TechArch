@@ -1,45 +1,20 @@
-# Trust over IP Specification Template
+# Trust over IP (ToIP) Technology Architecture Specification
 
-A base template.
+This is the working area for the ToIP Technology Architecture specification. It is a work in progress and should only be referenced as such. A HTML version of the spec (main branch) is automatically generated and available at https://trustoverip.github.io/TechArch. Once the specification is officially adopted by the ToIP Foundation, it will be available in Deliverables area: https://www.trustoverip.org/our-work/deliverables/
 
-### How to use this template
+This is a Draft Deliverable of the Technology Architecture Task Force of the Technology Stack Working Group. The purpose is to define the full set of requirements for the technology architecture of the four layers of the ToIP stack. For introductory information about the ToIP stack, please check out:
+- https://www.trustoverip.org/wp-content/uploads/Introduction-to-ToIP-V2.0-2021-11-17.pdf
+- https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf
 
-The contents of this template can be used to create a ToIP specification.
+## Contributing
 
-### Getting Started
+To contribute, please first visit the Task Force's wiki: https://wiki.trustoverip.org/display/HOME/TSWG+Technology+Architecture+Task+Force. ToIP Technolog Working Group charter requires you be a member of ToIP Foundation and agree to the IPR policy as noted in the above wiki page. A free *Contributor* level membership is available from ToIP.
 
-You need a [GitHub](https://github.com) account.
+Here are several ways you can contribute:
 
-When creating a new specification, you can select 'trustoverip/toip-spec-template' from the Repository template list.
-
-#### Set up GitHub pages
-
-1. Under your repository name, click  Settings.
-2. In the "Code and automation" section of the sidebar, click  Pages.
-3. Under "GitHub Pages", use the drop-down menu and select 'main' as the publishing source.
-4. Use the drop-down menu to select '/docs' for your publishing source.
-5. Click save
-
-### Editing
-
-1. Edit the [specification](spec.md) using markdown.
-2. Commit and push your changes
-
-A HTML version of the spec is automatically generated and available at https://trustoverip.github.io/TechArch
+1. Attending the Task Force's weekly calls. Join the slack channel. See detailed information in the above wiki page,
+2. Submitting an issue (review current open issues first to avoid duplication), including suggestions of minor edits,
+3. Submitting major edits to the text as a pull request.
 
 
-#### Previewing locally
 
-This requires [node.js](https://nodejs.dev) to be installed.
-
-Install development dependencies:
-
-```shell
-npm install
-```
-
-To generate and preview the specification run:
-
-```shell
-npm run preview
-```
