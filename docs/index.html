@@ -42,6 +42,31 @@
 <li class='ui item' ><p><strong>Public policy.</strong> A well-defined architecture with clear and concise terminology helps policymakers and legal experts define coherent policies and regulations in a manner that serves the needs of society without constraining technical innovation and competition. </p></li>
 </ul>
 <h2 class='ui medium header'  id="audienceandscope">Audience and Scope</h2>
+<p><em>This section is informative.</em></p>
+<p>The audience for this specification is protocol designers, system architects, software developers and product managers. The purpose of the reference architecture defined in this specification is to guide them in the development of protocols, system architectures, and software products that meet two key types of interoperability requirements:</p>
+<ol>
+<li class='ui item' ><strong>System-to-system interoperability requirements</strong>: the architectural components and the interactions between those components necessary for interoperability of all systems acting within a ToIP digital trust ecosystem.</li>
+<li class='ui item' ><strong>Functional interoperability requirements</strong>: the software functions required for each of the four layers including:<ul class='ui list' >
+<li class='ui item' >What each layer must do.</li>
+<li class='ui item' >What each layer should do.</li>
+<li class='ui item' >What behaviors are expected to support interoperability.</li>
+<li class='ui item' >What interactions each layer supports for other layers on which it depends, or which depend on it.</li></ul></li>
+</ol>
+<p>Upon reading this specification, the intended audience should have a better understanding of the implications of their protocol design, system architecture, or product architecture with regard to interoperability between multiple implementations.</p>
+<p>The scope of this specification is limited to defining the architectural requirements for each layer in the ToIP stack. The following are explicitly out-of-scope:</p>
+<ul class='ui list' >
+<li class='ui item' >The definition of specific protocols or interfaces at each layer.</li>
+<li class='ui item' >The definition of specific supporting systems or intermediary systems for any layer.</li>
+<li class='ui item' >The definition of specific test cases or interoperability profiles—including both vertical and horizontal interoperability—that can be used for test harnesses.</li>
+<li class='ui item' >The definition of applications (and their user interfaces) that run on top of the ToIP stack.</li>
+<li class='ui item' >The definition of trust frameworks or governance frameworks for usage of the ToIP stack within specific digital trust ecosystems.</li>
+</ul>
+<p>The ToIP Technology Stack Working Group has committed to producing two additional documents addressing some of these needs:</p>
+<ol>
+<li class='ui item' ><strong>ToIP Interoperability Test Cases</strong> will specify interoperability profiles that can be implemented by commercial-grade test harnesses and testing labs.</li>
+<li class='ui item' ><strong>ToIP Primer for Policymakers</strong> will guide policymakers, governing authorities, analysts, and other non-technical audiences who need to deeply understand the purpose, uses, and implications of the ToIP stack but do not need (or want) to dive into technical details.</li>
+</ol>
+<p>The rest of the specifications and guides necessary to develop, test, and deploy interoperable implementations of the ToIP stack are expected to be developed by the ToIP Technology Stack Working Group, other ToIP Working Groups, other standards development organizations, independent governing authorities, and independent developers.</p>
 <h2 class='ui medium header'  id="exampleusecases">Example Use Cases</h2>
 <h2 class='ui medium header'  id="referencearchitectureoverview">Reference Architecture Overview</h2>
 <h2 class='ui medium header'  id="endpointsystemsandthelayeredstack">Endpoint Systems and the Layered Stack</h2>
