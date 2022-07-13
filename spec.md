@@ -51,8 +51,33 @@ Whether from the perspective of an implementer, a customer, or a policymaker, th
 
 - **Public policy.** A well-defined architecture with clear and concise terminology helps policymakers and legal experts define coherent policies and regulations in a manner that serves the needs of society without constraining technical innovation and competition. 
 
-
 ## Audience and Scope
+
+*This section is informative.*
+
+The audience for this specification is protocol designers, system architects, software developers and product managers. The purpose of the reference architecture defined in this specification is to guide them in the development of protocols, system architectures, and software products that meet two key types of interoperability requirements:
+
+1. **System-to-system interoperability requirements**: the architectural components and the interactions between those components necessary for interoperability of all systems acting within a ToIP digital trust ecosystem.
+1. **Functional interoperability requirements**: the software functions required for each of the four layers including:
+     - What each layer must do.
+     - What each layer should do.
+     - What behaviors are expected to support interoperability.
+     - What interactions each layer supports for other layers on which it depends, or which depend on it.
+
+Upon reading this specification, the intended audience should have a better understanding of the implications of their protocol design, system architecture, or product architecture with regard to interoperability between multiple implementations.
+
+The scope of this specification is limited to defining the architectural requirements for each layer in the ToIP stack. The following are explicitly out-of-scope:
+- The definition of specific protocols or interfaces at each layer.
+- The definition of specific supporting systems or intermediary systems for any layer.
+- The definition of specific test cases or interoperability profiles—including both vertical and horizontal interoperability—that can be used for test harnesses.
+- The definition of applications (and their user interfaces) that run on top of the ToIP stack.
+- The definition of trust frameworks or governance frameworks for usage of the ToIP stack within specific digital trust ecosystems.
+
+The ToIP Technology Stack Working Group has committed to producing two additional documents addressing some of these needs:
+1. **ToIP Interoperability Test Cases** will specify interoperability profiles that can be implemented by commercial-grade test harnesses and testing labs.
+1. **ToIP Primer for Policymakers** will guide policymakers, governing authorities, analysts, and other non-technical audiences who need to deeply understand the purpose, uses, and implications of the ToIP stack but do not need (or want) to dive into technical details.
+
+The rest of the specifications and guides necessary to develop, test, and deploy interoperable implementations of the ToIP stack are expected to be developed by the ToIP Technology Stack Working Group, other ToIP Working Groups, other standards development organizations, independent governing authorities, and independent developers.
 
 ## Example Use Cases
 
