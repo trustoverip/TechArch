@@ -15,33 +15,45 @@
 <h4 class='ui smallest header'  id="contributors">Contributors:</h4>
 <p>*Copyright: *</p>
 <h2 class='ui medium header'  id="introduction">Introduction</h2>
-<p>This document is the normative specification for the overall technical architecture of the ToIP Technology Sstack. A conceptual diagram of this four-layer, two-sided architecture for decentralized digital trust infrastructure is shown in Figure 1: </p>
+<p>The mission of the Trust over IP (ToIP) Foundation is to define an overall architecture for Internet-scale digital trust that combines cryptographic assurance at the machine layers (technology) with human accountability at the business, legal, and social layers (governance). Together these two halves form a complete four-layer architecture for decentralized digital trust infrastructure known as the <a href="https://trustoverip.github.io/toip/glossary#toip-stack">ToIP stack</a>, illustrated in Figure 1.</p>
 <p><img src="/images/ToIPDualStack.jpeg" alt="Figure 1" />
-<strong>Figure 1: Conceptial Diagram of the ToIP Stack</strong></p>
-<p>This specification is a deliverable of the <a href="https://wiki.trustoverip.org/display/HOME/Technology+Stack+Working+Group">Technology Stack Working Group</a> at the <a href="https://www.trustoverip.org/">Trust oover IP (ToIP) Foundation</a>. It is recommended to read this document in conjunction with three other deliverables from the ToIP Foundation:</p>
-<ul class='ui list' >
-<li class='ui item' ><p><a href="https://www.trustoverip.org/wp-content/uploads/Introduction-to-ToIP-V2.0-2021-11-17.pdf">Introduction to ToIP</a> is our white paper that provides an overall introduction to the market needs that have led to the emergence of decentralized digital trust infrastructure, the origin and basic structure of the ToIP stack, and the mission and activities of the ToIP Foundation.</p></li>
-<li class='ui item' ><p><a href="https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf">Design Principles for the ToIP Stack</a> enumerates the set of design principles informing, guiding, and constraining the design of the ToIP stack.</p></li>
-<li class='ui item' ><p><a href="https://wiki.trustoverip.org/pages/viewpage.action?pageId=71241">ToIP Governance Architecture Specification</a> defines the overall requirements for ToIP-compliant governance frameworks.</p></li>
-</ul>
+<strong>Figure 1: Conceptial diagram of the ToIP stack</strong></p>
+<p>This document is the normative specification for the high level architecture of the ToIP technology stack (the left half of Figure 1).  It is a deliverable of the <a href="https://wiki.trustoverip.org/display/HOME/Technology+Stack+Working+Group">Technology Stack Working Group</a> at the <a href="https://www.trustoverip.org/">ToIP Foundation</a>. It is recommended to read this document in conjunction with three other deliverables from the ToIP Foundation:</p>
+<p>1 <a href="https://www.trustoverip.org/wp-content/uploads/Introduction-to-ToIP-V2.0-2021-11-17.pdf">Introduction to ToIP</a> is our white paper that provides an overall introduction to the market needs leading to the emergence of decentralized digital trust infrastructure. It explains the origin and basic structure of the ToIP stack together with the mission and activities of the ToIP Foundation.</p>
+<p>1 <a href="https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf">Design Principles for the ToIP Stack</a> enumerates the set of design principles informing, guiding, and constraining the design of the ToIP stack.</p>
+<p>1 <a href="https://wiki.trustoverip.org/pages/viewpage.action?pageId=71241">ToIP Governance Architecture Specification</a> defines the overall requirements for ToIP-compliant governance frameworks.</p>
 <p>As with all ToIP deliverables, the ToIP Foundation invites your feedback and suggestions. Please contact us via any of the channels listed on the <a href="https://www.trustoverip.org/">ToIP Foundation</a> website.</p>
 <h2 class='ui medium header'  id="terminology">Terminology</h2>
 <p>In this document, the key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL", when appearing in ALL CAPITALS, are to be interpreted as described in <a href="https://datatracker.ietf.org/doc/html/rfc2119">IETF RFC 2119</a>.</p>
-<p>All other terms in <strong>bold</strong> are defined in <a href="https://trustoverip.github.io/toip/glossary">ToIP Core Glossary</a> following the <a href="https://wiki.trustoverip.org/display/HOME/Terms+Wikis">terms wiki</a> process defined by the <a href="https://wiki.trustoverip.org/pages/viewpage.action?pageId=65700">ToIP Concepts and Terminology Working Group</a>.</p>
-<h2 class='ui medium header'  id="motivationsandusecases">Motivations and Use Cases</h2>
-<h2 class='ui medium header'  id="referencearchitecture">Reference Architecture</h2>
+<p>All other defined terms are linked to their definitions in the applicable <a href="https://trustoverip.github.io/toip/glossary">ToIP glossary</a> following the process defined by the <a href="https://wiki.trustoverip.org/pages/viewpage.action?pageId=65700">ToIP Concepts and Terminology Working Group</a>.</p>
+<h2 class='ui medium header'  id="motivations">Motivations</h2>
+<h2 class='ui medium header'  id="audienceandscope">Audience and Scope</h2>
+<h2 class='ui medium header'  id="exampleusecases">Example Use Cases</h2>
+<h2 class='ui medium header'  id="referencearchitectureoverview">Reference Architecture Overview</h2>
+<h2 class='ui medium header'  id="endpointsystemsandthelayeredstack">Endpoint Systems and the Layered Stack</h2>
+<h3 class='ui small header'  id="endpointsystems">Endpoint Systems</h3>
+<h3 class='ui small header'  id="layer1infrastructures">Layer 1 (Infrastructures)</h3>
+<h3 class='ui small header'  id="layer2trustspanning">Layer 2 (Trust Spanning)</h3>
+<h3 class='ui small header'  id="layer3trusttasks">Layer 3 (Trust Tasks)</h3>
+<h3 class='ui small header'  id="layer4applications">Layer 4 (Applications)</h3>
+<h2 class='ui medium header'  id="theendsystemtoendsystemtrustspanningprotocol">The End System to End System Trust Spanning Protocol</h2>
 <h3 class='ui small header'  id="overview">Overview</h3>
-<h3 class='ui small header'  id="endsystems">End Systems</h3>
-<h3 class='ui small header'  id="endsystemtoendsystemprotocol">End System to End System Protocol</h3>
-<h3 class='ui small header'  id="supportingsystems">Supporting Systems</h3>
+<h3 class='ui small header'  id="identifier">Identifier</h3>
+<h3 class='ui small header'  id="messages">Messages</h3>
+<h3 class='ui small header'  id="routing">Routing</h3>
+<h3 class='ui small header'  id="interfacetolayer1">Interface to Layer 1</h3>
+<h2 class='ui medium header'  id="supportingsystems">Supporting Systems</h2>
+<h3 class='ui small header'  id="overview-1">Overview</h3>
+<h3 class='ui small header'  id="example1">Example 1</h3>
+<h3 class='ui small header'  id="example2">Example 2</h3>
+<h3 class='ui small header'  id="generalization">Generalization</h3>
 <h2 class='ui medium header'  id="intermediarysystems">Intermediary Systems</h2>
-<h2 class='ui medium header'  id="interoperability">Interoperability</h2>
-<h2 class='ui medium header'  id="layerspecificrequirements">Layer Specific Requirements</h2>
-<h2 class='ui medium header'  id="considerationsforthetrustoveripgovernancestack">Considerations for the Trust over IP Governance Stack</h2>
+<h2 class='ui medium header'  id="endpointsysteminteroperability">Endpoint System Interoperability</h2>
+<h3 class='ui small header'  id="interoperabilitybetweenendpointswithdecentralizedidentifiers">Interoperability between Endpoints with Decentralized Identifiers</h3>
+<h3 class='ui small header'  id="interoperabilitybetweenendpointswithdecentralizedandotheridentifiers">Interoperability between Endpoints with Decentralized and Other Identifiers</h3>
+<h2 class='ui medium header'  id="integrationwiththetoipgovernancestack">Integration with the ToIP Governance Stack</h2>
 <h2 class='ui medium header'  id="references">References</h2>
-<h3 class='ui small header'  id="normativereferences">Normative References</h3>
-<h3 class='ui small header'  id="informativereferences">Informative References</h3>
-<h2 class='ui medium header'  id="acknowledgements">Acknowledgements</h2>
+<h2 class='ui medium header'  id="aboutthetoipfoundation">About the ToIP Foundation</h2>
 
 </body>
 </html>
