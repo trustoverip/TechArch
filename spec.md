@@ -6,7 +6,7 @@
 
 *Copyright: *
 
-## Introduction
+## 1. Introduction
 
 The mission of the Trust over IP (ToIP) Foundation is to define an overall architecture for Internet-scale digital trust that combines cryptographic assurance at the machine layers (technology) with human accountability at the business, legal, and social layers (governance). Together these two halves form a complete four-layer architecture for decentralized digital trust infrastructure known as the [ToIP stack](https://trustoverip.github.io/toip/glossary#toip-stack), illustrated in Figure 1.
 
@@ -23,13 +23,13 @@ This document is the normative specification for the high level architecture of 
 
 As with all ToIP deliverables, the ToIP Foundation invites your feedback and suggestions. Please contact us via any of the channels listed on the [ToIP Foundation](https://www.trustoverip.org/) website.
 
-## Terminology
+## 2. Terminology
 
 In this document, the key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL", when appearing in ALL CAPITALS, are to be interpreted as described in [IETF RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
 
 All other defined terms are linked to their definitions in the applicable [ToIP glossary](https://trustoverip.github.io/toip/glossary) following the process defined by the [ToIP Concepts and Terminology Working Group](https://wiki.trustoverip.org/pages/viewpage.action?pageId=65700).
 
-## Motivations
+## 3. Motivations
 
 *This section is informative.*
 
@@ -51,7 +51,7 @@ Whether from the perspective of an implementer, a customer, or a policymaker, th
 
 - **Public policy.** A well-defined architecture with clear and concise terminology helps policymakers and legal experts define coherent policies and regulations in a manner that serves the needs of society without constraining technical innovation and competition. 
 
-## Audience and Scope
+## 4. Audience and Scope
 
 *This section is informative.*
 
@@ -79,40 +79,40 @@ The ToIP Technology Stack Working Group has committed to producing two additiona
 
 The rest of the specifications and guides necessary to develop, test, and deploy interoperable implementations of the ToIP stack are expected to be developed by the ToIP Technology Stack Working Group, other ToIP Working Groups, other standards development organizations, independent governing authorities, and independent developers.
 
-## Example Use Cases
+## 5. Example Use Cases
 
-## Reference Architecture Overview
+## 6. Reference Architecture Overview
 
-## Endpoint Systems and the Layered Stack
-### Endpoint Systems
-### Layer 1 (Infrastructures)
-### Layer 2 (Trust Spanning)
-### Layer 3 (Trust Tasks)
-### Layer 4 (Applications)
+## 7. Endpoint Systems and the Layered Stack
+### 7.1 Endpoint Systems
+### 7.2 Layer 1 (Infrastructures)
+### 7.3 Layer 2 (Trust Spanning)
+### 7.4 Layer 3 (Trust Tasks)
+### 7.5 Layer 4 (Applications)
 
-## The End System to End System Trust Spanning Protocol
-### Overview
-### Identifier
-### Messages
-### Routing
-### Interface to Layer 1
+## 8. The End System to End System Trust Spanning Protocol
+### 8.1 Overview
+### 8.2 Identifier
+### 8.3 Messages
+### 8.4 Routing
+### 8.5 Interface to Layer 1
 
-## Supporting Systems
-### Overview
-### Example 1
-### Example 2
-### Generalization
+## 9. Supporting Systems
+### 9.1 Overview
+### 9.2 Example 1
+### 9.3 Example 2
+### 9.4 Generalization
 
-## Intermediary Systems
+## 10. Intermediary Systems
 
-## Endpoint System Interoperability
-### Interoperability between Endpoints with Decentralized Identifiers
-### Interoperability between Endpoints with Decentralized and Other Identifiers
+## 11. Endpoint System Interoperability
+### 11.1 Interoperability between Endpoints with Decentralized Identifiers
+### 11.2 Interoperability between Endpoints with Decentralized and Other Identifiers
 
 
-## Integration with the ToIP Governance Stack
+## 12. Integration with the ToIP Governance Stack
 
-## References
+## 13. References
 
 
 ## About the ToIP Foundation
