@@ -82,7 +82,89 @@ The rest of the specifications and guides necessary to develop, test, and deploy
 
 ## 5. Example Use Cases
 
+*This section is informative.*
+
 ## 6. Reference Architecture Overview
+
+*This section is informative.*
+
+### 6.1 Design Goals
+
+A reference architecture of a complex system is an abstract framework consisting of a list of component subsystems (or functions) and the interfaces of interactions with each other and external systems. 
+
+Such a reference architecture is an exercise in design guided by a set of most significant goals or principles. Our overarching goals are twofold:
+
+1. Defining a general means of establishing trust between any two endpoint systems over the Internet,
+1. Achieving universal interoperability among implementations.
+
+These twin objectives lead us to a set of design principles that influence the design choices presented in this document. These design principles are further discussed in the [Design Principles for the ToIP Stack](https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf). 
+
+On the first goal, establishing trust between parties requires that each party develop confidence in the following properties of their relationship:
+
+1. **Authenticity:** is each party who the other party believes it to be?
+1. **Confidentiality:** are the communications between the parties only accessible by the parties?
+1. **Privacy:** will the expectations of each party—with respect to usage of the information communicated between the parties—be upheld by the other party?
+
+These three properties of trust relationships are ordered, meaning each one depends on the one before it. Furthermore, in some trust relationships, confidentiality and privacy are optional. Thus our design goal with the ToIP stack is to achieve authenticity first, then confidentiality, then privacy. 
+
+On the second goal, we share the same goal of global scalability as the original Internet architecture. This involves several intertwined considerations that overlap and reinforce each other as summarized by the first four [Design Principles for the ToIP Stack](https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf):
+
+- The End-to-End Principle
+- Connectivity Is Its Own Reward (Universal Interoperability)
+- The Hourglass Model
+- Decentralization
+
+### 6.2 The Four Layer Pattern
+
+Together these considerations lead to the general four-layer pattern summarized in Table 1.
+
+| Leyer # | Generic Name | ToIP Name |
+|---------|--------------|-----------|
+| 4       | Application. | Trust Application |
+| 3       | Supported protocols | Trust Tasks |
+| 2       | Spanning Protocol | Trust Spanning Protocol |
+| 1       | Supporting Protocols | Trust support |
+
+**Table 1: The four layer pattern of large-scale protocol stacks**
+
+The keystone to this pattern is the role of the spanning layer at Layer 2. Much of the success of the Internet is attributed to its “hourglass” design in which a single spanning layer protocol—the IP protocol—is supported by a variety of lower-level protocols below it. The spanning layer in turn supports a variety of higher-level protocols above it. How this hourglass design applies to the four ToIP layers is illustrated in Figure 2.
+
+<img src="/images/Fourlayerpattern.jpeg" alt="Four layer pattern" style="width:800px;"/>
+
+**Figure 2: How the four layer pattern fits the Hourglass Model**
+
+The spanning layer protocol maximizes interoperability because it provides a common way for all the higher level protocols to communicate via all the lower level protocols. This is why the design of the spanning layer protocol must be “as simple as possible but no simpler”. It should support only the minimal foundational functions needed by the supported protocols. 
+In terms of our specific design goals, this means the ToIP trust spanning layer must only satisfy our first goal. All other goals can be accomplished by protocols and functions at other layers. 
+
+
+
+### 6.3 High-Level System Architecture
+
+This section describes a reference architecture for ToIP that provides a generalization of various viable solutions for trust establishment over the Internet. It provides the common concepts and vocabulary with which to discuss implementations of each component, the protocols or interfaces between these components, and interoperability among different implementations. Subsequent sections will describe these components and protocols in more detail.
+
+At the highest level, a ToIP system consists of three base types of component systems that together all interact using the common infrastructure of the Internet:
+
+1. At least two Endpoint Systems (often simply referred to as Endpoints).
+1. A set of zero or more Supporting Systems that support trust establishment among the Endpoint Systems.
+1. A set of zero or more Intermediary Systems that may be employed to assist the interactions between the Endpoint Systems. 
+
+This high level view is depicted in Figure 3.
+
+<img src="/images/Highlevelreferencearchitecture.jpeg" alt="High level view of the ToIP Reference Architecture" style="width:800px;"/>
+
+**Figure 3: High Level View of the ToIP Reference Architecture**
+
+The first level of decomposition is based on the locus of control. This is a critical decision because the locus of control determines the chains of dependencies as we construct end-to-end trust between any two Endpoint Systems. Each subsystem, whether it is classified as an Endpoint System, Supporting System, or Intermediary System, is its own locus of control. An Endpoint System, for example, may be a tiny IoT device, a personal smartphone, or a large capacity service hosted in a cloud. What matters to the architecture is that it exhibits a consistent locus of control with respect to other subsystems.
+
+These subsystems collaborate with each other through three types of interactions:
+- Endpoint System to Endpoint System
+- Endpoint System to Supporting Systems
+- Endpoint System to Intermediary Systems
+
+The ToIP Endpoint Systems follow a 4-layered design pattern. As we move up the stack, roles played by an Endpoint System are often given more context specific names. For example, a credential exchange Trust Task in layer 3 may use terms such as issuers, holders, and verifiers to describe such roles played by the Endpoint Systems and the interactions among them in that context. These higher layer terms are specific to that context and must be consistent with the abstract and general terms used in this Reference Architecture.
+
+The normative requirements for each type of subsystem and interaction across the ToIP layers are specified in the following sections.
+
 
 ## 7. Endpoint Systems and the Layered Stack
 ### 7.1 Endpoint Systems
