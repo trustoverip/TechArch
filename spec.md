@@ -103,29 +103,33 @@ By focusing solely on the Technical Architecture Track, the following are explic
 
 ### 6.1 Design Goals
 
-A reference architecture of a complex system is an abstract framework consisting of a list of component subsystems (or functions) and the interfaces of interactions with each other and external systems. 
+A reference architecture of a complex system is an abstract framework consisting of a list of functional subsystems together with the interfaces and protocols needed to define the potential interactions and dependencies between these systems and/or external systems. This reference architecture provides a logical articulation of these interfaces and protocols which can then be translated into specific component specifications as described in Figure 2.
 
-Such a reference architecture is an exercise in design guided by a set of most significant goals or principles. Our overarching goals are twofold:
 
-1. Defining a general means of establishing trust between any two endpoint systems over the Internet,
-1. Achieving universal interoperability among implementations.
+Such a reference architecture is an exercise in design guided by a set of most significant goals or principles. The overarching goals for the ToIP stack are twofold:
 
-These twin objectives lead us to a set of design principles that influence the design choices presented in this document. These design principles are further discussed in the [Design Principles for the ToIP Stack](https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf). 
+1. Define a general means of establishing trust between any two or more endpoint systems,
+1. Achieve universal interoperability among implementations.
 
-On the first goal, establishing trust between parties requires that each party develop confidence in the following properties of their relationship:
+These twin objectives led the ToIP Foundation to begin the work with the Design Principles Track in Figure 2. In 2021, we developed a set of 17 [Design Principles for the ToIP Stack](https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf) that are the basis for the design choices reflected in this specification. For the full rationale behind each design principle, see [Design Principles for the ToIP Stack](https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf).
 
-1. **Authenticity:** is each party who the other party believes it to be?
-1. **Confidentiality:** are the communications between the parties only accessible by the parties?
-1. **Privacy:** will the expectations of each party—with respect to usage of the information communicated between the parties—be upheld by the other party?
+With regard to the first design goal, establishing trust between parties requires that each party develop confidence in the following properties of their relationship:
 
-These three properties of trust relationships are ordered, meaning each one depends on the one before it. Furthermore, in some trust relationships, confidentiality and privacy are optional. Thus our design goal with the ToIP stack is to achieve authenticity first, then confidentiality, then privacy. 
+1. **Authenticity:** is the receiver of a communication able to verify that it originated from the expected sender?
+2. **Integrity:** is the receiver able to verify that a communication is complete and has not been tampered with?
+3. **Confidentiality:** is the contents of a communication protected so only authorized parties have access?
+4. **Privacy:** will the expectations of each party with respect to usage of shared information be honored by the other parties?
 
-On the second goal, we share the same goal of global scalability as the original Internet architecture. This involves several intertwined considerations that overlap and reinforce each other as summarized by the first four [Design Principles for the ToIP Stack](https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf):
+Note that, in some trust relationships, confidentiality and privacy may be optional. Thus our design goal with the ToIP stack is to achieve these four properties in the order listed.[^1]
 
-- The End-to-End Principle
-- Connectivity Is Its Own Reward (Universal Interoperability)
-- The Hourglass Model
-- Decentralization
+[^1]: Another standard information trust criteria is **availability**. This is a concern with the design and implementation of operational deployments of the ToIP stack and should be addressed in the associated operational governance frameworks.
+
+With regard to the second design goal, the ToIP reference architecture shares the same goal of global scalability as the original Internet architecture. This involves several intertwined considerations that overlap and reinforce each other as summarized by the first four [Design Principles for the ToIP Stack](https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf):
+
+1. The End-to-End Principle
+1. Connectivity Is Its Own Reward (Universal Interoperability)
+1. The Hourglass Model
+1. Decentralization
 
 ### 6.2 The Four Layer Pattern
 
