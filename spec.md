@@ -8,21 +8,21 @@
 
 ## 1. Introduction
 
-The mission of the Trust over IP (ToIP) Foundation is to define an overall architecture for Internet-scale digital trust that combines cryptographic assurance at the machine layers (technology) with human accountability at the business, legal, and social layers (governance). Together these two halves form a complete four-layer architecture for decentralized digital trust infrastructure known as the [ToIP stack](https://trustoverip.github.io/toip/glossary#toip-stack), illustrated in Figure 1.
+The mission of the [Trust over IP (ToIP) Foundation](https://www.trustoverip.org) is to define an overall architecture for Internet-scale digital trust that combines cryptographic assurance at the machine layers (technology) with human accountability at the business, legal, and social layers (governance). Together these two halves form a complete four-layer architecture for decentralized digital trust infrastructure known as the [ToIP stack](https://trustoverip.github.io/toip/glossary#toip-stack). Figure 1 is a conceptual diagram of this stack:
 
 <img src="/images/ToIPDualStack.jpeg" alt="ToIP Dual Stack" style="width:800px;"/>
 
 **Figure 1: Conceptial diagram of the ToIP stack**
 
-This document is the normative specification for the high level architecture of the ToIP technology stack (the left half of Figure 1).  It is a deliverable of the [Technology Stack Working Group](https://wiki.trustoverip.org/display/HOME/Technology+Stack+Working+Group) at the [ToIP Foundation](https://www.trustoverip.org/). It is recommended to read this document in conjunction with three other deliverables from the ToIP Foundation:
+This document is the normative specification for the high-level architecture of the ToIP technology stack (the left half of Figure 1).  It is a deliverable of the [Technology Stack Working Group](https://wiki.trustoverip.org/display/HOME/Technology+Stack+Working+Group) at the ToIP Foundation. It is recommended to read this document in conjunction with these three other documents from the ToIP Foundation in the following order:
 
-1. [Introduction to ToIP](https://www.trustoverip.org/wp-content/uploads/Introduction-to-ToIP-V2.0-2021-11-17.pdf) is our white paper that provides an overall introduction to the market needs leading to the emergence of decentralized digital trust infrastructure. It explains the origin and basic structure of the ToIP stack together with the mission and activities of the ToIP Foundation.
+1. [Introduction to ToIP](https://www.trustoverip.org/wp-content/uploads/Introduction-to-ToIP-V2.0-2021-11-17.pdf) is our white paper that provides an overall introduction to the emergence of decentralized digital trust infrastructure. It explains the origin and basic structure of the ToIP stack together with the mission and activities of the ToIP Foundation.
 
-1. [Design Principles for the ToIP Stack](https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf) enumerates the set of design principles informing, guiding, and constraining the design of the ToIP stack.
+1. [Evolution of the ToIP Stack](https://docs.google.com/document/d/1RKbHtqTRxlefkTTo4AgKW-Mwz631Z7Ufn0-oKqi9XxY/edit) is a companion document to this specification that explains the overall process the ToIP Foundation is following in the development of the ToIP stack. It is recommended for anyone seeking to understand how the work of the ToIP Foundation relates to that of adjacent non-profit organizations such as the Decentralized Identity Foundation, the OpenID Foundation, the Open Identity Exchange, and others including established SDOs such as W3C, IETF, ISO, etc. See Appendix B for more.
 
-1. [ToIP Governance Architecture Specification](https://wiki.trustoverip.org/pages/viewpage.action?pageId=71241) defines the overall requirements for ToIP-compliant governance frameworks.
+1. [Design Principles for the ToIP Stack](https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf) is the immediate predecessor to this specification (see the development tracks described in Section 4). It enumerates the set of design principles informing, guiding, and constraining the design of the ToIP stack. We especially recommend this document for a complete understanding of this specification.
 
-As with all ToIP deliverables, the ToIP Foundation invites your feedback and suggestions. Please contact us via any of the channels listed on the [ToIP Foundation](https://www.trustoverip.org/) website.
+As with all ToIP deliverables, the ToIP Foundation invites your feedback and suggestions. Please contact us via the [ToIP Foundation website](https://www.trustoverip.org/).
 
 ## 2. Terminology
 
