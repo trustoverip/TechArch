@@ -62,29 +62,36 @@ Whether from the perspective of an implementer, a customer, or a policymaker, th
 
 *This section is informative.*
 
-The audience for this specification is protocol designers, system architects, software developers and product managers. The purpose of the reference architecture defined in this specification is to guide them in the development of protocols, system architectures, and software products that meet two key types of interoperability requirements:
+The audience for this specification is protocol designers, system architects, software developers and product managers who wish to understand, influence, design, develop, or implement interoperable decentralized digital trust infrastructure, services, or applications.
 
-1. **System-to-system interoperability requirements**: the architectural components and the interactions between those components necessary for interoperability of all systems acting within a ToIP digital trust ecosystem.
-1. **Functional interoperability requirements**: the software functions required for each of the four layers including:
+The purpose of is specification is to define a reference architecture for the technology side of the ToIP stack, including the functions and behaviors required for each of the four layers and the functional and behavioral inter-dependencies between the layers:
      - What each layer must do.
-     - What each layer should do.
+     - What each layer should and may do.
      - What behaviors are expected to support interoperability.
-     - What interactions each layer supports for other layers on which it depends, or which depend on it.
+     - What interactions each layer supports for other layers.
 
-Upon reading this specification, the intended audience should have a better understanding of the implications of their protocol design, system architecture, or product architecture with regard to interoperability between multiple implementations.
+The goal of these architectural requirements is to inform subsequent development tracks as summarized in Figure 2:
 
-The scope of this specification is limited to defining the architectural requirements for each layer in the ToIP stack. The following are explicitly out-of-scope:
-- The definition of specific protocols or interfaces at each layer.
-- The definition of specific supporting systems or intermediary systems for any layer.
-- The definition of specific test cases or interoperability profiles—including both vertical and horizontal interoperability—that can be used for test harnesses.
-- The definition of applications (and their user interfaces) that run on top of the ToIP stack.
-- The definition of trust frameworks or governance frameworks for usage of the ToIP stack within specific digital trust ecosystems.
+<img src="/images/StackDevTrack.png" alt="ToIP Stack Development Track" style="width:800px;"/>
 
-The ToIP Technology Stack Working Group has committed to producing two additional documents addressing some of these needs:
-1. **ToIP Interoperability Test Cases** will specify interoperability profiles that can be implemented by commercial-grade test harnesses and testing labs.
-1. **ToIP Primer for Policymakers** will guide policymakers, governing authorities, analysts, and other non-technical audiences who need to deeply understand the purpose, uses, and implications of the ToIP stack but do not need (or want) to dive into technical details.
+**Figure 2: The planned progression of development tracks for the ToIP Technology Stack**
 
-The rest of the specifications and guides necessary to develop, test, and deploy interoperable implementations of the ToIP stack are expected to be developed by the ToIP Technology Stack Working Group, other ToIP Working Groups, other standards development organizations, independent governing authorities, and independent developers.
+For more information about the interrelationship and progression of these four development tracks, please see Appendix B: Evolution of the ToIP Stack. 
+
+The scope of this specification is limited to the Technical Architecture Track above, i.e., to defining the normative architectural requirements needed to guide the Component Specification Track. Success will be achieved if these requirements are sufficient to produce the component specifications needed to implement the architecture and prepare for the Interoperability Testing Track. 
+
+By focusing solely on the Technical Architecture Track, the following are explicitly out-of-scope:
+
+  1. The definition of specific protocols or interfaces at each layer (these will be produced in the Component Specifications Track).
+  1. The definition of specific interoperability profiles and test cases—including both vertical and horizontal interoperability—that can be used for commercial-grade test harnesses and testing labs (these will be produced in the Interoperability Testing Track).
+  1. The definition of specific intermediary systems or supporting systems for any layer.
+  1. The definition of specific applications (and their user interfaces) that run on top of the ToIP stack.
+  1. The definition of ToIP Governance Stack components such as trust frameworks or governance frameworks for usage of the ToIP stack within specific digital trust ecosystems.
+
+*NOTE: We do not expect all of these additional deliverables, especially the component specifications, to be produced by the ToIP Technology Stack Working Group (or other ToIP Working Groups). Some have already been produced—and others are in development—by other standards development organizations (such as the Decentralized Identity Foundation, W3C, IETF, ETSI, and ISO), independent governing authorities, and independent developers.*
+
+*NOTE: Due to the public policy implications, the ToIP Foundation is committed to producing a companion document called **ToIP Primer for Policymakers**. This document will guide policymakers, governing authorities, analysts, and other non-technical audiences who need to deeply understand the purpose, uses, and implications of the ToIP stack but do not need (or want) to dive into technical details.*
+
 
 ## 5. Example Use Cases
 
