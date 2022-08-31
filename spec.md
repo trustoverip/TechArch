@@ -18,9 +18,9 @@ This document is the normative specification for the high-level architecture of 
 
 1. [Introduction to ToIP](https://www.trustoverip.org/wp-content/uploads/Introduction-to-ToIP-V2.0-2021-11-17.pdf) is our white paper that provides an overall introduction to the emergence of decentralized digital trust infrastructure. It explains the origin and basic structure of the ToIP stack together with the mission and activities of the ToIP Foundation.
 
-1. [Evolution of the ToIP Stack](https://docs.google.com/document/d/1RKbHtqTRxlefkTTo4AgKW-Mwz631Z7Ufn0-oKqi9XxY/edit) is a companion document to this specification that explains the overall process the ToIP Foundation is following in the development of the ToIP stack. It is recommended for anyone seeking to understand how the work of the ToIP Foundation relates to that of adjacent non-profit organizations such as the Decentralized Identity Foundation, the OpenID Foundation, the Open Identity Exchange, and others including established SDOs such as W3C, IETF, ISO, etc. See Appendix B for more.
+1. [Evolution of the ToIP Stack](https://docs.google.com/document/d/1RKbHtqTRxlefkTTo4AgKW-Mwz631Z7Ufn0-oKqi9XxY/edit) is a companion document to this specification that explains the overall process the ToIP Foundation is following in the development of the ToIP stack. It is recommended for anyone seeking to understand how the work of the ToIP Foundation relates to that of adjacent non-profit organizations such as the Decentralized Identity Foundation, the OpenID Foundation, the Open Identity Exchange, and others including established SDOs such as W3C, IETF, ISO, etc. See [Appendix B](#appendix-b-mapping-of-existing-technologies-into-the-toip-stack) for more. 
 
-1. [Design Principles for the ToIP Stack](https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf) is the immediate predecessor to this specification (see the development tracks described in Section 4). It enumerates the set of design principles informing, guiding, and constraining the design of the ToIP stack. We especially recommend this document for a complete understanding of this specification.
+1. [Design Principles for the ToIP Stack](https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf) is the immediate predecessor to this specification (see the development tracks described in [Section 4](#4-audience-purpose-and-scope)). It enumerates the set of design principles informing, guiding, and constraining the design of the ToIP stack. We especially recommend this document for a complete understanding of this specification.
 
 As with all ToIP deliverables, the ToIP Foundation invites your feedback and suggestions. Please contact us via the [ToIP Foundation website](https://www.trustoverip.org/).
 
@@ -58,7 +58,7 @@ Whether from the perspective of an implementer, a customer, or a policymaker, th
 
 - **Public policy.** A well-defined architecture with clear and concise terminology helps policymakers and legal experts define coherent policies and regulations in a manner that serves the needs of society without constraining technical innovation and competition. 
 
-## 4. Audience and Scope
+## 4. Audience, Purpose and Scope
 
 *This section is informative.*
 
@@ -179,7 +179,7 @@ The normative requirements for each type of subsystem and interaction across the
 ### 7.4 Layer 3 (Trust Tasks)
 ### 7.5 Layer 4 (Applications)
 
-## 8. The End System to End System Trust Spanning Protocol
+## 8. The ToIP Trust Spanning Protocol
 ### 8.1 Overview
 ### 8.2 Identifier
 ### 8.3 Messages
@@ -205,4 +205,8 @@ The normative requirements for each type of subsystem and interaction across the
 
 
 ## About the ToIP Foundation
+
+## Appendix A: Consolidated Requirements
+
+## Appendix B: Mapping of Existing Technologies into the ToIP Stack
 
