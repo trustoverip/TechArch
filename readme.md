@@ -11,7 +11,7 @@ This is a Draft Deliverable of the Technology Architecture Task Force of the Tec
 
 To contribute, please first visit the Task Force's [wiki](https://wiki.trustoverip.org/display/HOME/TSWG+Technology+Architecture+Task+Force).
 
-ToIP Technolog Working Group charter requires you be a member of ToIP Foundation and agree to the IPR policy as noted in the above wiki page. A free *Contributor* level membership is available from ToIP.
+ToIP Technology Working Group charter requires you be a member of ToIP Foundation and agree to the IPR policy as noted in the above wiki page. A free *Contributor* level membership is available from ToIP.
 
 Here are several ways in which you can contribute:
 
