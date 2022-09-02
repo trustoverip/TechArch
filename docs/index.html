@@ -166,10 +166,26 @@
 <p>In addition to the internal layer interfaces implemented by hardware and software resources within the Endpoint System’s boundary, an Endpoint System may also rely on the services of other Supporting Systems that are located outside of the Endpoint System but accessible through the Internet to perform their functions. This type of interaction requires a defined <strong>Protocol</strong>. </p>
 <p>The distinction between an Interface and a Protocol is whether the systems communicating over the protocol represent different loci of control. For example, simply distributing the functions within a particular layer over the Internet — such as having some of the functions performed using cloud computing or web services—does not necessarily require a defined protocol if all of the functions are under the same locus of control. However an agreed protocol may be necessary if the communicating systems are under different loci of control. What is essential is delineating who has control over what in order to reason about trust relationships. </p>
 <p>The four layer stack within an Endpoint System is defined in the following sections.</p>
-<h3 class='ui small header'  id="72layer1infrastructures">7.2 Layer 1 (Infrastructures)</h3>
-<h3 class='ui small header'  id="73layer2trustspanning">7.3 Layer 2 (Trust Spanning)</h3>
-<h3 class='ui small header'  id="74layer3trusttasks">7.4 Layer 3 (Trust Tasks)</h3>
-<h3 class='ui small header'  id="75layer4applications">7.5 Layer 4 (Applications)</h3>
+<h3 class='ui small header'  id="72layer1trustsupport">7.2 Layer 1: Trust Support</h3>
+<p>If a ToIP Endpoint System includes Trust Support Functions, then those functions MUST be included at Layer 1 of the Endpoint System. [REQ L1.1] The exact nature of the Trust Support Functions required by any particular Endpoint System may vary significantly depending on the Endpoint System’s physical manifestation and numerous other design goals (e.g. cost, location, convenience, power usage, reliability and so on). For example the Trust Support Functions required for a full-featured smartphone vs. a cloud server vs. an IoT thermostat may be very different. </p>
+<p>Examples of Trust Support Functions designed to specifically support machine-to-machine trust (aka cryptographic trust or technical trust):</p>
+<ul class='ui list' >
+<li class='ui item' >Cryptographic hardware modules capable of generating good quality cryptographic key materials.</li>
+<li class='ui item' >Sufficiently secure storage of secrets and cryptographic materials.</li>
+<li class='ui item' >Sufficiently secure computing environment.</li>
+<li class='ui item' >Sufficient communication functions for the intended deployment environment.</li>
+</ul>
+<p><em>NOTE: while this specification generally assumes the Internet as the common networking environment, Internet support is not strictly required. The ToIP stack may be implemented over any communication medium capable of supporting the defined protocols.</em></p>
+<p>Examples of Trust Support Functions designed to specifically support human-to-human trust (aka business trust or legal trust) include:</p>
+<ul class='ui list' >
+<li class='ui item' >Identity binding mechanisms that associate a natural person to the Endpoint System itself, or to data artifacts on the Endpoint System such as identity claims or verifiable credentials. One of the strongest identity binding mechanisms is biometrics — physiological or behavioral characteristics that identify the individual (facial recognition, fingerprint readers, voice recognition, palm recognition, and so on). Layer 1 would provide the hardware and software support for registering, storing, and processing biometric primitives.</li>
+<li class='ui item' >Hardware-based trust attestation systems, such as those incorporated within <a href="https://trustedcomputinggroup.org/resource/trusted-platform-module-tpm-summary/">Trusted Platform Modules</a>, and other confidential computing systems that can provide legally valid evidence of the security characteristics of a Layer 1 component.</li>
+</ul>
+<p>Diversity of implementations of Layer 1 Trust Support Functions is <em>intentional</em> and a key goal of the ToIP stack design.</p>
+<p><em>NOTE: For functional, performance, security, or other reasons, a Layer 1 Trust Support Function may use a remote service in its implementation, e.g., a distributed ledger, distributed directory, distributed database, distributed file system, or distributed hash table. These systems are Supporting Systems to the Layer 1 implementation; they are not part of Layer 1 itself.</em></p>
+<h3 class='ui small header'  id="73layer2trustspanning">7.3 Layer 2: Trust Spanning</h3>
+<h3 class='ui small header'  id="74layer3trusttasks">7.4 Layer 3: Trust Tasks</h3>
+<h3 class='ui small header'  id="75layer4trustapplications">7.5 Layer 4: Trust Applications</h3>
 <h2 class='ui medium header'  id="8thetoiptrustspanningprotocol">8. The ToIP Trust Spanning Protocol</h2>
 <h3 class='ui small header'  id="81overview">8.1 Overview</h3>
 <h3 class='ui small header'  id="82identifiers">8.2 Identifiers</h3>
