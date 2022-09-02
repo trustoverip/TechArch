@@ -210,7 +210,35 @@ DIDs can be further subdivided into two classes: those whose verification requir
 Requirements for ToIP identifiers are covered in [Section 8.2](#82-identifiers).
 
 ## 7. Endpoint Systems and the Layered Stack
+*This section is normative.*
+
 ### 7.1 Endpoint Systems
+
+Endpoint Systems represent ToIP systems that are under a party’s direct control. A party means the entity that is evaluating, relying on, and benefiting from a trust relationship. In other words, a party is any user of the system without regard to their role in the system. This represents a contrast with the traditional identity and access management (IAM) distinct roles of a user who is making trust assertions and a *relying party* who is relying on those assertions to make a trust decision. In a ToIP system, Endpoint Systems have a symmetric *peer-to-peer* trust relationship in Layer 2 — the trust spanning layer.
+
+Endpoint Systems are autonomous in the sense that a party’s locus of control is fully contained within the given Endpoint System. This means a potential compromise of other Endpoint Systems, Intermediary Systems, or Supporting Systems will not directly compromise the integrity of a given Endpoint System. Each Endpoint System can be simple or very complex, i.e., it may have many further divided functions and/or services, however in this reference architecture, we shall consider the abstract Endpoint System autonomous. Implementers SHOULD ensure autonomy for Endpoint Systems [REQ A.1]
+
+Common examples of Endpoint Systems include:
+
+  - A mobile phone owned and administered by an individual.
+  - A merchant’s web server (on-premise or in the cloud), administered by the merchant.
+  - A financial institution’s distributed digital services, including certain online services for trust functions, administered by the financial institution.
+  - An IoT pollution sensor device owned and administered by a city.
+
+Befitting Design Principle #1 ([The End-to-End Principle](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)), Endpoint Systems are the ultimate targets of the requirements of ToIP architecture. They are likely to be much larger in number — by several magnitudes — compared to Intermediary or Supporting Systems. They implement most of the functions in the ToIP architecture and represent the biggest challenge for interoperability and scalability.
+
+<img src="/images/EndpointSystem.png" alt="Endpoint System" style="width:400px;"/>
+
+**Figure 8: Endpoint System**
+
+Within an Endpoint System, a higher layer uses the functions of a lower layer through an **Interface**. In ToIP architecture, functions within an Endpoint System are decomposed into layers in a vertical stack where layer boundaries are defined by their corresponding Interfaces. In a ToIP Endpoint System, the higher layers of the ToIP protocol stack MUST communicate with the lower layers via defined interfaces. [REQ A.2]
+
+In addition to the internal layer interfaces implemented by hardware and software resources within the Endpoint System’s boundary, an Endpoint System may also rely on the services of other Supporting Systems that are located outside of the Endpoint System but accessible through the Internet to perform their functions. This type of interaction requires a defined **Protocol**. 
+
+The distinction between an Interface and a Protocol is whether the systems communicating over the protocol represent different loci of control. For example, simply distributing the functions within a particular layer over the Internet — such as having some of the functions performed using cloud computing or web services—does not necessarily require a defined protocol if all of the functions are under the same locus of control. However an agreed protocol may be necessary if the communicating systems are under different loci of control. What is essential is delineating who has control over what in order to reason about trust relationships. 
+
+The four layer stack within an Endpoint System is defined in the following sections.
+
 ### 7.2 Layer 1 (Infrastructures)
 ### 7.3 Layer 2 (Trust Spanning)
 ### 7.4 Layer 3 (Trust Tasks)
