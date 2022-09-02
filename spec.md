@@ -262,6 +262,11 @@ Diversity of implementations of Layer 1 Trust Support Functions is *intentional*
 *NOTE: For functional, performance, security, or other reasons, a Layer 1 Trust Support Function may use a remote service in its implementation, e.g., a distributed ledger, distributed directory, distributed database, distributed file system, or distributed hash table. These systems are Supporting Systems to the Layer 1 implementation; they are not part of Layer 1 itself.*
 
 ### 7.3 Layer 2: Trust Spanning
+
+Layer 2 is the trust spanning layer of the ToIP stack. In keeping with Design Principle #3 ([The Hourglass Model](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)), this means there is only one requirement for Layer 2: A ToIP Endpoint System MUST communicate with another ToIP Endpoint System using the ToIP Trust Spanning Protocol. [REQ L2.1] No other functions are required.
+
+The requirements for the ToIP Trust Spanning Protocol are defined in [Section 8](#8-the-toip-trust-spanning-protocol).
+
 ### 7.4 Layer 3: Trust Tasks
 ### 7.5 Layer 4: Trust Applications
 
