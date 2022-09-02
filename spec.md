@@ -239,10 +239,31 @@ The distinction between an Interface and a Protocol is whether the systems commu
 
 The four layer stack within an Endpoint System is defined in the following sections.
 
-### 7.2 Layer 1 (Infrastructures)
-### 7.3 Layer 2 (Trust Spanning)
-### 7.4 Layer 3 (Trust Tasks)
-### 7.5 Layer 4 (Applications)
+### 7.2 Layer 1: Trust Support
+
+If a ToIP Endpoint System includes Trust Support Functions, then those functions MUST be included at Layer 1 of the Endpoint System. [REQ L1.1] The exact nature of the Trust Support Functions required by any particular Endpoint System may vary significantly depending on the Endpoint System’s physical manifestation and numerous other design goals (e.g. cost, location, convenience, power usage, reliability and so on). For example the Trust Support Functions required for a full-featured smartphone vs. a cloud server vs. an IoT thermostat may be very different. 
+
+Examples of Trust Support Functions designed to specifically support machine-to-machine trust (aka cryptographic trust or technical trust):
+
+  - Cryptographic hardware modules capable of generating good quality cryptographic key materials.
+  - Sufficiently secure storage of secrets and cryptographic materials.
+  - Sufficiently secure computing environment.
+  - Sufficient communication functions for the intended deployment environment.
+
+*NOTE: while this specification generally assumes the Internet as the common networking environment, Internet support is not strictly required. The ToIP stack may be implemented over any communication medium capable of supporting the defined protocols.*
+
+Examples of Trust Support Functions designed to specifically support human-to-human trust (aka business trust or legal trust) include:
+
+  - Identity binding mechanisms that associate a natural person to the Endpoint System itself, or to data artifacts on the Endpoint System such as identity claims or verifiable credentials. One of the strongest identity binding mechanisms is biometrics — physiological or behavioral characteristics that identify the individual (facial recognition, fingerprint readers, voice recognition, palm recognition, and so on). Layer 1 would provide the hardware and software support for registering, storing, and processing biometric primitives.
+  - Hardware-based trust attestation systems, such as those incorporated within [Trusted Platform Modules](https://trustedcomputinggroup.org/resource/trusted-platform-module-tpm-summary/), and other confidential computing systems that can provide legally valid evidence of the security characteristics of a Layer 1 component.
+
+Diversity of implementations of Layer 1 Trust Support Functions is *intentional* and a key goal of the ToIP stack design.
+
+*NOTE: For functional, performance, security, or other reasons, a Layer 1 Trust Support Function may use a remote service in its implementation, e.g., a distributed ledger, distributed directory, distributed database, distributed file system, or distributed hash table. These systems are Supporting Systems to the Layer 1 implementation; they are not part of Layer 1 itself.*
+
+### 7.3 Layer 2: Trust Spanning
+### 7.4 Layer 3: Trust Tasks
+### 7.5 Layer 4: Trust Applications
 
 ## 8. The ToIP Trust Spanning Protocol
 ### 8.1 Overview
