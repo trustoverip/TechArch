@@ -160,31 +160,36 @@ A more detailed overview showing where different decentralized digital trust inf
 
 ### 6.3 High-Level System Architecture
 
-This section describes a reference architecture for ToIP that provides a generalization of various viable solutions for trust establishment over the Internet. It provides the common concepts and vocabulary with which to discuss implementations of each component, the protocols or interfaces between these components, and interoperability among different implementations. Subsequent sections will describe these components and protocols in more detail.
+The reference architecture of the ToIP stack provides a generalization of different solutions to trust establishment over the Internet (or over other digital networks). This section introduces the basic concepts, requirements and vocabulary with which to consider: a) each functional component, b) the interface definitions and protocols between these components, and c) interoperability of solutions built upon those components. Subsequent sections will describe these components and protocols in more detail.
 
-At the highest level, a ToIP system consists of three base types of component systems that together all interact using the common infrastructure of the Internet:
+At the highest level, ToIP interactions occur between three basic types of interacting systems.
 
-1. At least two Endpoint Systems (often simply referred to as Endpoints).
-1. A set of zero or more Supporting Systems that support trust establishment among the Endpoint Systems.
-1. A set of zero or more Intermediary Systems that may be employed to assist the interactions between the Endpoint Systems. 
+  1. **Endpoint Systems** (often simply referred to as Endpoints): the ToIP systems between which end-to-end trust is enabled following the End-to-End Principle. See [Section 7.1](#71-endpoint-systems).
+  1. **Intermediary Systems** may be used to assist in the interactions between the Endpoint Systems. In that context, Intermediary systems are involved in the ToIP Trust Spanning Protocol, and may themselves be Endpoint Systems. Intermediary systems are not a dependency to Endpoint systems' trust relationship. See [Section 9](#9-intermediary-systems).
+  1. **Supporting Systems** are typically required to support the definition of Endpoints and trust establishment between Endpoint Systems. Supporting Systems that facilitate the authenticity and autonomy of an Endpoint System are termed “Privileged” Supporting Systems, others are “Unprivileged” (see [Section 10.1](#101-overview)). Supporting Systems are not directly involved in the ToIP Trust Spanning Protocol. See [Section 10](#10-supporting-systems).
 
-This high level view is depicted in Figure 3.
+The relationships between these systems is shown in Figure 5.
 
-<img src="/images/Highlevelreferencearchitecture.jpeg" alt="High level view of the ToIP Reference Architecture" style="width:800px;"/>
+<img src="/images/ThreeTypesofSystems.png" alt="Three Types of Systems" style="width:600px;"/>
 
-**Figure 3: High Level View of the ToIP Reference Architecture**
+**Figure 5: The three basic types of component systems in ToIP architecture**
 
-The first level of decomposition is based on the locus of control. This is a critical decision because the locus of control determines the chains of dependencies as we construct end-to-end trust between any two Endpoint Systems. Each subsystem, whether it is classified as an Endpoint System, Supporting System, or Intermediary System, is its own locus of control. An Endpoint System, for example, may be a tiny IoT device, a personal smartphone, or a large capacity service hosted in a cloud. What matters to the architecture is that it exhibits a consistent locus of control with respect to other subsystems.
+The definition of each system is anchored to its defined (and agreed) locus of control, i.e., who is able to exert control over the operation of that system. Clarity about the locus of control and the dependencies between systems is critical as end-to-end trust is constructed between any two Endpoint Systems. Each system, whether it is classified as an Endpoint System, Intermediary System or Supporting System, defines its own locus of control. An Endpoint System, for example, may be a tiny IoT device, a personal smartphone, or a large capacity service hosted in a cloud. What matters to the architecture is that it exhibits a consistent locus of control and, therefore, consistent interaction protocols with respect to other systems. 
 
-These subsystems collaborate with each other through three types of interactions:
-- Endpoint System to Endpoint System
-- Endpoint System to Supporting Systems
-- Endpoint System to Intermediary Systems
+These subsystems collaborate with each other through three types of consistent ToIP interactions:
+  1. Endpoint System to Endpoint System
+  1. Endpoint System to Supporting Systems
+  1. Endpoint System to Intermediary Systems
 
-The ToIP Endpoint Systems follow a 4-layered design pattern. As we move up the stack, roles played by an Endpoint System are often given more context specific names. For example, a credential exchange Trust Task in layer 3 may use terms such as issuers, holders, and verifiers to describe such roles played by the Endpoint Systems and the interactions among them in that context. These higher layer terms are specific to that context and must be consistent with the abstract and general terms used in this Reference Architecture.
+ToIP Endpoint Systems and their interactions follow the 4-layer design pattern described in [Section 6.2](#62-the-four-layer-pattern). As we move up the stack (to Layers 3 and 4), the roles that may be played by an Endpoint System are often given more context-specific names. For example, at Layer 3, an Endpoint System involved in the Trust Task of exchanging [verifiable credentials](https://www.w3.org/TR/vc-data-model/) may be classified as an “Issuer”, “Holder”, or “Verifier” in that specific interaction context. These higher layer terms are specific to that context and must be consistent with the abstract general terms used in this reference architecture.
+
+Figure 6 shows a high level view of how these three basic types of component systems might interact using the existing infrastructure of the Internet.
+
+<img src="/images/HighLevelView.png" alt="High level view of ToIP consistent system interactions" style="width:800px;"/>
+
+**Figure 6: High level view of ToIP consistent system interactions**
 
 The normative requirements for each type of subsystem and interaction across the ToIP layers are specified in the following sections.
-
 
 ## 7. Endpoint Systems and the Layered Stack
 ### 7.1 Endpoint Systems
@@ -200,13 +205,13 @@ The normative requirements for each type of subsystem and interaction across the
 ### 8.4 Routing
 ### 8.5 Interface to Layer 1
 
-## 9. Supporting Systems
-### 9.1 Overview
-### 9.2 Example 1
-### 9.3 Example 2
-### 9.4 Generalization
+## 9. Intermediary Systems
 
-## 10. Intermediary Systems
+## 10. Supporting Systems
+### 10.1 Overview
+### 10.2 Example 1
+### 10.3 Example 2
+### 10.4 Generalization
 
 ## 11. Endpoint System Interoperability
 ### 11.1 Interoperability between Endpoints with Decentralized Identifiers
