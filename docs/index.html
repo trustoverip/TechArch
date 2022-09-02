@@ -204,6 +204,9 @@
 <li class='ui item' >Digital notaries</li>
 </ul>
 <h3 class='ui small header'  id="75layer4trustapplications">7.5 Layer 4: Trust Applications</h3>
+<p>Layer 4 is an open-ended application layer for any application that needs to engage in trusted interactions. Layer 4 Trust Applications MAY use any number of Layer 3 Trust Task Protocols. [REQ L4.1]. </p>
+<p>If a Layer 4 Trust Application does not use a Layer 3 Trust Task Protocol, it MUST communicate with other Endpoint Systems using the Layer 2 Trust Spanning Protocol. [REQ L4.2]</p>
+<p>Layer 4 is the layer where humans “touch” the ToIP stack, so this is where Design Principle #8 (<a href="https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf">Trust is Human</a>) and #14 (<a href="https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf">Trust and Technology have a Reciprocal Relationship</a>) come into play. The human experience of digital trust is so critical that Layer 4 has one more requirement: A Layer 4 Trust Application MUST support any ToIP-defined Trust Affordances relevant to that application. [REQ 4.3]</p>
 <h2 class='ui medium header'  id="8thetoiptrustspanningprotocol">8. The ToIP Trust Spanning Protocol</h2>
 <h3 class='ui small header'  id="81overview">8.1 Overview</h3>
 <h3 class='ui small header'  id="82identifiers">8.2 Identifiers</h3>
