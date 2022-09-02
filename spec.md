@@ -268,6 +268,26 @@ Layer 2 is the trust spanning layer of the ToIP stack. In keeping with Design Pr
 The requirements for the ToIP Trust Spanning Protocol are defined in [Section 8](#8-the-toip-trust-spanning-protocol).
 
 ### 7.4 Layer 3: Trust Tasks
+
+Many applications may require more complex trust-building functions than the minimal set offered directly by the ToIP Trust Spanning Protocol. When one of these functions is reusable across multiple contexts that are separated in time, space, or perspective, we call it a Trust Task. Trust Tasks can be standardized as their own higher-level protocols at Layer 3 of the ToIP stack. 
+
+A Layer 3 Trust Task Protocol MUST communicate either over the Layer 2 ToIP Trust Spanning Protocol or over another Layer 3 Trust Task Protocol for all communications related to trust establishment between Endpoint Systems. [REQ L3.1] This is directly analogous to how TCP and UDP communicate over IP, and how HTTP communicates over TCP. A Layer 3 Trust Task MAY use other protocols, but only for other purposes (since short-circuiting Layer 2 when establishing trust with other Endpoint Systems would undermine the trust guarantees of the ToIP stack). [REQ L3.2]
+
+Note that because Confidentiality and Privacy are optional for the Layer 2 ToIP Trust Spanning Protocol, the following requirement applies: A Layer 3 Trust Task Protocol intended to communicate private data SHOULD support Confidentiality and Privacy. [REQ L3.3]
+
+There can be as many Trust Tasks Protocols as are needed by Layer 4 Trust Applications. Some examples of Trust Tasks include:
+
+  - Human authentication (as opposed to cryptographic authentication performed at Layer 2), including biometric authentication
+  - Exchanges of verifiable credentials (issue, request, offer, present, revoke)
+  - Provisioning, updating, and verification of digital identities
+  - Consent management
+  - Requesting and signing of digital documents
+  - Secure messaging
+  - Secure data sharing
+  - Digital payment or value exchange in any form
+  - Digital auctions
+  - Digital notaries
+
 ### 7.5 Layer 4: Trust Applications
 
 ## 8. The ToIP Trust Spanning Protocol
