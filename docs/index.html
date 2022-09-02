@@ -187,6 +187,22 @@
 <p>Layer 2 is the trust spanning layer of the ToIP stack. In keeping with Design Principle #3 (<a href="https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf">The Hourglass Model</a>), this means there is only one requirement for Layer 2: A ToIP Endpoint System MUST communicate with another ToIP Endpoint System using the ToIP Trust Spanning Protocol. [REQ L2.1] No other functions are required.</p>
 <p>The requirements for the ToIP Trust Spanning Protocol are defined in <a href="#8-the-toip-trust-spanning-protocol">Section 8</a>.</p>
 <h3 class='ui small header'  id="74layer3trusttasks">7.4 Layer 3: Trust Tasks</h3>
+<p>Many applications may require more complex trust-building functions than the minimal set offered directly by the ToIP Trust Spanning Protocol. When one of these functions is reusable across multiple contexts that are separated in time, space, or perspective, we call it a Trust Task. Trust Tasks can be standardized as their own higher-level protocols at Layer 3 of the ToIP stack. </p>
+<p>A Layer 3 Trust Task Protocol MUST communicate either over the Layer 2 ToIP Trust Spanning Protocol or over another Layer 3 Trust Task Protocol for all communications related to trust establishment between Endpoint Systems. [REQ L3.1] This is directly analogous to how TCP and UDP communicate over IP, and how HTTP communicates over TCP. A Layer 3 Trust Task MAY use other protocols, but only for other purposes (since short-circuiting Layer 2 when establishing trust with other Endpoint Systems would undermine the trust guarantees of the ToIP stack). [REQ L3.2]</p>
+<p>Note that because Confidentiality and Privacy are optional for the Layer 2 ToIP Trust Spanning Protocol, the following requirement applies: A Layer 3 Trust Task Protocol intended to communicate private data SHOULD support Confidentiality and Privacy. [REQ L3.3]</p>
+<p>There can be as many Trust Tasks Protocols as are needed by Layer 4 Trust Applications. Some examples of Trust Tasks include:</p>
+<ul class='ui list' >
+<li class='ui item' >Human authentication (as opposed to cryptographic authentication performed at Layer 2), including biometric authentication</li>
+<li class='ui item' >Exchanges of verifiable credentials (issue, request, offer, present, revoke)</li>
+<li class='ui item' >Provisioning, updating, and verification of digital identities</li>
+<li class='ui item' >Consent management</li>
+<li class='ui item' >Requesting and signing of digital documents</li>
+<li class='ui item' >Secure messaging</li>
+<li class='ui item' >Secure data sharing</li>
+<li class='ui item' >Digital payment or value exchange in any form</li>
+<li class='ui item' >Digital auctions</li>
+<li class='ui item' >Digital notaries</li>
+</ul>
 <h3 class='ui small header'  id="75layer4trustapplications">7.5 Layer 4: Trust Applications</h3>
 <h2 class='ui medium header'  id="8thetoiptrustspanningprotocol">8. The ToIP Trust Spanning Protocol</h2>
 <h3 class='ui small header'  id="81overview">8.1 Overview</h3>
