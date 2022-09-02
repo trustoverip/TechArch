@@ -133,27 +133,30 @@ With regard to the second design goal, the ToIP reference architecture shares th
 
 ### 6.2 The Four Layer Pattern
 
-Together these considerations lead to the general four-layer pattern summarized in Table 1.
+Together these considerations lead to the general *four-layer pattern* of a protocol stack summarized in Table 1.
 
 | Leyer # | Generic Name | ToIP Name |
 |---------|--------------|-----------|
-| 4       | Application. | Trust Application |
+| 4       | Applications | Trust Applications |
 | 3       | Supported protocols | Trust Tasks |
-| 2       | Spanning Protocol | Trust Spanning Protocol |
-| 1       | Supporting Protocols | Trust support |
+| 2       | Spanning protocol | Trust Spanning |
+| 1       | Supporting protocols | Trust Support |
 
 **Table 1: The four layer pattern of large-scale protocol stacks**
 
-The keystone to this pattern is the role of the spanning layer at Layer 2. Much of the success of the Internet is attributed to its “hourglass” design in which a single spanning layer protocol—the IP protocol—is supported by a variety of lower-level protocols below it. The spanning layer in turn supports a variety of higher-level protocols above it. How this hourglass design applies to the four ToIP layers is illustrated in Figure 2.
+The best-known example of this four-layer pattern is the TCP/IP Internet protocol stack, where any number of local area networking protocols at Layer 1 support a single spanning layer protocol—the IP protocol—at Layer 2. This spanning layer in turn supports multiple higher-level protocols at Layer 3 (e.g., TCP, UDP, HTTP, SMTP) designed to meet the needs of many different applications at Layer 4.
 
-<img src="/images/Fourlayerpattern.jpeg" alt="Four layer pattern" style="width:800px;"/>
+Much of the success of the Internet is attributed to this “hourglass” design in which the spanning layer protocol maximizes interoperability by providing a common way for all the higher level layers to communicate with all the lower level layers. This is why the design of the trust spanning layer should be “as simple as possible but no simpler”. Figure 3 illustrates how this same hourglass design applies to the four ToIP layers.
 
-**Figure 2: How the four layer pattern fits the Hourglass Model**
+<img src="/images/HourGlass.png" alt="Four layer pattern in the hourglass model" style="width:500px;"/>
 
-The spanning layer protocol maximizes interoperability because it provides a common way for all the higher level protocols to communicate via all the lower level protocols. This is why the design of the spanning layer protocol must be “as simple as possible but no simpler”. It should support only the minimal foundational functions needed by the supported protocols. 
-In terms of our specific design goals, this means the ToIP trust spanning layer must only satisfy our first goal. All other goals can be accomplished by protocols and functions at other layers. 
+**Figure 3: How the four layer pattern fits the Hourglass Model**
 
+A more detailed overview showing where different decentralized digital trust infrastructure functions fall relative to the trust spanning layer is shown in Figure 4.
 
+<img src="/images/ExampleStack.png" alt="Examples of what falls above and below the trust spanning layer" style="width:800px;"/>
+
+**Figure 4: Examples of what falls above and below the trust spanning layer**
 
 ### 6.3 High-Level System Architecture
 
