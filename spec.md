@@ -290,6 +290,12 @@ There can be as many Trust Tasks Protocols as are needed by Layer 4 Trust Applic
 
 ### 7.5 Layer 4: Trust Applications
 
+Layer 4 is an open-ended application layer for any application that needs to engage in trusted interactions. Layer 4 Trust Applications MAY use any number of Layer 3 Trust Task Protocols. [REQ L4.1]. 
+
+If a Layer 4 Trust Application does not use a Layer 3 Trust Task Protocol, it MUST communicate with other Endpoint Systems using the Layer 2 Trust Spanning Protocol. [REQ L4.2]
+
+Layer 4 is the layer where humans “touch” the ToIP stack, so this is where Design Principle #8 ([Trust is Human](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)) and #14 ([Trust and Technology have a Reciprocal Relationship](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)) come into play. The human experience of digital trust is so critical that Layer 4 has one more requirement: A Layer 4 Trust Application MUST support any ToIP-defined Trust Affordances relevant to that application. [REQ 4.3]
+
 ## 8. The ToIP Trust Spanning Protocol
 ### 8.1 Overview
 ### 8.2 Identifiers
