@@ -191,6 +191,24 @@ Figure 6 shows a high level view of how these three basic types of component sys
 
 The normative requirements for each type of subsystem and interaction across the ToIP layers are specified in the following sections.
 
+### 6.4 ToIP Identifiers
+
+Just as IP addresses are the heart of the Internet TCP/IP stack, ToIP identifiers are the heart of the ToIP stack. Figure 7 illustrates the three basic types of ToIP identifiers.
+
+<img src="/images/IdentifierTypes.png" alt="Three classes of identifiers" style="width:800px;"/>
+
+**Figure 7: The three classes of identifiers used with ToIP architecture**
+
+Design Principle #5 ([Cryptographic Verifiability](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)) states that “messages and data structures exchanged between parties should be verifiable as authentic using standard cryptographic algorithms and protocols”. This requires that Endpoint Systems be able to associate, discover and verify the cryptographic keys associated with a ToIP identifier. This specification will refer to identifiers that meet this basic requirement of cryptographic verifiability as verifiable identifiers (VIDs). 
+
+VIDs divide into two subclasses: those that rely on centralized registries, and those that do not. An example of the former is the authority portion of an HTTPS URL. It relies on a centralized DNS registry for resolution, but that domain name is associated with an X.509 digital certificate that provides a cryptographic binding with a public key.
+
+VIDs that do not require a centralized registry are known as decentralized identifiers or DIDs. DIDs fulfill the requirement of Design Principle #4 ([Decentralization by Design and Default](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)). The W3C has established a global standard for the syntax and resolution format of [DIDs](https://www.w3.org/TR/did-core/).
+
+DIDs can be further subdivided into two classes: those whose verification requires the use of an external system outside of the autonomy boundary of the DID controller, and those whose verification can be accomplished using cryptography alone. The latter are often called self-certifying identifiers. Since self-certifying identifiers enable an Endpoint System to be completely autonomous, this specification will refer to this class of identifiers as autonomous identifiers (AIDs). A [KERI autonomic identifier](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) is an example of an AID.
+
+Requirements for ToIP identifiers are covered in [Section 8.2](#82-identifiers).
+
 ## 7. Endpoint Systems and the Layered Stack
 ### 7.1 Endpoint Systems
 ### 7.2 Layer 1 (Infrastructures)
@@ -200,7 +218,7 @@ The normative requirements for each type of subsystem and interaction across the
 
 ## 8. The ToIP Trust Spanning Protocol
 ### 8.1 Overview
-### 8.2 Identifier
+### 8.2 Identifiers
 ### 8.3 Messages
 ### 8.4 Routing
 ### 8.5 Interface to Layer 1
