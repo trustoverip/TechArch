@@ -363,6 +363,24 @@ Such proofs may require support from one or more Layer 1 Trust Support Functions
 Different considerations apply when a ToIP identifier needs to be provably bound to a digital resource, such as a file, photo, or video. This can be accomplished using ToIP identifiers that serve as content-addressable identifiers or self-addressing identifiers that are derived from a cryptographic hash of the subject resource. For example, see [ACDC](https://trustoverip.github.io/tswg-acdc-specification/draft-ssmith-acdc.html).
 
 ### 8.3 Messages
+
+Messages are the lingua franca of the ToIP Trust Spanning Protocol. To achieve the design goals in [Section 6.1](#61-design-goals), the following requirements must be met:
+
+The ToIP Trust Spanning Protocol specification MUST define how to construct and format messages that are cryptographically verifiable to have the following four properties:
+
+  - Authenticity: the message was sent from a sender who has control over the ToIP identifier.
+  - Integrity: the contents of the message transmitted by the sender are received by the recipient without modification.
+  - Confidentiality: the contents of the message are only accessible by authorized parties.
+  - Privacy: the contents of the message are bound to conditions of usage agreed to by the parties. [REC L2.9]
+
+In a ToIP Endpoint System, an implementation of the ToIP Trust Spanning Protocol MUST support authenticity and integrity. [REQ L2.10]
+
+In a ToIP Endpoint System, an implementation of the ToIP Trust Spanning Protocol MAY support confidentiality and privacy. [REQ L2.11]
+
+The ToIP Trust Spanning Protocol MUST enable the composition of higher-level Trust Tasks (such features as co-protocols). [REQ 2.12] Examples of such features include discovery, threading, timeouts, ACKs, and attachments. However this must be balanced with the requirement to only add additional functions to this protocol if they are universally beneficial.
+
+The ToIP Trust Spanning Protocol MUST support extensible message schema. [REQ 2.13] This enables different Trust Task protocols to be constructed without changing the base format.
+
 ### 8.4 Routing
 ### 8.5 Interface to Layer 1
 
