@@ -232,6 +232,26 @@
 <p><strong>Figure 10: A view of the ToIP protocol stack on an Endpoint System</strong></p>
 <p>The following sections enumerate the requirements in each of these four areas.</p>
 <h3 class='ui small header'  id="82identifiers">8.2 Identifiers</h3>
+<p>A key difference between Internet architecture and ToIP architecture is that the former only needed to identify the network endpoints of devices for data communications. The solution was Internet Protocol (IP) addresses: a global addressing scheme for network endpoints independent of any specific local area network.</p>
+<p>By contrast, ToIP Layer 2 architecture needs to identify and route messages between the entities participating in trust relationships. While this set of entities may include the devices serving as Endpoint Systems, it extends beyond the network to include identifiers for parties —people and organizations using the network to interact and transact.</p>
+<p>In order to establish trust in ToIP identifiers (<a href="#64-toip-identifiers">Section 6.4</a>) regardless of the type of entity to which they are bound, they must meet the following requirements:</p>
+<ul class='ui list' >
+<li class='ui item' ><p>A ToIP identifier MUST be unique within the context in which it is used for identification. [REQ L2.2] This means ToIP identifiers intended to be globally resolvable need to be globally unique; identifiers intended to be locally resolvable need to be locally unique.</p></li>
+<li class='ui item' ><p>A ToIP identifier MUST be a verifiable identifier, i.e., verifiably bound to at least one set of cryptographic keys discoverable via an associated discovery protocol. [REQ L2.3]</p></li>
+<li class='ui item' ><p>A ToIP identifier SHOULD be a decentralized identifier, i.e., a verifiable identifier that does not require registration with a centralized authority. [REQ L2.4] </p></li>
+<li class='ui item' ><p>A ToIP identifier SHOULD be an autonomous identifier, i.e., a decentralized identifier that is self-certifying and fully portable. [REQ L2.5]</p></li>
+<li class='ui item' ><p>A ToIP identifier SHOULD support rotation of the associated cryptographic keys for the lifetime of the identifier. [REQ L2.6] </p></li>
+<li class='ui item' ><p>A ToIP identifier MAY also support rotation to an entirely different ToIP identifier that can be cryptographically verified to be a synonym of the original ToIP identifier. [REQ 2.7]</p></li>
+<li class='ui item' ><p>A ToIP identifier SHOULD support the ability to: a) associate the identifier with the network address of one or more ToIP Systems that can deliver to one or more Endpoint Systems under the locus of control of the ToIP identifier controller, and b) if desired by that controller, enable that association to be discoverable. [REC L2.8]</p></li>
+</ul>
+<p>Special considerations apply when a ToIP identifier needs to be provably bound to a specific party, i.e., a person or an organization. Proof of such a binding can be a critical factor in establishing a desired level of assurance in the identity of that party. Such proof can be accomplished using multiple mechanisms such as:</p>
+<ol>
+<li class='ui item' >Proof of control of the cryptographic keys bound to the ToIP identifier.</li>
+<li class='ui item' >Proof of control of one or more verifiable credentials describing the identified party.</li>
+<li class='ui item' >Proof of one or more biometric primitives describing the identified party.</li>
+</ol>
+<p>Such proofs may require support from one or more Layer 1 Trust Support Functions within the Endpoint, and/or support of one or more Supporting Systems outside of the Endpoint, and/or the additional invocation of one or more Layer 3 Trust Task Protocols. These steps are out-of-scope for the Layer 2 Trust Spanning Protocol.</p>
+<p>Different considerations apply when a ToIP identifier needs to be provably bound to a digital resource, such as a file, photo, or video. This can be accomplished using ToIP identifiers that serve as content-addressable identifiers or self-addressing identifiers that are derived from a cryptographic hash of the subject resource. For example, see <a href="https://trustoverip.github.io/tswg-acdc-specification/draft-ssmith-acdc.html">ACDC</a>.</p>
 <h3 class='ui small header'  id="83messages">8.3 Messages</h3>
 <h3 class='ui small header'  id="84routing">8.4 Routing</h3>
 <h3 class='ui small header'  id="85interfacetolayer1">8.5 Interface to Layer 1</h3>
