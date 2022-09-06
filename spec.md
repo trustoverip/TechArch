@@ -507,5 +507,46 @@ For more information about ToIP Foundation, please read our [Introduction to ToI
 
 ## Appendix A: Consolidated Requirements
 
+For ease of reference, the following table consolidates all normative requirements in this specification. Each requirement is linked to the section in which it appears.
+
+| Req # | Description | Section |
+|---------|--------------|-----------|
+| | **General ToIP Architecture Requirements**| |
+| A.1       | Implementers SHOULD ensure autonomy for ToIP Endpoint Systems. | [7.1](#71-endpoint-systems) |
+|A.2 | In a ToIP Endpoint System, the higher layers of the ToIP protocol stack MUST communicate with the lower layers via defined interfaces. | [7.1](#71-endpoint-systems)|
+|A.3|A ToIP Intermediary System SHOULD be able to perform the functions of a ToIP Endpoint System for the purpose of routing enveloped messages using the ToIP Trust Spanning Protocol.|[9](#9-intermediary-systems)|
+|A.4|The ToIP protocol stack in an Endpoint System MAY use the services of a Supporting System at any layer.|[10.1](#101-overview)|
+||**ToIP Layer 1 Requirements**| |
+|L1.1|If a ToIP Endpoint System includes Trust Support Functions, then those functions MUST be included at Layer 1 of the Endpoint System.|[7.2](#72-layer-1-trust-support)|
+| |**ToIP Layer 2 Requirements**| |
+|L2.1|A ToIP Endpoint System MUST communicate with another ToIP Endpoint System using the ToIP Trust Spanning Protocol.|[7.3](#73-layer-2-trust-spanning)|
+|L2.2|A ToIP identifier MUST be unique within the context in which it is used for identification.|[8.2](#82-identifiers)|
+|L2.3|A ToIP identifier MUST be a verifiable identifier, i.e., verifiably bound to at least one set of cryptographic keys discoverable via an associated discovery protocol.|[8.2](#82-identifiers)|
+|L2.4|A ToIP identifier SHOULD be a decentralized identifier, i.e., a verifiable identifier that does not require registration with a centralized authority.|[8.2](#82-identifiers)|
+|L2.5|A ToIP identifier SHOULD be an autonomous identifier, i.e., a decentralized identifier that is self-certifying and fully portable.|[8.2](#82-identifiers)|
+|L2.6|A ToIP identifier SHOULD support rotation of the associated cryptographic keys for the lifetime of the identifier.|[8.2](#82-identifiers)|
+|L2.7|A ToIP identifier MAY also support rotation to an entirely different ToIP identifier that can be cryptographically verified to be a synonym of the original ToIP identifier.|[8.2](#82-identifiers)|
+|L2.8|A ToIP identifier SHOULD support the ability to: a) associate the identifier with the network address of one or more ToIP Systems that can deliver to one or more Endpoint Systems under the locus of control of the ToIP identifier controller, and, b) if desired by the controller, enable that association to be discoverable.|[8.2](#82-identifiers)|
+|L2.9|The ToIP Trust Spanning Protocol specification MUST define how to construct and format messages that are cryptographically verifiable to have the following four properties: (1) Authenticity: the message was sent from a sender who has control over the ToIP identifier. (2) Integrity: the contents of the message transmitted by the sender are received by the recipient without modification. (3) Confidentiality: the contents of the message are only accessible by authorized parties. (4) Privacy: the contents of the message are bound to conditions of usage agreed to by the parties|[8.3](#83-messages)|
+|L2.10|In a ToIP Endpoint System, an implementation of the ToIP Trust Spanning Protocol MUST support authenticity and integrity.|[8.3](#83-messages)|
+|L2.11|In a ToIP Endpoint System, an implementation of the ToIP Trust Spanning Protocol MAY support confidentiality and privacy.|[8.3](#83-messages)|
+|L2.12|The ToIP Trust Spanning Protocol MUST enable the composition of higher-level Trust Task Protocols (such features as co-protocols).|[8.3](#83-messages)|
+|L2.13|The ToIP Trust Spanning Protocol MUST support extensible message schema.|[8.3](#83-messages)|
+|L2.14|The ToIP Trust Spanning Protocol MUST support resolution of ToIP identifiers to: a) the network addresses of receiving Endpoint Systems, and b) any required cryptographic keys.|[8.4](#84-routing)|
+|L2.15|The ToIP Trust Spanning Protocol MUST support transport of messages via ToIP Layer 1 interfaces.|[8.4](#84-routing)|
+|L2.16|The ToIP Trust Spanning Protocol MUST support delivery of messages to the Layer 2 interface of the Endpoint System of the ultimate receiver of the message.|[8.4](#84-routing)|
+|L2.17|The ToIP Trust Spanning Protocol MUST support delivery of messages via Intermediary Systems.|[8.4](#84-routing)|
+|L2.18|The ToIP Trust Spanning Protocol MUST support confidentiality with regard to the metadata required for message routing.|[8.4](#84-routing)|
+| |**ToIP Layer 3 Requirements**| |
+|L3.1|A Layer 3 Trust Task Protocol MUST communicate either over the Layer 2 ToIP Trust Spanning Protocol or over another Layer 3 Trust Task Protocol for all communications related to trust establishment between Endpoint Systems.|[7.4](#74-layer-3-trust-tasks)|
+|L3.2|A Layer 3 Trust Task MAY use other protocols, but only for other purposes (since short-circuiting Layer 2 when establishing trust with other Endpoint Systems would undermine the trust guarantees of the ToIP stack).|[7.4](#74-layer-3-trust-tasks)|
+|L3.3|A Layer 3 Trust Task Protocol intended to communicate private data SHOULD support Confidentiality and Privacy.|[7.4](#74-layer-3-trust-tasks)|
+| |**ToIP Layer 4 Requirements**| |
+|L4.1|Layer 4 Trust Applications MAY use any number of Layer 3 Trust Task Protocols.|[7.5](#75-layer-4-trust-applications)|
+|L4.2|If a Layer 4 Trust Application does not use a Layer 3 Trust Task Protocol, it MUST communicate with other Endpoint Systems using the Layer 3 Trust Spanning Protocol|[7.5](#75-layer-4-trust-applications)|
+|L4.3|A Layer 4 Trust Application MUST support any ToIP-defined Trust Affordances relevant to that application.|[7.5](#75-layer-4-trust-applications)|
+
+
+
 ## Appendix B: Mapping of Existing Technologies into the ToIP Stack
 
