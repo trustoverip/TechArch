@@ -411,6 +411,36 @@ Given these requirements for the ToIP Trust Spanning Protocol at Layer 2, the Tr
   1. **User binding** is the interface via which a Layer 2 implementation can request and verify a biometric or other authentication information from a user. 
 
 ## 9. Intermediary Systems
+*This section is normative.*
+
+Intermediary Systems are mediators for facilitating the ToIP Trust Spanning Protocol. Since the Internet itself is routable as long as a ToIP identifier can be resolved to a unique IP address, Intermediary Systems are not absolutely required. However they can be very beneficial in other aspects.
+
+Examples of useful Intermediary Systems include:
+
+  - **Store and forward intermediaries.** Some Endpoint Systems are not always connected to the Internet (e.g. smartphones). As with email, effective communication between an Endpoint System and a smartphone or similar device could use an Intermediary System to receive and store the messages while the device is not connected. Messages are  subsequently delivered to the eventual receiver when the device becomes connected again.
+  - **Multi-device intermediaries.** Individuals who use multiple computing devices (e.g., smartphone, laptop, smart watch, smart car, etc.) may choose to use an intermediary to simplify configuration and management of these devices as well as routing of messages to the appropriate device.
+  - **Anonymizing intermediaries.** When confidentiality is desired in the routing of messages, intermediaries designed for this purpose can obfusticate the message routing path.
+  - **Auditing intermediaries.** When auditing of message traffic is required for regulatory or compliance reasons, intermediaries designed for this purpose can maintain the necessary audit logs.
+
+Intermediary Systems differ from Supporting Systems because they reside between Endpoint Systems and are visible to the Endpoint Systems.
+
+<img src="/images/IntermediarySystems.png" alt="The role of Intermediary Systems" style="width:800px;"/>
+
+**Figure 11: The role of Intermediary Systems**
+
+In Figure 11, end-to-end communication between Endpoint Systems A and B are routed through Intermediary Systems X and Y. In this case, all systems implement the Layer 2 protocol as described in [Section 8](#8-the-toip-trust-spanning-protocol). Routing uses “nested envelopes” as follows:
+
+  1. Endpoint System A prepares a message for Endpoint System B and puts it in an inner message envelope addressed to Endpoint System B.
+  1. Endpoint System A places the inner message envelope inside an outer message envelope addressed to Intermediary System X.
+  1. Endpoint System A delivers the outer message envelope to Intermediary System X.
+  1. Intermediary System X removes the outer message envelope and replaces it with a new outer message envelope addressed to the next hop: Intermediary System Y.
+  1. Intermediary System X delivers the new outer message envelope to Intermediary System Y.
+  1. Intermediary System Y removes the outer message envelope.
+  1. Intermediary System Y delivers the inner message envelope to Endpoint System B.
+
+This pattern casts one requirement for the use of Intermediary Systems:
+
+A ToIP Intermediary System SHOULD be able to perform the functions of a ToIP Endpoint System for the purpose of routing enveloped messages using the ToIP Trust Spanning Protocol. [REC A.3]
 
 ## 10. Supporting Systems
 ### 10.1 Overview
