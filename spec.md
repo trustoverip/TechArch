@@ -500,6 +500,11 @@ Figure 14: A generalization of how Endpoint Systems and Supporting Systems inter
 
 ## About the ToIP Foundation
 
+Founded in May 2020 with 27 original founding member organizations, the ToIP Foundation has now grown to over 400 participating organizations plus over 100 additional individual participants. Our mission is to define an overall architecture for Internet-scale digital trust that combines cryptographic assurance at the machine layers (technology) with human accountability at the business, legal, and social layers (governance).
+
+For more information about ToIP Foundation, please read our [Introduction to ToIP](https://trustoverip.org/permalink/Introduction-to-ToIP-V2.0-2021-11-17.pdf) white paper or visit our website at https://trustoverip.org/.
+
+
 ## Appendix A: Consolidated Requirements
 
 ## Appendix B: Mapping of Existing Technologies into the ToIP Stack
