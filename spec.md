@@ -331,6 +331,37 @@ A view of the ToIP protocol stack on an Endpoint System is shown in Figure 10. T
 The following sections enumerate the requirements in each of these four areas.
 
 ### 8.2 Identifiers
+
+A key difference between Internet architecture and ToIP architecture is that the former only needed to identify the network endpoints of devices for data communications. The solution was Internet Protocol (IP) addresses: a global addressing scheme for network endpoints independent of any specific local area network.
+
+By contrast, ToIP Layer 2 architecture needs to identify and route messages between the entities participating in trust relationships. While this set of entities may include the devices serving as Endpoint Systems, it extends beyond the network to include identifiers for parties —people and organizations using the network to interact and transact.
+
+In order to establish trust in ToIP identifiers ([Section 6.4](#64-toip-identifiers)) regardless of the type of entity to which they are bound, they must meet the following requirements:
+
+  - A ToIP identifier MUST be unique within the context in which it is used for identification. [REQ L2.2] This means ToIP identifiers intended to be globally resolvable need to be globally unique; identifiers intended to be locally resolvable need to be locally unique.
+
+  - A ToIP identifier MUST be a verifiable identifier, i.e., verifiably bound to at least one set of cryptographic keys discoverable via an associated discovery protocol. [REQ L2.3]
+
+  - A ToIP identifier SHOULD be a decentralized identifier, i.e., a verifiable identifier that does not require registration with a centralized authority. [REQ L2.4] 
+
+  - A ToIP identifier SHOULD be an autonomous identifier, i.e., a decentralized identifier that is self-certifying and fully portable. [REQ L2.5]
+
+  - A ToIP identifier SHOULD support rotation of the associated cryptographic keys for the lifetime of the identifier. [REQ L2.6] 
+
+  - A ToIP identifier MAY also support rotation to an entirely different ToIP identifier that can be cryptographically verified to be a synonym of the original ToIP identifier. [REQ 2.7]
+
+  - A ToIP identifier SHOULD support the ability to: a) associate the identifier with the network address of one or more ToIP Systems that can deliver to one or more Endpoint Systems under the locus of control of the ToIP identifier controller, and b) if desired by that controller, enable that association to be discoverable. [REC L2.8]
+
+Special considerations apply when a ToIP identifier needs to be provably bound to a specific party, i.e., a person or an organization. Proof of such a binding can be a critical factor in establishing a desired level of assurance in the identity of that party. Such proof can be accomplished using multiple mechanisms such as:
+
+  1. Proof of control of the cryptographic keys bound to the ToIP identifier.
+  1. Proof of control of one or more verifiable credentials describing the identified party.
+  1. Proof of one or more biometric primitives describing the identified party.
+
+Such proofs may require support from one or more Layer 1 Trust Support Functions within the Endpoint, and/or support of one or more Supporting Systems outside of the Endpoint, and/or the additional invocation of one or more Layer 3 Trust Task Protocols. These steps are out-of-scope for the Layer 2 Trust Spanning Protocol.
+
+Different considerations apply when a ToIP identifier needs to be provably bound to a digital resource, such as a file, photo, or video. This can be accomplished using ToIP identifiers that serve as content-addressable identifiers or self-addressing identifiers that are derived from a cryptographic hash of the subject resource. For example, see [ACDC](https://trustoverip.github.io/tswg-acdc-specification/draft-ssmith-acdc.html).
+
 ### 8.3 Messages
 ### 8.4 Routing
 ### 8.5 Interface to Layer 1
