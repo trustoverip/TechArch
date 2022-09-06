@@ -279,6 +279,13 @@
 <p>The ToIP Trust Spanning Protocol MUST support the option to deliver messages via Intermediary Systems. [REC 2.17]</p>
 <p>The ToIP Trust Spanning Protocol MUST support confidentiality with regard to the metadata required for message routing. [REC 2.18]</p>
 <h3 class='ui small header'  id="85interfacetolayer1">8.5 Interface to Layer 1</h3>
+<p>Given these requirements for the ToIP Trust Spanning Protocol at Layer 2, the Trust Support Function interfaces at Layer 1 should only need to include the following. Note that Layer 3 Trust Tasks or Layer 4 Trust Applications may also need to call these interfaces directly.</p>
+<ol>
+<li class='ui item' ><strong>Key Management System (KMS)</strong> is the interface for generating cryptographic quality keys, random numbers, or other values required by the cryptographic primitives used by the protocol.</li>
+<li class='ui item' ><strong>Secure storage</strong> is the interface through which Layer 2 can create, read, write, and delete confidential or secret data.</li>
+<li class='ui item' ><strong>Transport</strong> consists of one primitive via which the sender’s Layer 2 implementation can submit a message for transmission and another primitive through which the receiver’s Layer 1 implementation can deliver a message up to Layer 2.</li>
+<li class='ui item' ><strong>User binding</strong> is the interface via which a Layer 2 implementation can request and verify a biometric or other authentication information from a user. </li>
+</ol>
 <h2 class='ui medium header'  id="9intermediarysystems">9. Intermediary Systems</h2>
 <h2 class='ui medium header'  id="10supportingsystems">10. Supporting Systems</h2>
 <h3 class='ui small header'  id="101overview">10.1 Overview</h3>
