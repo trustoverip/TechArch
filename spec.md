@@ -484,7 +484,7 @@ These supporting services differ from local dependencies (e.g. secure storage) b
 
 Figure 14 illustrates a generalization of the pattern in which Endpoint Systems and their respective Support Systems interact. This figure makes it clear that the interoperability between Endpoint Systems in each layer is orthogonal to the methods of interaction with respective Supporting Systems.
 
-<img src="/images/GeneralizedSupportingSystem.png" alt="A generalization of how Endpoint Systems and Supporting Systems interact" style="width:800px;"/>
+<img src="/images/GeneralizedSupportingSystems.png" alt="A generalization of how Endpoint Systems and Supporting Systems interact" style="width:800px;"/>
 
 Figure 14: A generalization of how Endpoint Systems and Supporting Systems interact
 
