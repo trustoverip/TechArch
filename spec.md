@@ -382,6 +382,25 @@ The ToIP Trust Spanning Protocol MUST enable the composition of higher-level Tru
 The ToIP Trust Spanning Protocol MUST support extensible message schema. [REQ 2.13] This enables different Trust Task protocols to be constructed without changing the base format.
 
 ### 8.4 Routing
+
+Routing of a message from a sender to a receiver proceeds in three steps as shown in Figure 9:
+
+  1. **Address resolution** takes the ToIP identifier of the receiver and resolves it to: a) the network address of an Endpoint System for the receiver that supports the desired Layer 1 transport mechanism, and b) the associated cryptographic keys. For example, if the ToIP identifier is a DID and the desired transport is HTTP, then a DID resolver resolves the DID following the associated DID method to retrieve the DID document. It then selects: a) the service type associated with the ToIP Trust Spanning Protocol and extracts an HTTP URL to which a connection can be made to deliver the message to the other Endpoint System, and b) the required cryptographic keys.
+  1. **Transport** is the Layer 1 mechanism to send the message to the Endpoint System of the receiver or to an Intermediary System which can eventually deliver the message. In the above example, HTTP is the transport. Over the Internet, any transport layer protocol may be a suitable transport. Other contexts may use other transports, e.g. Bluetooth, QR code, or a publish-subscribe messaging system. 
+  1. **Delivery** is the final step of delivering the message to Layer 2 of the receiver’s Endpoint System. This step may include a sub-step for an Intermediary System ([Section 9](#9-intermediary-systems)) to deliver the message to the Endpoint System, and a second sub-step for the Endpoint System’s Layer 1 transport to deliver the message to the Layer 2 interface.
+
+These steps lead to the following requirements:
+
+The ToIP Trust Spanning Protocol MUST support resolution of ToIP identifiers to: a) the network addresses of receiving Endpoint Systems, and b) any required cryptographic keys. [REC 2.14]
+
+The ToIP Trust Spanning Protocol MUST support transport of messages via ToIP Layer 1 interfaces. [REC 2.15]
+
+The ToIP Trust Spanning Protocol MUST support delivery of messages to the Layer 2 interface of the Endpoint System of the ultimate receiver of the message. [REC 2.16]
+
+The ToIP Trust Spanning Protocol MUST support the option to deliver messages via Intermediary Systems. [REC 2.17]
+
+The ToIP Trust Spanning Protocol MUST support confidentiality with regard to the metadata required for message routing. [REC 2.18]
+
 ### 8.5 Interface to Layer 1
 
 ## 9. Intermediary Systems
