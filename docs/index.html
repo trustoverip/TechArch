@@ -287,6 +287,30 @@
 <li class='ui item' ><strong>User binding</strong> is the interface via which a Layer 2 implementation can request and verify a biometric or other authentication information from a user. </li>
 </ol>
 <h2 class='ui medium header'  id="9intermediarysystems">9. Intermediary Systems</h2>
+<p><em>This section is normative.</em></p>
+<p>Intermediary Systems are mediators for facilitating the ToIP Trust Spanning Protocol. Since the Internet itself is routable as long as a ToIP identifier can be resolved to a unique IP address, Intermediary Systems are not absolutely required. However they can be very beneficial in other aspects.</p>
+<p>Examples of useful Intermediary Systems include:</p>
+<ul class='ui list' >
+<li class='ui item' ><strong>Store and forward intermediaries.</strong> Some Endpoint Systems are not always connected to the Internet (e.g. smartphones). As with email, effective communication between an Endpoint System and a smartphone or similar device could use an Intermediary System to receive and store the messages while the device is not connected. Messages are  subsequently delivered to the eventual receiver when the device becomes connected again.</li>
+<li class='ui item' ><strong>Multi-device intermediaries.</strong> Individuals who use multiple computing devices (e.g., smartphone, laptop, smart watch, smart car, etc.) may choose to use an intermediary to simplify configuration and management of these devices as well as routing of messages to the appropriate device.</li>
+<li class='ui item' ><strong>Anonymizing intermediaries.</strong> When confidentiality is desired in the routing of messages, intermediaries designed for this purpose can obfusticate the message routing path.</li>
+<li class='ui item' ><strong>Auditing intermediaries.</strong> When auditing of message traffic is required for regulatory or compliance reasons, intermediaries designed for this purpose can maintain the necessary audit logs.</li>
+</ul>
+<p>Intermediary Systems differ from Supporting Systems because they reside between Endpoint Systems and are visible to the Endpoint Systems.</p>
+<p><img src="/images/IntermediarySystems.png" alt="The role of Intermediary Systems" style="width:800px;"/></p>
+<p><strong>Figure 11: The role of Intermediary Systems</strong></p>
+<p>In Figure 11, end-to-end communication between Endpoint Systems A and B are routed through Intermediary Systems X and Y. In this case, all systems implement the Layer 2 protocol as described in <a href="#8-the-toip-trust-spanning-protocol">Section 8</a>. Routing uses “nested envelopes” as follows:</p>
+<ol>
+<li class='ui item' >Endpoint System A prepares a message for Endpoint System B and puts it in an inner message envelope addressed to Endpoint System B.</li>
+<li class='ui item' >Endpoint System A places the inner message envelope inside an outer message envelope addressed to Intermediary System X.</li>
+<li class='ui item' >Endpoint System A delivers the outer message envelope to Intermediary System X.</li>
+<li class='ui item' >Intermediary System X removes the outer message envelope and replaces it with a new outer message envelope addressed to the next hop: Intermediary System Y.</li>
+<li class='ui item' >Intermediary System X delivers the new outer message envelope to Intermediary System Y.</li>
+<li class='ui item' >Intermediary System Y removes the outer message envelope.</li>
+<li class='ui item' >Intermediary System Y delivers the inner message envelope to Endpoint System B.</li>
+</ol>
+<p>This pattern casts one requirement for the use of Intermediary Systems:</p>
+<p>A ToIP Intermediary System SHOULD be able to perform the functions of a ToIP Endpoint System for the purpose of routing enveloped messages using the ToIP Trust Spanning Protocol. [REC A.3]</p>
 <h2 class='ui medium header'  id="10supportingsystems">10. Supporting Systems</h2>
 <h3 class='ui small header'  id="101overview">10.1 Overview</h3>
 <h3 class='ui small header'  id="102example1">10.2 Example 1</h3>
