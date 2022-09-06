@@ -470,8 +470,16 @@ A DID Method may be implemented based on a distributed ledger, e.g. Hyperledger 
 
 A Layer 2 implementation must implement both DID resolution and the ToIP Trust Spanning Protocol. To implement DID resolution in this example, the Aries agent uses a local service, i.e. a digital wallet, which relies on, eventually, a KMS function and a secure storage function within the Endpoint System. It also uses a remote service — the Indy blockchain — via web service APIs built on top of HTTPS and other web protocols. This remote service protocol consists of three components in the case of Aries-Indy: pool API, anoncred API, and payment API. The web service eventually relies on the Internet Protocol stack for routing, transport and delivery. Collectively, it is a complete Endpoint System to Supporting System Protocol that in this case runs over the web.
 
-
 ### 10.3 Example 2
+
+[KERI](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) offers another example in this design pattern. In KERI, the Endpoint System identifier is either an AID or a did:keri method. A layer 2 implementation will need certain key material and secure storage from the lower layer as well. In addition, it requires additional services that are outside of the Endpoint System boundary. The [KERI Witness Pool](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) is an example of such a supporting service as shown in Figure 13. Another example is [KERI Watcher Pool](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf). 
+
+These supporting services differ from local dependencies (e.g. secure storage) because they are outside of an Endpoint System’s locus of control. The access protocol to such supporting services is also different from the ToIP Trust Spanning Protocol as it is a protocol between different types of parties and has a different protocol stack.
+
+<img src="/images/KERIExample.png" alt="An example of a KERI witness as a Supporting System" style="width:800px;"/>     
+
+**Figure 13: An example of a KERI witness as a Supporting System**
+
 ### 10.4 Generalization
 
 ## 11. Endpoint System Interoperability
