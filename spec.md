@@ -403,6 +403,13 @@ The ToIP Trust Spanning Protocol MUST support confidentiality with regard to the
 
 ### 8.5 Interface to Layer 1
 
+Given these requirements for the ToIP Trust Spanning Protocol at Layer 2, the Trust Support Function interfaces at Layer 1 should only need to include the following. Note that Layer 3 Trust Tasks or Layer 4 Trust Applications may also need to call these interfaces directly.
+
+  1. **Key Management System (KMS)** is the interface for generating cryptographic quality keys, random numbers, or other values required by the cryptographic primitives used by the protocol.
+  1. **Secure storage** is the interface through which Layer 2 can create, read, write, and delete confidential or secret data.
+  1. **Transport** consists of one primitive via which the sender’s Layer 2 implementation can submit a message for transmission and another primitive through which the receiver’s Layer 1 implementation can deliver a message up to Layer 2.
+  1. **User binding** is the interface via which a Layer 2 implementation can request and verify a biometric or other authentication information from a user. 
+
 ## 9. Intermediary Systems
 
 ## 10. Supporting Systems
