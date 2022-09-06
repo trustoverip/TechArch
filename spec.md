@@ -460,7 +460,17 @@ The ToIP protocol stack in an Endpoint System MAY use the services of a Supporti
 
 The following sections illustrated the layered interaction between Endpoint Systems and Supporting Systems using examples of known implementations.
 
-### 10.2 Example 1
+### 10.2 Example 1 - a DID Method
+
+A DID Method may be implemented based on a distributed ledger, e.g. Hyperledger Indy. An Endpoint System, in this example, may be implemented using a Hyperledger Aries agent software module running on either a mobile device or a cloud platform. The Indy ledger is a Privileged Supporting System and the Aries agent implements layer 2 and layer 3 of the Endpoint System stack. Such a design pattern is illustrated in Figure 12.
+
+<img src="/images/IndyAriesExample.png" alt="An example of Hyperledger Indy as a Supporting System" style="width:800px;"/>
+
+**Figure 12: An example of Hyperledger Indy as a Supporting System**
+
+A Layer 2 implementation must implement both DID resolution and the ToIP Trust Spanning Protocol. To implement DID resolution in this example, the Aries agent uses a local service, i.e. a digital wallet, which relies on, eventually, a KMS function and a secure storage function within the Endpoint System. It also uses a remote service — the Indy blockchain — via web service APIs built on top of HTTPS and other web protocols. This remote service protocol consists of three components in the case of Aries-Indy: pool API, anoncred API, and payment API. The web service eventually relies on the Internet Protocol stack for routing, transport and delivery. Collectively, it is a complete Endpoint System to Supporting System Protocol that in this case runs over the web.
+
+
 ### 10.3 Example 2
 ### 10.4 Generalization
 
