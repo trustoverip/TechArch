@@ -312,7 +312,17 @@
 <p>This pattern casts one requirement for the use of Intermediary Systems:</p>
 <p>A ToIP Intermediary System SHOULD be able to perform the functions of a ToIP Endpoint System for the purpose of routing enveloped messages using the ToIP Trust Spanning Protocol. [REC A.3]</p>
 <h2 class='ui medium header'  id="10supportingsystems">10. Supporting Systems</h2>
+<p><em>This section is normative.</em></p>
 <h3 class='ui small header'  id="101overview">10.1 Overview</h3>
+<p>An Endpoint System may utilize services from any number of Supporting Systems, either privileged or unprivileged, over the Internet or other networks.</p>
+<ul class='ui list' >
+<li class='ui item' ><strong>Privileged Supporting Systems</strong> are integral to the dependent Endpoint System’s autonomy and authenticity. A privileged Supporting System must implement strongly qualified trust mechanisms in order to play this role. Such trust mechanisms can be a combination of technology (e.g. algorithmic) and governance policies (see <a href="#12-integration-with-the-toip-governance-stack">Section 12</a>). For example, a blockchain is a privileged supporting system for a DID method whose root of trust is the blockchain.</li>
+<li class='ui item' ><strong>Unprivileged Supporting Systems</strong> are Supporting Systems that are not required to support an Endpoint System’s autonomy and authenticity. For example, a website that serves as a non-exclusive convenient discovery (e.g. advertising or search) mechanism for public DIDs is unprivileged.</li>
+</ul>
+<p>Each type of Supporting System may have a service access protocol standardized for the type of service it offers. There may be many such services with many different protocols. One Endpoint System may utilize one set of Supporting Systems while another Endpoint System may use a different set of Supporting Systems. This difference in the types of Supporting Systems used does not impede the two Endpoint Systems in interoperating through the Layer 2 ToIP Trust Spanning Protocol. Therefore, standardization across different services is not required. </p>
+<p>An example of a common protocol stack for this purpose is a defined Web Service running on top of HTTPS. However, many types of protocols may be used for different Supporting Systems.</p>
+<p>The ToIP protocol stack in an Endpoint System MAY use the services of a Supporting System at any layer. [REC A.4] Such design decisions can be made layer by layer to optimize the functions performed in each layer. </p>
+<p>The following sections illustrated the layered interaction between Endpoint Systems and Supporting Systems using examples of known implementations.</p>
 <h3 class='ui small header'  id="102example1">10.2 Example 1</h3>
 <h3 class='ui small header'  id="103example2">10.3 Example 2</h3>
 <h3 class='ui small header'  id="104generalization">10.4 Generalization</h3>
