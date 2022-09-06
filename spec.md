@@ -297,7 +297,39 @@ If a Layer 4 Trust Application does not use a Layer 3 Trust Task Protocol, it MU
 Layer 4 is the layer where humans “touch” the ToIP stack, so this is where Design Principle #8 ([Trust is Human](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)) and #14 ([Trust and Technology have a Reciprocal Relationship](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)) come into play. The human experience of digital trust is so critical that Layer 4 has one more requirement: A Layer 4 Trust Application MUST support any ToIP-defined Trust Affordances relevant to that application. [REQ 4.3]
 
 ## 8. The ToIP Trust Spanning Protocol
+
+*This section is normative.*
+
 ### 8.1 Overview
+
+This section describes the ToIP Trust Spanning Protocol required at Layer 2 to communicate between any two Endpoint Systems. The overall protocol operation is shown in Figure 9 below.
+
+<img src="/images/SpanningProtocol.png" alt="Overview of the ToIP Spanning Protocol" style="width:800px;"/>
+
+**Figure 9: Overview of the ToIP Spanning Protocol**
+
+The main function of this protocol is to enable universal end-to-end communication among all Endpoint Systems using trusted messages. This architectural choice is based on the following considerations:
+
+  - Existing Internet, local network, and mesh network infrastructure already supports universal end-to-end communication through various types of transport mechanisms.
+  - This form of communication should be able to be implemented on all common types of Endpoint Systems with minimum overhead and constraints.
+  - Messaging-based communication is a least common denominator that provides sufficient foundation for building more complex trust functions at higher layers.
+
+This protocol is designed to be universal in the sense that all Endpoint Systems, regardless of their form factors or implementation methods, can communicate with each other using messages incorporating standard trust guarantees.
+
+To achieve ubiquity, this protocol should be kept as simple as possible to ease implementation challenges and allow maximum flexibility on all variants of Endpoint Systems. Thus the requirements in the following sections are not only necessary but sufficient. Strong preference must be given not to add additional functions to this protocol unless they are universally beneficial. Strong preference must also be given to a single common protocol specification for maximum any-to-any interoperability. 
+
+A view of the ToIP protocol stack on an Endpoint System is shown in Figure 10. The component specification for the ToIP Trust Spanning Protocol therefore needs to specify:
+  1. How to generate and maintain identifiers with the properties described in [Section 6.4](#64-toip-identifiers).
+  1. The common message format that meets the design goals described in [Section 6.1](#61-design-goals).
+  1. How lower layer transport protocol(s) can be used to deliver messages between Endpoint Systems.
+  1. Any required support from ToIP Layer 1.
+
+<img src="/images/StackOnEndpoint.png" alt="A view of the ToIP protocol stack on an Endpoint System" style="width:800px;"/>
+
+**Figure 10: A view of the ToIP protocol stack on an Endpoint System**
+
+The following sections enumerate the requirements in each of these four areas.
+
 ### 8.2 Identifiers
 ### 8.3 Messages
 ### 8.4 Routing
