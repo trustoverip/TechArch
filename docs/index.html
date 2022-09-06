@@ -208,7 +208,29 @@
 <p>If a Layer 4 Trust Application does not use a Layer 3 Trust Task Protocol, it MUST communicate with other Endpoint Systems using the Layer 2 Trust Spanning Protocol. [REQ L4.2]</p>
 <p>Layer 4 is the layer where humans “touch” the ToIP stack, so this is where Design Principle #8 (<a href="https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf">Trust is Human</a>) and #14 (<a href="https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf">Trust and Technology have a Reciprocal Relationship</a>) come into play. The human experience of digital trust is so critical that Layer 4 has one more requirement: A Layer 4 Trust Application MUST support any ToIP-defined Trust Affordances relevant to that application. [REQ 4.3]</p>
 <h2 class='ui medium header'  id="8thetoiptrustspanningprotocol">8. The ToIP Trust Spanning Protocol</h2>
+<p><em>This section is normative.</em></p>
 <h3 class='ui small header'  id="81overview">8.1 Overview</h3>
+<p>This section describes the ToIP Trust Spanning Protocol required at Layer 2 to communicate between any two Endpoint Systems. The overall protocol operation is shown in Figure 9 below.</p>
+<p><img src="/images/SpanningProtocol.png" alt="Overview of the ToIP Spanning Protocol" style="width:800px;"/></p>
+<p><strong>Figure 9: Overview of the ToIP Spanning Protocol</strong></p>
+<p>The main function of this protocol is to enable universal end-to-end communication among all Endpoint Systems using trusted messages. This architectural choice is based on the following considerations:</p>
+<ul class='ui list' >
+<li class='ui item' >Existing Internet, local network, and mesh network infrastructure already supports universal end-to-end communication through various types of transport mechanisms.</li>
+<li class='ui item' >This form of communication should be able to be implemented on all common types of Endpoint Systems with minimum overhead and constraints.</li>
+<li class='ui item' >Messaging-based communication is a least common denominator that provides sufficient foundation for building more complex trust functions at higher layers.</li>
+</ul>
+<p>This protocol is designed to be universal in the sense that all Endpoint Systems, regardless of their form factors or implementation methods, can communicate with each other using messages incorporating standard trust guarantees.</p>
+<p>To achieve ubiquity, this protocol should be kept as simple as possible to ease implementation challenges and allow maximum flexibility on all variants of Endpoint Systems. Thus the requirements in the following sections are not only necessary but sufficient. Strong preference must be given not to add additional functions to this protocol unless they are universally beneficial. Strong preference must also be given to a single common protocol specification for maximum any-to-any interoperability. </p>
+<p>A view of the ToIP protocol stack on an Endpoint System is shown in Figure 10. The component specification for the ToIP Trust Spanning Protocol therefore needs to specify:</p>
+<ol>
+<li class='ui item' >How to generate and maintain identifiers with the properties described in <a href="#64-toip-identifiers">Section 6.4</a>.</li>
+<li class='ui item' >The common message format that meets the design goals described in <a href="#61-design-goals">Section 6.1</a>.</li>
+<li class='ui item' >How lower layer transport protocol(s) can be used to deliver messages between Endpoint Systems.</li>
+<li class='ui item' >Any required support from ToIP Layer 1.</li>
+</ol>
+<p><img src="/images/StackOnEndpoint.png" alt="A view of the ToIP protocol stack on an Endpoint System" style="width:800px;"/></p>
+<p><strong>Figure 10: A view of the ToIP protocol stack on an Endpoint System</strong></p>
+<p>The following sections enumerate the requirements in each of these four areas.</p>
 <h3 class='ui small header'  id="82identifiers">8.2 Identifiers</h3>
 <h3 class='ui small header'  id="83messages">8.3 Messages</h3>
 <h3 class='ui small header'  id="84routing">8.4 Routing</h3>
