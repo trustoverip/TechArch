@@ -10,7 +10,7 @@
 
 The mission of the [Trust over IP (ToIP) Foundation](https://www.trustoverip.org) is to define an overall architecture for Internet-scale digital trust that combines cryptographic assurance at the machine layers (technology) with human accountability at the business, legal, and social layers (governance). Together these two halves form a complete four-layer architecture for decentralized digital trust infrastructure known as the [ToIP stack](https://trustoverip.github.io/toip/glossary#toip-stack). Figure 1 is a conceptual diagram of this stack:
 
-<img src="/images/ToIPDualStack.jpeg" alt="ToIP Dual Stack" style="width:800px;"/>
+<img src="/images/ToIPDualStack.png" alt="ToIP Dual Stack" style="width:800px;"/>
 
 **Figure 1: Conceptial diagram of the ToIP stack**
 
