@@ -227,7 +227,7 @@ Common examples of Endpoint Systems include:
 
 Befitting Design Principle #1 ([The End-to-End Principle](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)), Endpoint Systems are the ultimate targets of the requirements of ToIP architecture. They are likely to be much larger in number — by several magnitudes — compared to Intermediary or Supporting Systems. They implement most of the functions in the ToIP architecture and represent the biggest challenge for interoperability and scalability.
 
-<img src="/images/EndpointSystem.png" alt="Endpoint System" style="width:400px;"/>
+<img src="/images/EndpointSystem.png" alt="Endpoint System" style="width:800px;"/>
 
 **Figure 8: Endpoint System**
 
