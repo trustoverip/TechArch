@@ -65,10 +65,10 @@ Whether from the perspective of an implementer, a customer, or a policymaker, th
 The audience for this specification is protocol designers, system architects, software developers and product managers who wish to understand, influence, design, develop, or implement interoperable decentralized digital trust infrastructure, services, or applications.
 
 The purpose of is specification is to define a reference architecture for the technology side of the ToIP stack, including the functions and behaviors required for each of the four layers and the functional and behavioral inter-dependencies between the layers:
-     - What each layer must do.
-     - What each layer should and may do.
-     - What behaviors are expected to support interoperability.
-     - What interactions each layer supports for other layers.
+  - What each layer **must** do.
+  - What each layer *should* and *may* do.
+  - What behaviors are expected to support interoperability.
+  - What interactions each layer supports for other layers.
 
 The goal of these architectural requirements is to inform subsequent development tracks as summarized in Figure 2:
 
