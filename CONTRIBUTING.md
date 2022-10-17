@@ -119,25 +119,39 @@ issue, so that we may accurately classify the work to do on it.
   for the change, the editor should follow the standard review process and refer
   the PR in the issue
 
-### Editing Git process
-1. Create a
- [clone](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) of
- the repo or
- [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)
- the repo 
- 2. Make changes to the document on your own repo 
- 3. Ensure commit
- history sync by rebasing own repo with 'git pull rebase' 
- 4. Create a pull
- request against the ToIP repo main branch 
- 5. Refer to the PR in the relevant
- issue(s). 
- 6. Contributor sets the issue to label "Needs review" to signal
- editors to review the changes
+### Making a Pull Request 
 
-You may also put your PR in
-[draft](https://github.blog/2019-02-14-introducing-draft-pull-requests/) to
-signal a wip that can be collaborated on with other people.
+#### Basic Flow
+
+If you're not familiar with Github and Git, here's a few simple steps you can
+use to get going and to contribute to the repository *without ever touching the
+command line*.
+
+1. [Fork the TechArch repo into your
+   account](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)
+2. Find the file you want to edit. [Click the pen tool on the top right of
+   the file to edit it.](https://www.youtube.com/watch?v=uE2DxUfZjtE) If you
+   want to add a file, click "Add File". Generally, when you save it is better
+   to click "create new branch".
+3. Make your changes. When you are ready, click [Pull
+   Request](https://youtu.be/rgbCcBNZcdQ?t=205)
+   on the bar above the file. Then create `New Pull Request` and choose to set
+   the request to merge to the `TechArch:main` branch. Put any information you
+   want to describe your changes on the description, and you're done!
+   
+#### Advanced Flow
+
+As a more advanced user, there are few ways you can manage your Github
+repository:
+
+1. [You can use the github web
+   editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor)
+2. [You can use github desktop](https://desktop.github.com/)
+3. [You can use the
+   cli](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
+4. Something else!
+
+This document will document the basic flow.
 
 ### Review and Merge Process
 
