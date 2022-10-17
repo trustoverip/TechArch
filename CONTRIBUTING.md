@@ -130,14 +130,19 @@ issue, so that we may accurately classify the work to do on it.
   the PR in the issue
 
 ### Editing Git process
-1) Create a
+1. Create a
  [clone](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) of
  the repo or
  [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)
- the repo 2) Make changes to the document on your own repo 3) Ensure commit
- history sync by rebasing own repo with 'git pull rebase' 4) Create a pull
- request against the ToIP repo main branch 5) Refer to the PR in the relevant
- issue(s). 6) Contributor sets the issue to label "Needs review" to signal
+ the repo 
+ 2. Make changes to the document on your own repo 
+ 3. Ensure commit
+ history sync by rebasing own repo with 'git pull rebase' 
+ 4. Create a pull
+ request against the ToIP repo main branch 
+ 5. Refer to the PR in the relevant
+ issue(s). 
+ 6. Contributor sets the issue to label "Needs review" to signal
  editors to review the changes
 
 You may also put your PR in
