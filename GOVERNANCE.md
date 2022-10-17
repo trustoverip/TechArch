@@ -42,18 +42,39 @@ communications channels. We welcome newcomers, so don't hesitate to say hi
 
 ### Subgroups
 
-If an issue appears to require in-depth discussion and analysis, the Editors should assign a subgroup to tackle the issue and come back to the group with a proposed resolution. This subgroup should:
-* Keep as much of their discussion as possible within GitHub Issues — and, if necessary, Github Discussions. If any substantive discussions take place in other channels (e.g., Slack) or proposals are drafted outside of GitHub (e.g., in a Google doc), they must be copied into GitHub to create a permanent public audit trail.
-* Hold special calls/meetings if needed, but record those meetings and document key discussion points and decisions and copy those to GitHub.
-* Develop a proposed resolution to the issue (along the lines of an ISO "Technical Report").
-* Return with a proposal (text and diagrams) for resolution of the issue (along the lines of an ISO "Technical Spec"). Ideally this proposal is in a form that can be easily: a) turned into a PR (for a GitHub document), or b) copy-and-pasted as a revision to a Google doc or other format.
+If an issue appears to require in-depth discussion and analysis, the Editors
+should assign a subgroup to tackle the issue and come back to the group with a
+proposed resolution. This subgroup should:
+* Keep as much of their discussion as possible within GitHub Issues — and, if
+  necessary, Github Discussions. If any substantive discussions take place in
+  other channels (e.g., Slack) or proposals are drafted outside of GitHub (e.g.,
+  in a Google doc), they must be copied into GitHub to create a permanent public
+  audit trail.
+* Hold special calls/meetings if needed, but record those meetings and document
+  key discussion points and decisions and copy those to GitHub.
+* Develop a proposed resolution to the issue (along the lines of an ISO
+  "Technical Report").
+* Return with a proposal (text and diagrams) for resolution of the issue (along
+  the lines of an ISO "Technical Spec"). Ideally this proposal is in a form that
+  can be easily: a) turned into a PR (for a GitHub document), or b)
+  copy-and-pasted as a revision to a Google doc or other format.
 
 ### Closure
 
-* If the Editors believe an issue has been resolved via one or more PRs that have been accepted and merged, then one of the Editors should apply the label status: PR-merged and close the issue. If the Editors believe consensus has been achieved about some other resolution of the issue — and that resolution is fully documented in the issue — then one of the Editors should apply the label `status: last-call`.
-  * Once that label has been applied, a group member MUST object to closure by making a comment on the issue within 5 calendar days to reopen discussion of the issue.
-  * If there is no objection within 5 calendar days, the proposed resolution shall be applied to the deliverable by one of the Maintainers and one of the Editors shall close the issue with no further discussion.
-  * If there is an objection, the Editors will take it to a group meeting to reach final consensus on closure.
+* If the Editors believe an issue has been resolved via one or more PRs that
+  have been accepted and merged, then one of the Editors should apply the label
+  status: PR-merged and close the issue. If the Editors believe consensus has
+  been achieved about some other resolution of the issue — and that resolution
+  is fully documented in the issue — then one of the Editors should apply the
+  label `status: last-call`.
+  * Once that label has been applied, a group member MUST object to closure by
+    making a comment on the issue within 5 calendar days to reopen discussion of
+    the issue.
+  * If there is no objection within 5 calendar days, the proposed resolution
+    shall be applied to the deliverable by one of the Maintainers and one of the
+    Editors shall close the issue with no further discussion.
+  * If there is an objection, the Editors will take it to a group meeting to
+    reach final consensus on closure.
 
 ### Editor Activities
 

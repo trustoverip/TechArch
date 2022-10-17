@@ -1,14 +1,18 @@
 # Contribution Guide
 
-There are many ways to be a contributor, and we're here to help you on your way! You may:
+There are many ways to be a contributor, and we're here to help you on your way!
+You may:
 
 * Propose ideas in our discussion forums
-* Raise an [issue](https://github.com/trustoverip/TechArch/issues) or feature request in our issue tracker
-* Help another contributor with one of their questions, or a documentation review
+* Raise an [issue](https://github.com/trustoverip/TechArch/issues) or feature
+  request in our issue tracker
+* Help another contributor with one of their questions, or a documentation
+  review
 * Suggest improvements by supplying a [Pull
   Request](https://github.com/trustoverip/TechArch/pulls) or opening a
   [Discussion](https://github.com/trustoverip/TechArch/discussions)
-* Evangelize our work together in conferences, podcasts, and social media spaces.
+* Evangelize our work together in conferences, podcasts, and social media
+  spaces.
 
 This guide is for you.
 
@@ -72,61 +76,69 @@ are always answering the following:
 Priority labels are used to describe the impact and focus of the issue. Higher
 priority means it is more likely to find focus within the group.
 
-| Priority | Label    | Usage                                                                                      |
+| Priority | Label | Usage |
 |----------|----------|--------------------------------------------------------------------------------------------|
-| priority | critical | Progress on this issue is critical to the group's forward progress.                        |
-| priority | high     | It is important for the group to resolve this issue soon.                                  |
-| priority | medium   | This issue is important to resolve before the next release.                                |
-| priority | low      | This issue is "nice to have" for the next release, but could be deferred if time runs out. |
+| priority | critical | Progress on this issue is critical to the group's forward progress. |
+| priority | high | It is important for the group to resolve this issue soon. |
+| priority | medium | This issue is important to resolve before the next release. |
+| priority | low | This issue is "nice to have" for the next release, but could be deferred if time runs out. |
 
 ### Type Labels 
 
-Type labels are labels the define the nature of the issue and/or the correction itself.
+Type labels are labels the define the nature of the issue and/or the correction
+itself.
 
-| Type | Label      | Usage                                                                      |
+| Type | Label | Usage |
 |------|------------|----------------------------------------------------------------------------|
-| type | editorial  | The issue only involves wording and not normative content.                 |
-| type | content    | The issue involves normative content; resolution requires group consensus. |
-| type | correction | The issue is fixing a recognized problem in the current version.           |
-| type | formatting | The issue involves fixing formatting.                                      |
-| type | figure     | The issue involves a figure that it missing or needs to be revised.        |
-| type | admin      | The issue is administrative and NOT about the deliverable.                 |
+| type | editorial | The issue only involves wording and not normative content. |
+| type | content | The issue involves normative content; resolution requires group consensus. |
+| type | correction | The issue is fixing a recognized problem in the current version. |
+| type | formatting | The issue involves fixing formatting. |
+| type | figure | The issue involves a figure that it missing or needs to be revised. |
+| type | admin | The issue is administrative and NOT about the deliverable. |
 
 ### Status Labels 
 
-Status labels are labels that are used to help identify the current state of
-the issue, so that we may accurately classify the work to do on it.
+Status labels are labels that are used to help identify the current state of the
+issue, so that we may accurately classify the work to do on it.
 
-| Status | Label             | Usage                                                                                                             |
+| Status | Label | Usage |
 |--------|-------------------|-------------------------------------------------------------------------------------------------------------------|
-| status | unassigned        | The issue is new and has not yet been assigned to anyone.                                                         |
-| status | in-progress       | The issue has been assigned and work is in progress.                                                              |
-| status | needs-review      | A resolution (or concrete step forward) has been proposed and needs review.                                       |
-| status | blocked           | Progress is currently blocked; the block should be explained in a comment.                                        |
-| status | on-hold           | Progress is currently on hold; the reason should be explained in a comment.                                       |
-| status | deferred          | Consensus has been reached that this issue can be deferred to a subsequent version.                               |
-| status | abandoned         | Consensus has been reached that this issue can be abandoned.                                                      |
-| status | PR-needed         | Consensus has been reached and this issue is now waiting for a PR to be submitted.                                |
-| status | PR-in-progress    | The issue is linked to a PR that is in progress                                                                   |
-| status | PR-completed      | The issue is linked to a PR that is complete and waiting for review.                                              |
-| status | PR-accepted       | The issue is linked to a PR that has been accepted and is waiting for merge.                                      |
-| status | PR-merged         | The issue is linked to a PR that has been merged; this issue can now be closed.                                   |
+| status | unassigned | The issue is new and has not yet been assigned to anyone. |
+| status | in-progress | The issue has been assigned and work is in progress. |
+| status | needs-review | A resolution (or concrete step forward) has been proposed and needs review. |
+| status | blocked | Progress is currently blocked; the block should be explained in a comment. |
+| status | on-hold | Progress is currently on hold; the reason should be explained in a comment. |
+| status | deferred | Consensus has been reached that this issue can be deferred to a subsequent version. |
+| status | abandoned | Consensus has been reached that this issue can be abandoned. |
+| status | PR-needed | Consensus has been reached and this issue is now waiting for a PR to be submitted. |
+| status | PR-in-progress | The issue is linked to a PR that is in progress |
+| status | PR-completed | The issue is linked to a PR that is complete and waiting for review. |
+| status | PR-accepted | The issue is linked to a PR that has been accepted and is waiting for merge. |
+| status | PR-merged | The issue is linked to a PR that has been merged; this issue can now be closed. |
 | status | status: last-call | The issue has been resolved by some other mechanism documented in the comments and is now in **5 day last call.** |
 
 ## Changes to document
 
-- Change proposals can be made by anyone by creating an issue in Git and proposing a pull request against the main branch, containing the proposed changes.
+- Change proposals can be made by anyone by creating an issue in Git and
+  proposing a pull request against the main branch, containing the proposed
+  changes.
 - Change proposals are made as according to the process below
-- Editors may make changes to the main branch without creating an issue, in the case where an issue has not been already created. If an issue already exists for the change, the editor should follow the standard review process and refer the PR in the issue
+- Editors may make changes to the main branch without creating an issue, in the
+  case where an issue has not been already created. If an issue already exists
+  for the change, the editor should follow the standard review process and refer
+  the PR in the issue
 
 ### Editing Git process
-1) Create a [clone](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) of the repo or [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)
- the repo
-2) Make changes to the document on your own repo
-3) Ensure commit history sync by rebasing own repo with 'git pull rebase'
-4) Create a pull request against the ToIP repo main branch
-5) Refer to the PR in the relevant issue(s).
-6) Contributor sets the issue to label "Needs review" to signal editors to review the changes
+1) Create a
+ [clone](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) of
+ the repo or
+ [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)
+ the repo 2) Make changes to the document on your own repo 3) Ensure commit
+ history sync by rebasing own repo with 'git pull rebase' 4) Create a pull
+ request against the ToIP repo main branch 5) Refer to the PR in the relevant
+ issue(s). 6) Contributor sets the issue to label "Needs review" to signal
+ editors to review the changes
 
 You may also put your PR in
 [draft](https://github.blog/2019-02-14-introducing-draft-pull-requests/) to
@@ -151,8 +163,8 @@ signal a wip that can be collaborated on with other people.
   no unwanted changes happen.
 - In case of change conflicts, the editor requests the PR creator to rebase
   against current main branch and resubmit the PR.
-- After review, an `editor` may change the status to `status: last-call`. This would
-  signal a 5 day delay for close. 
+- After review, an `editor` may change the status to `status: last-call`. This
+  would signal a 5 day delay for close.
 - If nobody disagrees with the `status: last-call`, the issue is accepted and
   merged back into `main`.
 - Sometimes the editor group may agree to a controlled merging process and
