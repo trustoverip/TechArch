@@ -7,11 +7,15 @@
 
 ## Contributors
 
-Anyone may be a contributor to the Technology Architecture Project. Contribution
-may take the form of:
-
-Anyone with a GitHub account may use the project issue trackers and
-communications channels. We welcome newcomers, so don't hesitate to say hi
+For the protection of all Members, participation in working groups, meetings and
+events is limited to members, including their employees, of the Trust over IP
+Foundation who have signed the membership documents and thus agreed to the
+intellectual property rules governing participation. If you or your employer are
+not a member of ToIP, you may not participate in meetings by verbal contribution
+or otherwise take any action beyond observing. [To join
+ToIP](https://trustoverip.org/get-involved/membership/) and be able to
+contribute, please fill out the light weight membership application on our
+website [here](https://trustoverip.org/get-involved/membership/).
 
 ### Contributor Activities
 

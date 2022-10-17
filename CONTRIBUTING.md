@@ -3,7 +3,7 @@
 There are many ways to be a contributor, and we're here to help you on your way!
 You may:
 
-* Propose ideas in our discussion forums
+* Join the discussion and share ideas in our [Slack channel](trustoverip.slack.com) and regular [TSWG](https://wiki.trustoverip.org/display/HOME/Technology+Stack+Working+Group?src=contextnavpagetreemode) and [TATF](https://wiki.trustoverip.org/display/HOME/Technology+Architecture+Task+Force) meetings.
 * Raise an [issue](https://github.com/trustoverip/TechArch/issues) or feature
   request in our issue tracker
 * Help another contributor with one of their questions, or a documentation
@@ -30,16 +30,6 @@ This guide is for you.
 * [Review and Merge Process](#review-and-merge-process)
 
 ## Contribution
-
-### Setup
-
-First, the Working Group or Task Force ("group") should contact the ToIP
-Foundation Program Manager (currently Elisa Trevino) to request setup of a
-GitHub repo for the deliverable. The group should also request that Github
-Discussions be turned on for the repo so the Discussions feature is available to
-the group for Q&A or other discussions that are not necessarily issues (but can
-be quickly converted into a formal issue when needed).
-
 
 ### Branching and Tagging:
 
