@@ -3,7 +3,12 @@
 There are many ways to be a contributor, and we're here to help you on your way!
 You may:
 
-* Join the discussion and share ideas in our [Slack channel](trustoverip.slack.com) and regular [TSWG](https://wiki.trustoverip.org/display/HOME/Technology+Stack+Working+Group?src=contextnavpagetreemode) and [TATF](https://wiki.trustoverip.org/display/HOME/Technology+Architecture+Task+Force) meetings.
+* Join the discussion and share ideas in our [Slack
+  channel](trustoverip.slack.com) and regular
+  [TSWG](https://wiki.trustoverip.org/display/HOME/Technology+Stack+Working+Group?src=contextnavpagetreemode)
+  and
+  [TATF](https://wiki.trustoverip.org/display/HOME/Technology+Architecture+Task+Force)
+  meetings.
 * Raise an [issue](https://github.com/trustoverip/TechArch/issues) or feature
   request in our issue tracker
 * Help another contributor with one of their questions, or a documentation
@@ -18,36 +23,128 @@ This guide is for you.
 
 ## Table Of Contents
 
-* [Setup](#setup)
-* [Branching And Tagging](#branching-and-tagging)
+* [Contributing](#contributing)
+  * [Basic Flow](#basic-change-flow)
+  * [Advanced Flow](#advanced-change-flow)
+  * [Commits](#commits)
+  * [Branching](#branching)
+  * [Tagging](#tagging)
+  * [Pull Requests](#pull-requests)
+  * [Review](#review)
 * [Issues](#issues)
 * [Labels](#labels)
   * [Priority Labels](#priority-labels)
   * [Type Labels](#type-labels)
   * [Status Labels](#status-labels)
-* [Changes to Document](#changes-to-document)
-* [Editing Git Process](#editing-git-process)
-* [Review and Merge Process](#review-and-merge-process)
 
-## Contribution
+## Contributing
 
-### Branching and Tagging:
+This section is designed to help you make an edit if you aren't familiar with
+using Github and want to make a change to the TechArch repository.
 
+### Basic Change Flow
+
+If you're not familiar with Github and Git, here's a few simple steps you can
+use to get going and to contribute to the repository *without ever touching the
+command line*.
+
+1. [Fork the TechArch repo into your
+   account](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)
+2. Find the file you want to edit. [Click the pen tool on the top right of the
+   file to edit it.](https://www.youtube.com/watch?v=uE2DxUfZjtE) If you want to
+   add a file, click "Add File". Generally, when you save it is better to click
+   "create new branch".
+3. Make your changes. When you are ready, click [Pull
+   Request](https://youtu.be/rgbCcBNZcdQ?t=205) on the bar above the file. Then
+   create `New Pull Request` and choose to set the request to merge to the
+   `TechArch:main` branch. Put any information you want to describe your changes
+   on the description, and you're done!
+   
+### Advanced Change Flow
+
+As a more advanced user, there are few ways you can manage your Github
+repository:
+
+1. [You can use the github web
+   editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor)
+2. [You can use github desktop](https://desktop.github.com/)
+3. [You can use the
+   cli](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
+4. Something else! Git is extremely powerful if you want to spend the time
+   researching.
+
+### Commits
+
+- [You must sign your
+  commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits)
+- Please try to keep your commit history clean. We do not enforce this but it is
+  encouraged.
+
+### Branching:
+
+- Nobody will work directly on the `main` branch. All changes must occur over a
+  PR and off the main branch.
+- We encourage, but do not enforce branching naming using the following schema:
+  `<type>/<description>` ex. `edit/fix-fig4-label`.
 - The main-branch should always have the latest approved changes
 - Custom "feature" branches may be used for special purposes, e.g. for groups to
   work on a larger section of text
+- Branching will occur on forks, not over the main repository. This is to ensure
+  that the main repository is not cluttered with lots of branches from contributors.
+ 
+### Tagging
+
 - Version tags are used for each release of the document
 - Releases should be versioned and if needed, appended with a pre-release tag,
   e.g. "v1", "v3-RC1", "v4-IIW39"
 - Versioning should be simple, only major releases numbered, prepended with
   letter v. e.g. v1, v2, v3.
-- Please
-  [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)
-  the repository to make changes and submit a PR to request them for review.
 - Branch protection rules will exist to not allow a person to directly commit to
   `main`.
 
-### Issues
+### Pull Requests
+
+The below documents some basic best practices for your pull requests.
+
+- Please make sure to ask an editor to review your Pull Request. 
+- Write descriptive and consistent names.
+- Create a clear PR title and description.
+- Keep PRs short as possible 
+- Try to keep a transparent audit trail of your conversation so people can
+  follow it.
+- Avoid rewrites by getting feedback early.
+- Request additional reviewers to create dialogue.
+- Be precise in your comments about what needs to be fixed.
+
+### Review
+
+- Review of PR's is done by appointed editors. See the
+  [GOVERNANCE](GOVERNANCE.md) file for more information.
+- Issues labeled with `status: needs-review` should contain a PR code OR the
+  change text directly in the issue (for those not Git-savvy)
+- When you create an issue or a PR, please try to tag them appropriately,
+  including adding a `status: needs-review` label to the issue/PR.
+- Every week, the editors will go through the issues and tag them appropriately.
+- If the PR is ready to be merged, it is tagged with `accepted` -label
+- In normal circumstances, any editor may merge changes tagged with label
+  `accepted`
+- The editor can try to merge the PR to the main branch.
+- If PR is not rebased and commit histories are not in sync, the PR can be
+  merged if there are no overlapping changes with the history. In this case it
+  is the merging editor's responsibility to ensure that the merging is clean and
+  no unwanted changes happen.
+- In case of change conflicts, the editor requests the PR creator to rebase
+  against current main branch and resubmit the PR.
+- After review, an `editor` may change the status to `status: last-call`. This
+  would signal a 5 day delay for close.
+- If nobody disagrees with the `status: last-call`, the issue is accepted and
+  merged back into `main`.
+- Sometimes the editor group may agree to a controlled merging process and
+  decide that merging happens only by a selected editor (e.g. release owner) or
+  during editor meetings. This may happen when a release of the document is
+  coming soon and only some specific changes are allowed.
+
+## Issues
 
 - Anyone may raise an issue
 - Every week editors will go through the new issues, and label them.
@@ -58,6 +155,8 @@ are always answering the following:
    * what would trigger closure of the ticket?
 - Issues that are not commented on for over 90 days, and reviewed to not be
   relevant will be closed by an editor
+- Please do not hesitate to self assign yourself if you would like to address an
+  issue. 
 
 ## Labels
 
@@ -107,76 +206,3 @@ issue, so that we may accurately classify the work to do on it.
 | status | PR-accepted | The issue is linked to a PR that has been accepted and is waiting for merge. |
 | status | PR-merged | The issue is linked to a PR that has been merged; this issue can now be closed. |
 | status | status: last-call | The issue has been resolved by some other mechanism documented in the comments and is now in **5 day last call.** |
-
-## Changes to document
-
-- Change proposals can be made by anyone by creating an issue in Git and
-  proposing a pull request against the main branch, containing the proposed
-  changes.
-- Change proposals are made as according to the process below
-- Editors may make changes to the main branch without creating an issue, in the
-  case where an issue has not been already created. If an issue already exists
-  for the change, the editor should follow the standard review process and refer
-  the PR in the issue
-
-### Making a Pull Request 
-
-#### Basic Flow
-
-If you're not familiar with Github and Git, here's a few simple steps you can
-use to get going and to contribute to the repository *without ever touching the
-command line*.
-
-1. [Fork the TechArch repo into your
-   account](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)
-2. Find the file you want to edit. [Click the pen tool on the top right of
-   the file to edit it.](https://www.youtube.com/watch?v=uE2DxUfZjtE) If you
-   want to add a file, click "Add File". Generally, when you save it is better
-   to click "create new branch".
-3. Make your changes. When you are ready, click [Pull
-   Request](https://youtu.be/rgbCcBNZcdQ?t=205)
-   on the bar above the file. Then create `New Pull Request` and choose to set
-   the request to merge to the `TechArch:main` branch. Put any information you
-   want to describe your changes on the description, and you're done!
-   
-#### Advanced Flow
-
-As a more advanced user, there are few ways you can manage your Github
-repository:
-
-1. [You can use the github web
-   editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor)
-2. [You can use github desktop](https://desktop.github.com/)
-3. [You can use the
-   cli](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
-4. Something else!
-
-This document will document the basic flow.
-
-### Review and Merge Process
-
-- Review of PR's is done by appointed editors. See the
-  [GOVERNANCE](GOVERNANCE.md) file for more information.
-- Issues labeled with `status: needs-review` should contain a PR code OR the
-  change text directly in the issue (for those not Git-savvy)
-- When you create an issue or a PR, please try to tag them appropriately,
-  including adding a `status: needs-review` label to the issue/PR.
-- Every week, the editors will go through the issues and tag them appropriately.
-- If the PR is ready to be merged, it is tagged with `accepted` -label
-- In normal circumstances, any editor may merge changes tagged with label
-  `accepted`
-- The editor can try to merge the PR to the main branch.
-- If PR is not rebased and commit histories are not in sync, the PR can be
-  merged if there are no overlapping changes with the history. In this case it
-  is the merging editor's responsibility to ensure that the merging is clean and
-  no unwanted changes happen.
-- In case of change conflicts, the editor requests the PR creator to rebase
-  against current main branch and resubmit the PR.
-- After review, an `editor` may change the status to `status: last-call`. This
-  would signal a 5 day delay for close.
-- If nobody disagrees with the `status: last-call`, the issue is accepted and
-  merged back into `main`.
-- Sometimes the editor group may agree to a controlled merging process and
-  decide that merging happens only by a selected editor (e.g. release owner) or
-  during editor meetings. This may happen when a release of the document is
-  coming soon and only some specific changes are allowed.
