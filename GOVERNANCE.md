@@ -1,4 +1,13 @@
-# Tech Arch Governance Framework
+# Tech Arch Repository Governance Framework
+
+This document scopes the roles within maintanence of the **TechArch repository** and 
+is not related to the roles of Trust over IP organization. The intent of this document
+is to enumerate the various responsibilities and rights of various active roles within 
+the repository. 
+
+## Roles
+
+The TechArch repository currently defines 4 roles:
 
 * [Contributors](#contributors)
 * [Maintainers](#maintainers)
@@ -17,7 +26,7 @@ ToIP](https://trustoverip.org/get-involved/membership/) and be able to
 contribute, please fill out the light weight membership application on our
 website [here](https://trustoverip.org/get-involved/membership/).
 
-### Contributor Activities
+### Activities
 
 * Asking and answering questions on the development forums
 * Filing an issue
@@ -29,9 +38,18 @@ website [here](https://trustoverip.org/get-involved/membership/).
 
 ## Editors
 
-* The Working Group or Task Force ("group") should appoint an Editors team who
-  will take on the job of reviewing issues, assigning group members to an issue,
-  and proposing when an issue is ready for closure.
+The Editors team who are responsible for reviewing issues, assigning group members to an issue,
+and proposing when an issue is ready for closure.
+
+### Activities
+
+* Labelling issues on weekly review.
+* Prioritizing issues.
+* Finding the appropriate `assignee` to work on an issue.
+* Create issues that are required for advancement of the repository.
+
+### Policies
+
 * As a general rule, any one member of the Editors team can perform an action
   permitted under this role — it does not require consensus among all the
   Editors. However the Editors are trusted to use their judgement about when
@@ -44,11 +62,12 @@ website [here](https://trustoverip.org/get-involved/membership/).
   are assigned consistently, fairly, and timely. If an assignee is not
   progressing with an issue, the Editors can re-assign it as necessary.
 
-### Subgroups
+#### Subgroups
 
 If an issue appears to require in-depth discussion and analysis, the Editors
 should assign a subgroup to tackle the issue and come back to the group with a
 proposed resolution. This subgroup should:
+
 * Keep as much of their discussion as possible within GitHub Issues — and, if
   necessary, Github Discussions. If any substantive discussions take place in
   other channels (e.g., Slack) or proposals are drafted outside of GitHub (e.g.,
@@ -63,7 +82,7 @@ proposed resolution. This subgroup should:
   can be easily: a) turned into a PR (for a GitHub document), or b)
   copy-and-pasted as a revision to a Google doc or other format.
 
-### Closure
+#### Closure
 
 * If the Editors believe an issue has been resolved via one or more PRs that
   have been accepted and merged, then one of the Editors should apply the label
@@ -80,20 +99,23 @@ proposed resolution. This subgroup should:
   * If there is an objection, the Editors will take it to a group meeting to
     reach final consensus on closure.
 
-### Editor Activities
-
-* Labelling issues on weekly review.
-* Prioritizing issues.
-* Finding the appropriate `assignee` to work on an issue.
-* Create issues that are required for advancement of the repository.
-
 ## Maintainers
+Maintainers have write access to GitHub repositories and act as project administrators.
+They approve and merge pull requests, cut releases, and guide collaboration 
+with the community
 
-* Maintainers have write access to GitHub repositories and act as project
-  administrators. They approve and merge pull requests, cut releases, and guide
-  collaboration with the community. They have:
-  * Ability to merge PR's
-  * Commit access to their project's repositories
+### Activities
+
+* Helping users and novice contributors
+* Contributing code and documentation changes that improve the project
+* Reviewing and commenting on issues and pull requests
+* Participation in working groups
+* Merging pull requests
+* Ability to merge PR's
+* Commit access to their project's repositories
+
+### Policies
+
 * Both maintainers and non-maintainers may propose changes to source code. The
 mechanism to propose such a change is a GitHub pull request. Maintainers review
 and merge (land) pull requests.
@@ -106,20 +128,12 @@ and merge (land) pull requests.
   exception is if the Governance Committee ( GC) votes to approve the change
   despite the opposition. Usually, involving the GC is unnecessary.
 
-### Maintainer activities
-
-* Helping users and novice contributors
-* Contributing code and documentation changes that improve the project
-* Reviewing and commenting on issues and pull requests
-* Participation in working groups
-* Merging pull requests
-
 ## Administrators
 
-* Administrators are responsible for setting repository settings and allocating
-  new access controls for community. 
+Administrators are responsible for setting repository settings and allocating
+new access controls for community. 
   
-### Administrator Activities
+### Activities
 
 * Setting a Github feature in the repo.
 * Adding a person as a maintainer.
