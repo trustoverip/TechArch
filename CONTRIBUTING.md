@@ -49,16 +49,26 @@ use to get going and to contribute to the repository *without ever touching the
 command line*.
 
 1. [Fork the TechArch repo into your
-   account](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks)
+   account](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+   
+   <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196454640-13428816-918b-43d1-af7b-24c54959f756.png></div>
+   
+   <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196456303-be5ccc86-9f7b-4159-9387-2d4260333516.png></div>
+
 2. Find the file you want to edit. [Click the pen tool on the top right of the
-   file to edit it.](https://www.youtube.com/watch?v=uE2DxUfZjtE) If you want to
-   add a file, click "Add File". Generally, when you save it is better to click
-   "create new branch".
+   file to edit it]([https://www.youtube.com/watch?v=uE2DxUfZjtE](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files)). If you want to add a file, click "Add File". Click "create new branch". [Learn More](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files)
+   
+   <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196453797-8cf73fee-e032-44d0-a32b-fcdf7dccf3fc.png></div>
+   <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196456484-ac4160a4-657d-4ef3-bca5-21ad0fa9d8e8.png></div>
+
 3. Make your changes. When you are ready, click [Pull
    Request](https://youtu.be/rgbCcBNZcdQ?t=205) on the bar above the file. Then
    create `New Pull Request` and choose to set the request to merge to the
    `TechArch:main` branch. Put any information you want to describe your changes
-   on the description, and you're done!
+   on the description, and you're done! [Learn More](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
+   
+   <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196454843-23080862-1f8a-4514-a3e0-59bfb9350adf.png></div>
+   <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196454824-a20039f9-ab87-4806-b321-891eea222438.png></div>
    
 ### Advanced Change Flow
 
