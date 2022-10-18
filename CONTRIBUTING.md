@@ -48,6 +48,9 @@ If you're not familiar with Github and Git, here's a few simple steps you can
 use to get going and to contribute to the repository *without ever touching the
 command line*.
 
+There is also a [Video Walkthrough](https://www.youtube.com/embed/3CuB0wdJaSU) 
+of how to do this if you prefer to learn over video.
+
 1. [Fork the TechArch repo into your
    account](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
    
@@ -65,11 +68,12 @@ command line*.
    Request](https://youtu.be/rgbCcBNZcdQ?t=205) on the bar above the file. Then
    create `New Pull Request` and choose to set the request to merge to the
    `TechArch:main` branch. Put any information you want to describe your changes
-   on the description, and you're done! [Learn More](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)
+   on the description, and you're done! [Learn More](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork).
    
    <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196454843-23080862-1f8a-4514-a3e0-59bfb9350adf.png></div>
    <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196454824-a20039f9-ab87-4806-b321-891eea222438.png></div>
-   
+
+  
 ### Advanced Change Flow
 
 As a more advanced user, there are few ways you can manage your Github
