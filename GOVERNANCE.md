@@ -47,6 +47,13 @@ and proposing when an issue is ready for closure.
 * Prioritizing issues.
 * Finding the appropriate `assignee` to work on an issue.
 * Create issues that are required for advancement of the repository.
+* Helping users and novice contributors
+* Contributing code and documentation changes that improve the project
+* Reviewing and commenting on issues and pull requests
+* Participation in working groups
+* Merging pull requests
+* Ensuring clean commit history
+* Flagging breaches related to the code of conduct
 
 ### Policies
 
@@ -100,19 +107,17 @@ proposed resolution. This subgroup should:
     reach final consensus on closure.
 
 ## Maintainers
+
 Maintainers have write access to GitHub repositories and act as project administrators.
-They approve and merge pull requests, cut releases, and guide collaboration 
-with the community
+They approve release cuts, and guide collaboration with the community.
 
 ### Activities
 
-* Helping users and novice contributors
-* Contributing code and documentation changes that improve the project
-* Reviewing and commenting on issues and pull requests
-* Participation in working groups
-* Merging pull requests
-* Ability to merge PR's
-* Commit access to their project's repositories
+* All the editor activities
+* Configuration of the repository
+* Version and release cutting
+* Approving updates to CODEOWNERS 
+* Enforcing community conduct regulations via Github.
 
 ### Policies
 
@@ -124,9 +129,6 @@ and merge (land) pull requests.
   the deliverable. Typically a subset of the Editors serve as Maintainers, but
   all the Editors can serve in this role, or it can be assigned to others in the
   group.
-* If a maintainer opposes a proposed change, then the change cannot land. The
-  exception is if the Governance Committee ( GC) votes to approve the change
-  despite the opposition. Usually, involving the GC is unnecessary.
 
 ## Administrators
 
