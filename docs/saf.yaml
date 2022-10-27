@@ -1,5 +1,6 @@
 #
-# This is a Scope Administration File that can be used in conjunction with TEv2.
+# This is a Scope Administration File that can be used in conjunction with [Terminology Engine v2](https://essif-lab.github.io/framework/docs/tev2/tev2-overview).
+# The Terminology Engine (v2) is a set of specifications and tools that caters for the creation and maintenance (i.e. curation) of terminologies, as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual scopes.
 #
 # The first section defines meta-data concerning the scope itself, both for technical use and human use.
 # It shows where directories and files live that ar part of the scope, and also
