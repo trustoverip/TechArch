@@ -1,0 +1,44 @@
+#
+# This is a Scope Administration File that can be used in conjunction with [Terminology Engine v2](https://essif-lab.github.io/framework/docs/tev2/tev2-overview).
+# The Terminology Engine (v2) is a set of specifications and tools that caters for the creation and maintenance (i.e. curation) of terminologies, as well as for its subsequent use in publications of different types (e.g. websites, whitepapers) and formats (e.g. html, LaTeX), as appropriate for different, individual scopes.
+#
+# The first section defines meta-data concerning the scope itself, both for technical use and human use.
+# It shows where directories and files live that ar part of the scope, and also
+# ways in which people can contribute, raise issues, see what's going on, discuss, etc.
+#
+scope:
+  scopetag: techarch # identifier that curators have determined for this terminology
+  scopedir: https://github.com/trustoverip/TechArch/tree/main/docs  # URL of the scope-directory
+  curatedir: curated-texts # directory where all curated files are located. Full URL is `scopedir`/`curatedir`
+  glossarydir: glossaries # directory where all glossary files and GDFs are located. Full URL is `scopedir`/`glossarydir`
+  mrgfile: mrg.yaml # file that contains the (default) machine readable glossary. Full URL is `scopedir`/`mrgfile`
+  hrgfile: glossary # file that contains the (default) human readable glossary. Full URL is `scopedir`/`hrgfile`
+  license: LICENSE.md # file that contains the (default) licensing conditions. Full URL is `scopedir`/`license`
+  statuses: [ proposed, approved, deprecated ] # list of status tags that are defined for terminological artifacts in this scope
+  issues: https://github.com/trustoverip/TechArch/issues # URL where issues can be raised and handled
+  website: https://trustoverip.github.io/TechArch # home page of the terminology
+  curators: # contacting individual curators
+  - name: wenjing
+  - name: neiljthomson
+    email: # we split up the email address to reduce the likelihood of the address being harvested for spamming
+      id: neil.thomson
+      at: queryvision.com
+#
+# The second section contains a mapping between scopetags that are used within the scope, and the associated scopedirs.
+# This enables tools to find the [SAF](@) of these [scopes](@), and from there all other directories, files etc.
+# that live within them, e.g. to use/import their data.
+#
+scopes:  #
+- scopetags: [ essiflab, essif-lab ] # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
+  scopedir: https://github.com/essif-lab/framework/tree/master/docs # URL of the scope-directory
+- scopetags: [ ctwg, toip-ctwg ] # definition of (scope)tag(s) that are used within this scope to refer to a specific terminology
+  scopedir: https://github.com/trustoverip/ctwg # URL of the scope-directory
+#
+# The third section specifies the versions that are actively maintained by the curators.
+# For each version, the set of terms is selected that constitute the terminology.
+# See the Glossary Generation Tool (GGT) for details about the syntax and semantics.
+#
+versions:
+  - vsntag: test # this version MUST only be used for testing purposes
+    terms:
+    - "* @techarch" # import all techarch terms.
