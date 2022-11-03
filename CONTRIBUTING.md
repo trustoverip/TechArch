@@ -78,10 +78,17 @@ of how to do this if you prefer to learn over video.
 If you've gotten some comments about needing to fix a PR, the process is really
 simple. You do NOT need to create a new PR. 
 
-1. Go to the file in your branch that you want to edit. 
-2. Click the edit button ( step 2 from before )
+1. Go to the file in **your branch** that you want to edit. 
+2. Click the edit button ( step 2 from when you created the initial edit )
 3. Make edits, but this time, instead of creating a **new** branch, commit to
    the same branch. Your changes will propogate to the PR. 
+   
+   <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/199773674-443fbf9d-1a2b-4968-87d8-45b9adff21ab.png></div>
+
+4. You may want to re-request review. Click the sync button to do so:
+   
+  <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/199774182-74614cdb-f7ad-4cd0-8a6d-50d9a92fd127.png></div>
+
 
 ### Advanced Change Flow
 
