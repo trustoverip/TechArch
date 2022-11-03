@@ -73,7 +73,16 @@ of how to do this if you prefer to learn over video.
    <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196454843-23080862-1f8a-4514-a3e0-59bfb9350adf.png></div>
    <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196454824-a20039f9-ab87-4806-b321-891eea222438.png></div>
 
-  
+#### Updating your PR on Changes Requested
+
+If you've gotten some comments about needing to fix a PR, the process is really
+simple. You do NOT need to create a new PR. 
+
+1. Go to the file in your branch that you want to edit. 
+2. Click the edit button ( step 2 from before )
+3. Make edits, but this time, instead of creating a **new** branch, commit to
+   the same branch. Your changes will propogate to the PR. 
+
 ### Advanced Change Flow
 
 As a more advanced user, there are few ways you can manage your Github
