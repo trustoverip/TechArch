@@ -50,7 +50,7 @@ Whether from the perspective of an implementer, a customer, or a policymaker, th
 
 - **Reliability.** A well-defined architecture enables the development of software components and applications that can be trusted to act in predictable, reliable ways—and that can expect other components and applications to do the same.
 
-- **Interoperability and vendor independence.** As with the TCP/IP stack, the Bluetooth stack, the NFC stack, or other protocol stacks, implementations from multiple vendors can and should be interoperable, both with current standards, and as they evolve over time. Customers should be able to switch between them without major loss of functionality.
+- **Interoperability and vendor independence.** As with the TCP/IP stack, the Bluetooth stack, the NFC stack, or other protocol stacks, implementations from multiple vendors can and should be interoperable, and customers should be able to switch between them without major loss of functionality. In addition, we want the ToIP stack to be as interoperable as is practical with existing internet technologies that may not embody ToIP goals, as long as the guiding principles of Trust Over IP are not frustrated.
 
 - **Development communities.** A well-designed architecture stack helps spawn a robust, diverse community of developers building solutions whose interoperability depends on a core stack. More development attracts more innovation, more innovation attracts more adoption, producing a network effect benefiting the entire ecosystem.
 
