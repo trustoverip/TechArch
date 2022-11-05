@@ -115,7 +115,7 @@ These twin objectives led the ToIP Foundation to begin the work with the Design 
 
 With regard to the first design goal, establishing trust between parties requires that each party develop confidence in the following properties of their relationship:
 
-1. **Authenticity:** is the receiver of a communication able to verify that it originated from the expected sender and has not been tampered with?[^1]
+1. **Authenticity:** is the receiver of a communication able to verify that it originated from the sender and has not been tampered with?[^1]
 2. **Confidentiality:** is the contents of a communication protected so only authorized parties have access?
 3. **Privacy:** will the expectations of each party with respect to usage of shared information be honored by the other parties?
 
