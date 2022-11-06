@@ -1,10 +1,18 @@
 # Trust over IP (ToIP) Technology Architecture Specification
 
 #### Revision History
-#### Editors:
-#### Contributors:
+**Editors:**
+~ [Drummond Reed](https://www.linkedin.com/in/drummondreed/) (Evernym)
+~ [Andor Kesselman](https://www.linkedin.com/in/henosisknot/) (Benri)
+~ [Darrell O' Donnel]()
+~ [Wenjing Chu]()
+~ [Antti Kettunen]()
+~ [Jo Spencer]()
+~ [Christine Martin]()
+~ [Allan Thomson]()
 
-*Copyright: *
+**Contributors**
+
 
 ## 1. Introduction
 
