@@ -195,7 +195,7 @@ A more detailed overview showing where different decentralized digital trust inf
 
 The reference architecture of the ToIP stack provides a generalization of different solutions to trust establishment over the Internet (or over other digital networks). This section introduces the basic concepts, requirements and vocabulary with which to consider: a) each functional component, b) the interface definitions and protocols between these components, and c) interoperability of solutions built upon those components. Subsequent sections will describe these components and protocols in more detail.
 
-At the highest level, ToIP interactions occur between three basic types of interacting systems.
+At the highest level, ToIP interactions occur between three basic types of interacting systems delineated by *locus of control*.
 
   1. **Endpoint Systems** (often simply referred to as Endpoints): the ToIP systems between which end-to-end trust is enabled following the End-to-End Principle. See [Section 7.1](#71-endpoint-systems).
   1. **Intermediary Systems** may be used to assist in the interactions between the Endpoint Systems. In that context, Intermediary systems are involved in the ToIP Trust Spanning Protocol, and may themselves be Endpoint Systems. Intermediary systems are not a dependency to Endpoint systems' trust relationship. See [Section 9](#9-intermediary-systems).
@@ -207,7 +207,7 @@ The relationships between these systems is shown in Figure 5.
 
 **Figure 5: The three basic types of component systems in ToIP architecture**
 
-The definition of each system is anchored to its defined (and agreed) locus of control, i.e., who is able to exert control over the operation of that system. Clarity about the locus of control and the dependencies between systems is critical as end-to-end trust is constructed between any two Endpoint Systems. Each system, whether it is classified as an Endpoint System, Intermediary System or Supporting System, defines its own locus of control. An Endpoint System, for example, may be a tiny IoT device, a personal smartphone, or a large capacity service hosted in a cloud. What matters to the architecture is that it exhibits a consistent locus of control and, therefore, consistent interaction protocols with respect to other systems. 
+The definition of each system is anchored to its defined (and agreed) locus of control, i.e., who is able to exert control over the operation of that system. Clarity about the locus of control and the dependencies between systems is critical as end-to-end trust is constructed between any two Endpoint Systems. Each system, whether it is classified as an Endpoint System, Intermediary System or Supporting System, defines its own locus of control. An Endpoint System, for example, may be a tiny IoT device, a personal smartphone, or a large capacity service hosted in a cloud. The terms such as 'local or remote' or 'within, internal or outside' an Endpoint System should be understood as being with respect to its locus of control rather than physical location. What matters to the architecture is that it exhibits a consistent locus of control and, therefore, consistent interaction protocols with respect to other systems. 
 
 These subsystems collaborate with each other through three types of consistent ToIP interactions:
   1. Endpoint System to Endpoint System
@@ -247,9 +247,9 @@ Requirements for ToIP identifiers are covered in [Section 8.2](#82-identifiers).
 
 ### 7.1 Endpoint Systems
 
-Endpoint Systems represent ToIP systems that are under a party’s direct control. A party means the entity that is evaluating, relying on, and benefiting from a trust relationship. In other words, a party is any user of the system without regard to their role in the system. This represents a contrast with the traditional identity and access management (IAM) distinct roles of a user who is making trust assertions and a *relying party* who is relying on those assertions to make a trust decision. In a ToIP system, Endpoint Systems have a symmetric *peer-to-peer* trust relationship in Layer 2 — the trust spanning layer.
+Endpoint Systems represent ToIP systems that are under a party’s direct control. An Endpoint System's boundary is delineated by its locus of control. A party means the entity that is evaluating, relying on, and benefiting from a trust relationship. In other words, a party is any user of the system without regard to their role in the system. This represents a contrast with the traditional identity and access management (IAM) distinct roles of a user who is making trust assertions and a *relying party* who is relying on those assertions to make a trust decision. In a ToIP system, Endpoint Systems have a symmetric *peer-to-peer* trust relationship in Layer 2 — the trust spanning layer.
 
-Endpoint Systems are autonomous in the sense that a party’s locus of control is fully contained within the given Endpoint System. This means a potential compromise of other Endpoint Systems, Intermediary Systems, or Supporting Systems will not directly compromise the integrity of a given Endpoint System. Each Endpoint System can be simple or very complex, i.e., it may have many further divided functions and/or services, however in this reference architecture, we shall consider the abstract Endpoint System autonomous. Implementers SHOULD ensure autonomy for Endpoint Systems [REQ A.1]
+Endpoint Systems are autonomous in the sense that a party’s locus of control is the whole Endpoint System by definition. This means a potential compromise of other Endpoint Systems, Intermediary Systems, or Supporting Systems will not directly compromise the integrity of a given Endpoint System. Each Endpoint System can be simple or very complex, i.e., it may have many further divided functions and/or services, however in this reference architecture, we shall consider the abstract Endpoint System autonomous. Implementers SHOULD ensure autonomy for Endpoint Systems [REQ A.1]
 
 Common examples of Endpoint Systems include:
 
@@ -264,9 +264,9 @@ Befitting Design Principle #1 ([The End-to-End Principle](https://trustoverip.or
 
 **Figure 8: Endpoint System**
 
-Within an Endpoint System, a higher layer uses the functions of a lower layer through an **Interface**. In ToIP architecture, functions within an Endpoint System are decomposed into layers in a vertical stack where layer boundaries are defined by their corresponding Interfaces. In a ToIP Endpoint System, the higher layers of the ToIP protocol stack MUST communicate with the lower layers via defined interfaces. [REQ A.2]
+Within an Endpoint System's locus of control, a higher layer uses the functions of a lower layer through an **Interface**. In ToIP architecture, functions within an Endpoint System are decomposed into layers in a vertical stack where layer boundaries are defined by their corresponding Interfaces. In a ToIP Endpoint System, the higher layers of the ToIP protocol stack MUST communicate with the lower layers via defined interfaces. [REQ A.2]
 
-In addition to the internal layer interfaces implemented by hardware and software resources within the Endpoint System’s boundary, an Endpoint System may also rely on the services of other Supporting Systems that are located outside of the Endpoint System but accessible through the Internet to perform their functions. This type of interaction requires a defined **Protocol**. 
+In addition to the internal layer interfaces implemented by hardware and software resources within the Endpoint System’s locus of control, an Endpoint System may also rely on the services of other Supporting Systems that are located outside of the Endpoint System's locus of control but accessible through the Internet to perform their functions. This type of interaction requires a defined **Protocol**. 
 
 The distinction between an Interface and a Protocol is whether the systems communicating over the protocol represent different loci of control. For example, simply distributing the functions within a particular layer over the Internet — such as having some of the functions performed using cloud computing or web services—does not necessarily require a defined protocol if all of the functions are under the same locus of control. However an agreed protocol may be necessary if the communicating systems are under different loci of control. What is essential is delineating who has control over what in order to reason about trust relationships. 
 
@@ -274,7 +274,7 @@ The four layer stack within an Endpoint System is defined in the following secti
 
 ### 7.2 Layer 1: Trust Support
 
-If a ToIP Endpoint System includes Trust Support Functions, then those functions MUST be included at Layer 1 of the Endpoint System. [REQ L1.1] The exact nature of the Trust Support Functions required by any particular Endpoint System may vary significantly depending on the Endpoint System’s physical manifestation and numerous other design goals (e.g. cost, location, convenience, power usage, reliability and so on). For example the Trust Support Functions required for a full-featured smartphone vs. a cloud server vs. an IoT thermostat may be very different. 
+If a ToIP Endpoint System includes Trust Support Functions *within its locus of control*, then those functions MUST be included at Layer 1 of the Endpoint System. [REQ L1.1] The exact nature of the Trust Support Functions required by any particular Endpoint System may vary significantly depending on the Endpoint System’s physical manifestation and numerous other design goals (e.g. cost, location, convenience, power usage, reliability and so on). For example the Trust Support Functions required for a full-featured smartphone vs. a cloud server vs. an IoT thermostat may be very different. 
 
 Examples of Trust Support Functions designed to specifically support machine-to-machine trust (aka cryptographic trust or technical trust):
 
@@ -283,7 +283,7 @@ Examples of Trust Support Functions designed to specifically support machine-to-
   - Sufficiently secure computing environment.
   - Sufficient communication functions for the intended deployment environment.
 
-*NOTE: while this specification generally assumes the Internet as the common networking environment, Internet support is not strictly required. The ToIP stack may be implemented over any communication medium capable of supporting the defined protocols.*
+*NOTE: while this specification generally assumes the Internet as the common networking environment, Internet support is not strictly required. The ToIP stack may be implemented over any communication medium capable of supporting the communication functions.*
 
 Examples of Trust Support Functions designed to specifically support human-to-human trust (aka business trust or legal trust) include:
 
@@ -292,7 +292,7 @@ Examples of Trust Support Functions designed to specifically support human-to-hu
 
 Diversity of implementations of Layer 1 Trust Support Functions is *intentional* and a key goal of the ToIP stack design.
 
-*NOTE: For functional, performance, security, or other reasons, a Layer 1 Trust Support Function may use a remote service in its implementation, e.g., a distributed ledger, distributed directory, distributed database, distributed file system, or distributed hash table. These systems are Supporting Systems to the Layer 1 implementation; they are not part of Layer 1 itself.*
+*NOTE: For functional, performance, security, or other reasons, a Layer 1 Trust Support Function implementation may use a remote service outside its locus of control, e.g., a distributed ledger, distributed directory, distributed database, distributed file system, or distributed hash table. These systems are Supporting Systems to the Layer 1 implementation; they are not part of Layer 1 itself. See [Section 10.1](#101-overview)*.
 
 ### 7.3 Layer 2: Trust Spanning
 
@@ -501,11 +501,11 @@ A DID Method may be implemented based on a distributed ledger, e.g. Hyperledger 
 
 **Figure 12: An example of Hyperledger Indy as a Supporting System**
 
-A Layer 2 implementation must implement both DID resolution and the ToIP Trust Spanning Protocol. To implement DID resolution in this example, the Aries agent uses a local service, i.e. a digital wallet, which relies on, eventually, a KMS function and a secure storage function within the Endpoint System. It also uses a remote service — the Indy blockchain — via web service APIs built on top of HTTPS and other web protocols. This remote service protocol consists of three components in the case of Aries-Indy: pool API, anoncred API, and payment API. The web service eventually relies on the Internet Protocol stack for routing, transport and delivery. Collectively, it is a complete Endpoint System to Supporting System Protocol that in this case runs over the web.
+A Layer 2 implementation must implement both DID resolution and the ToIP Trust Spanning Protocol. To implement DID resolution in this example, the Aries agent uses a local service (i.e. within its locus of control), i.e. a digital wallet, which relies on, eventually, a KMS function and a secure storage function within the Endpoint System. It also uses a remote service (i.e. outside of its locus of control) — the Indy blockchain — via web service APIs built on top of HTTPS and other web protocols. This remote service protocol consists of three components in the case of Aries-Indy: pool API, anoncred API, and payment API. The web service eventually relies on the Internet Protocol stack for routing, transport and delivery. Collectively, it is a complete Endpoint System to Supporting System Protocol that in this case runs over the web.
 
 ### 10.3 Example 2
 
-[KERI](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) offers another example in this design pattern. In KERI, the Endpoint System identifier is either an AID or a did:keri method. A layer 2 implementation will need certain key material and secure storage from the lower layer as well. In addition, it requires additional services that are outside of the Endpoint System boundary. The [KERI Witness Pool](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) is an example of such a supporting service as shown in Figure 13. Another example is [KERI Watcher Pool](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf). 
+[KERI](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) offers another example in this design pattern. In KERI, the Endpoint System identifier is either an AID or a did:keri method. A layer 2 implementation will need certain key material and secure storage from the lower layer as well. In addition, it requires additional services that are outside of the Endpoint System's locus of control boundary. The [KERI Witness Pool](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) is an example of such a supporting service as shown in Figure 13. Another example is [KERI Watcher Pool](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf). 
 
 These supporting services differ from local dependencies (e.g. secure storage) because they are outside of an Endpoint System’s locus of control. The access protocol to such supporting services is also different from the ToIP Trust Spanning Protocol as it is a protocol between different types of parties and has a different protocol stack.
 
