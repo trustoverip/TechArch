@@ -3,27 +3,28 @@
 #### Revision History
 #### Editors:
 #### Contributors:
-- Jacques Bikoundou
-- Tim Bouma, CIO Strategy Council
-- Kevin Dean, GS1 Global Office
-- Judith Fleenor, Trust Over IP Foundation
-- Sid Haniff, Datasoc
-- Daniel Hardman, Provenant
-- Isaac Henderson
-- John Jordan, Province of British Columbia
-- Vikas Malhotra, WOPLLI Technologies
-- Sankarshan Mukhopadhyay, Dhiway Networks
-- Sumabala Nair, IBM
-- Vinod Panicker, Wipro 
-- Scott Perry, Schellman
-- Vladimir Simjanoski, Blokverse
-- P. A. Subrahmanyam, CyberKnowledge
-- Bart Suichies
-- Samuel Smith, ProSapien LLC
-- Neil Thomson, QueryVision
-- Alex Tweeddale, cheqd
-- Mattia Zago, Monokee
-- Vlad Zubenko, ETS
+
+~ [Jacques Bikoundou]()
+~ [Tim Bouma]() (CIO Strategy Council)
+~ [Kevin Dean]() (GS1 Global Office)
+~ [Judith Fleenor]() (Trust Over IP Foundation)
+~ [Sid Haniff]() (Datasoc)
+~ [Daniel Hardman]() (Provenant)
+~ [Isaac Henderson]()
+~ [John Jordan]() (Province of British Columbia)
+~ [Vikas Malhotra]() (WOPLLI Technologies)
+~ [Sankarshan Mukhopadhyay]() (Dhiway Networks)
+~ [Sumabala Nair]() (IBM)
+~ [Vinod Panicker]() (Wipro)
+~ [Scott Perry]() (Schellman)
+~ [Vladimir Simjanoski]() (Blokverse)
+~ [P. A. Subrahmanyam]() (CyberKnowledge)
+~ [Bart Suichies]()
+~ [Samuel Smith]() (ProSapien LLC)
+~ [Neil Thomson]() (QueryVision)
+~ [Alex Tweeddale]() (cheqd)
+~ [Mattia Zago]() (Monokee)
+~ [Vlad Zubenko]() (ETS)
 
 *Copyright: 2022 Trust Over IP Foundation*
 
