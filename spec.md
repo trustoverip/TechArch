@@ -11,7 +11,7 @@
 ~ [Christine Martin]()()
 ~ [Drummond Reed](https://www.linkedin.com/in/drummondreed/) (Evernym)
 ~ [Jo Spencer](https://www.linkedin.com/in/jospencer-1pg/?originalSubdomain=au)
-~ [Allan Thomson]https://www.linkedin.com/in/url4allant/)()
+~ [Allan Thomson](https://www.linkedin.com/in/url4allant/)()
 
 **Contributors**
 
