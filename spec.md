@@ -1,7 +1,10 @@
 # Trust over IP (ToIP) Technology Architecture Specification
 
-#### Revision History
-**Editors:**
+**Revision History**
+
+- Public Review Draft 01 (PR1) — 14 November 2022
+
+**Editors**
 
 ~ [Daniel Bachenheimer](https://www.linkedin.com/in/daniel-bachenheimer-2632202/) (Accenture)
 ~ [Wenjing Chu](https://www.linkedin.com/in/wenjingchu) (Futurewei Technologies, Inc)
@@ -67,6 +70,8 @@ All other defined terms are linked to their definitions in the applicable ToIP [
 - [The TSWG Glossary](https://trustoverip.github.io/tswg/glossary)
 - [The eSSIF-Lab Glossary](https://trustoverip.github.io/essiflab/glossary)
 
+*NOTE: Work on these glossaries is ongoing with the aim of being complete for the second public review draft (PR2).*
+
 Terms that especially vital to this specification are also explained inline.
 
 ## 3. Motivations
@@ -130,6 +135,8 @@ By focusing solely on the Technical Architecture Track, the following are explic
 
 *This section is informative.*
 
+*NOTE: Work on a set of example use cases illustrating the full breadth of usage of the ToIP stack is underway in the ToIP [Ecosystem Foundry Working Group](https://wiki.trustoverip.org/display/HOME/Ecosystem+Foundry+Working+Group). A summary table of these use cases is planned to be included in the second public review draft (PR2).*
+
 ## 6. Reference Architecture Overview
 
 *This section is informative.*
@@ -185,11 +192,7 @@ Much of the success of the Internet is attributed to this “hourglass” design
 
 **Figure 3: How the four layer pattern fits the Hourglass Model**
 
-A more detailed overview showing where different decentralized digital trust infrastructure functions fall relative to the trust spanning layer is shown in Figure 4.
-
-<img src="/images/ExampleStack.png" alt="Examples of what falls above and below the trust spanning layer" style="width:800px;"/>
-
-**Figure 4: Examples of what falls above and below the trust spanning layer**
+For additional overviews of how the ToIP technology stack implements the hourglass model, see [Appendix B](#appendix-b-consolidated-views-of-the-toip-technology-stack).
 
 ### 6.3 High-Level System Architecture
 
@@ -203,7 +206,7 @@ At the highest level, ToIP interactions occur between three basic types of inter
 
 The relationships between these systems is shown in Figure 5.
 
-<img src="/images/ThreeTypesofSystems.png" alt="Three Types of Systems" style="width:600px;"/>
+<img src="/images/ThreeTypesofSystems.png" alt="Three Types of Systems" style="width:900px;"/>
 
 **Figure 5: The three basic types of component systems in ToIP architecture**
 
@@ -579,7 +582,7 @@ For ease of reference, the following table consolidates all normative requiremen
 |L4.2|If a Layer 4 Trust Application does not use a Layer 3 Trust Task Protocol, it MUST communicate with other Endpoint Systems using the Layer 3 Trust Spanning Protocol|[7.5](#75-layer-4-trust-applications)|
 |L4.3|A Layer 4 Trust Application MUST support any ToIP-defined Trust Affordances relevant to that application.|[7.5](#75-layer-4-trust-applications)|
 
+## Appendix B: Consolidated Views of the ToIP Technology Stack
 
-
-## Appendix B: Mapping of Existing Technologies into the ToIP Stack
+## Appendix C: Mapping of Existing Technologies into the ToIP Stack
 
