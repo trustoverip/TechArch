@@ -1,8 +1,19 @@
 # Trust over IP (ToIP) Technology Architecture Specification
 
 #### Revision History
-#### Editors:
-#### Contributors:
+**Editors:**
+
+~ [Daniel Bachenheimer](https://www.linkedin.com/in/daniel-bachenheimer-2632202/) (Accenture)
+~ [Wenjing Chu](https://www.linkedin.com/in/wenjingchu) (Futurewei Technologies, Inc)
+~ [Darrell O' Donnel](https://www.linkedin.com/in/darrellodonnell/?originalSubdomain=ca) (Continuum Loop)
+~ [Andor Kesselman](https://www.linkedin.com/in/henosisknot/) (Benri)
+~ [Antti Kettunen](https://www.linkedin.com/in/anttikettunen/?originalSubdomain=fi)
+~ [Christine Martin](https://www.linkedin.com/in/martch/?originalSubdomain=ca) (Continuum Loop)
+~ [Drummond Reed](https://www.linkedin.com/in/drummondreed/) (Gen/Avast)
+~ [Jo Spencer](https://www.linkedin.com/in/jospencer-1pg/?originalSubdomain=au) (460degrees / Sezoo)
+~ [Allan Thomson](https://www.linkedin.com/in/url4allant/) (Gen/Avast)
+
+**Contributors**
 
 ~ [Jacques Bikoundou]()
 ~ [Tim Bouma]() (CIO Strategy Council)
