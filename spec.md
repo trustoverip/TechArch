@@ -2,14 +2,16 @@
 
 #### Revision History
 **Editors:**
-~ [Drummond Reed](https://www.linkedin.com/in/drummondreed/) (Evernym)
+
+~ [Daniel Bachenheimer](https://www.linkedin.com/in/daniel-bachenheimer-2632202/)(Accenture)
+~ [Wenjing Chu](https://www.linkedin.com/in/wenjingchu)(Futurewei Technologies, Inc)
+~ [Darrell O' Donnel](https://www.linkedin.com/in/darrellodonnell/?originalSubdomain=ca)
 ~ [Andor Kesselman](https://www.linkedin.com/in/henosisknot/) (Benri)
-~ [Darrell O' Donnel]()
-~ [Wenjing Chu]()
-~ [Antti Kettunen]()
-~ [Jo Spencer]()
-~ [Christine Martin]()
-~ [Allan Thomson]()
+~ [Antti Kettunen](https://www.linkedin.com/in/anttikettunen/?originalSubdomain=fi)
+~ [Christine Martin]()()
+~ [Drummond Reed](https://www.linkedin.com/in/drummondreed/) (Evernym)
+~ [Jo Spencer](https://www.linkedin.com/in/jospencer-1pg/?originalSubdomain=au)
+~ [Allan Thomson]https://www.linkedin.com/in/url4allant/)()
 
 **Contributors**
 
