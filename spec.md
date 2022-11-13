@@ -626,5 +626,25 @@ For ease of reference, the following table consolidates all normative requiremen
 
 ## Appendix B: Consolidated Views of the ToIP Technology Stack
 
-## Appendix C: Mapping of Existing Technologies into the ToIP Stack
+## Appendix C: Mapping of Existing Technologies into the ToIP Technology Stack
 
+Just as the TCP/IP stack did not need to reinvent or replace existing local area networks, but instead added a new inter-networking layer to connect the existing networks, the ToIP stack does not reinvent or replace existing centralized or federated identity and PKI trust infrastructures. It adds a new inter-_trust_ networking layer to connect the existing trust domains.
+
+As this new layer of decentralized digital identity and trust infrastructure has been evolving, many individual pieces of the puzzle have been developed in parallel. For example:
+
+* Over 120 different DID methods (see the [W3C DID Spec Registries](https://www.w3.org/TR/did-spec-registries/)).
+* At least a dozen different digital credential formats and signature schemes.
+* At least three digital credential exchange protocols (DIDComm/Aries, OIDC4VC, W3C VC API)
+* Several new decentralized payment protocols (e.g., [TBDex](https://tbdex.io/whitepaper.pdf)).
+* Multiple QR formats and out-of-band introduction (OOBI) protocols (e.g., [OASIS Secure QR Codes](https://www.oasis-open.org/2022/07/12/secure-qr-code-authentication-v1-0-from-esat-tc-approved-as-a-committee-specification/)).
+
+From a ToIP perspective, all of these are potential component specifications.
+
+* Some may fully meet the requirements of the ToIP Technology Architecture Specification without any modification. 
+* Others may require ToIP-conformant profiles to be written.
+* Still others may require (hopefully small) revisions to meet ToIP requirements.
+* A few (ideally very few) may need to be developed from scratch, either at the ToIP Foundation or another suitable industry organization.
+
+Given the speed at which this new evolutionary branch of the Internet is evolving, the ToIP Foundation is maintaining a “mapping” of existing technologies and open standards into the ToIP stack in a separate living document called [Evolution of the ToIP Stack](https://trustoverip.org/our-work/evolution-of-the-toip-stack/). 
+
+We highly recommend referring to this document to see the current mapping. The Foundation intends to publish an updated version of this document with each major development in the space (and no less frequently than twice a year). 
