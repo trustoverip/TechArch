@@ -58,7 +58,7 @@ Whether from the perspective of an implementer, a customer, or a policymaker, th
 
 - **Reliability.** A well-defined architecture enables the development of software components and applications that can be trusted to act in predictable, reliable ways—and that can expect other components and applications to do the same.
 
-- **Interoperability and vendor independence.** As with the TCP/IP stack, the Bluetooth stack, the NFC stack, or other protocol stacks, implementations from multiple vendors can and should be interoperable, and customers should be able to switch between them without major loss of functionality. In addition, we want the ToIP stack to be as interoperable as is practical with existing internet technologies that may not embody ToIP goals, as long as the guiding principles of Trust Over IP are not frustrated.
+- **Interoperability and vendor independence.** As with the TCP/IP stack, the Bluetooth stack, the NFC stack, or other protocol stacks, implementations from multiple vendors can and should be interoperable, and customers should be able to switch between them while maintaining standardized functionality. In addition, whenever practical, ToIP should leverage existing technologies provided they are consistent with the [ToIP design principles](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf).
 
 - **Development communities.** A well-designed architecture stack helps spawn a robust, diverse community of developers building solutions whose interoperability depends on a core stack. More development attracts more innovation, more innovation attracts more adoption, producing a network effect benefiting the entire ecosystem.
 
@@ -123,14 +123,14 @@ These twin objectives led the ToIP Foundation to begin the work with the Design 
 
 With regard to the first design goal, establishing trust between parties requires that each party develop confidence in the following properties of their relationship:
 
-1. **Authenticity:** is the receiver of a communication able to verify that it originated from the expected sender?
-2. **Integrity:** is the receiver able to verify that a communication is complete and has not been tampered with?
-3. **Confidentiality:** is the contents of a communication protected so only authorized parties have access?
-4. **Privacy:** will the expectations of each party with respect to usage of shared information be honored by the other parties?
+1. **Authenticity:** is the receiver of a communication able to verify that it originated from the sender and has not been tampered with?[^1]
+2. **Confidentiality:** is the contents of a communication protected so only authorized parties have access?
+3. **Privacy:** will the expectations of each party with respect to usage of shared information be honored by the other parties?
 
-Note that, in some trust relationships, confidentiality and privacy may be optional. Thus our design goal with the ToIP stack is to achieve these four properties in the order listed.[^1]
+Note that, in some trust relationships, confidentiality and privacy may be optional. Thus our design goal with the ToIP stack is to achieve these three properties in the order listed.[^2]
 
-[^1]: Another standard information trust criteria is **availability**. This is a concern with the design and implementation of operational deployments of the ToIP stack and should be addressed in the associated operational governance frameworks.
+[^1]: With respect to this design goal, authenticity includes **message integrity**, i.e., a communication is not authentic if it has been tampered with in any way.
+[^2]: Another important property of the architecture is **availability**. This is a concern with the design and implementation of operational deployments of the ToIP stack and should be addressed in the associated operational governance frameworks.
 
 With regard to the second design goal, the ToIP reference architecture shares the same goal of global scalability as the original Internet architecture. This involves several intertwined considerations that overlap and reinforce each other as summarized by the first four [Design Principles for the ToIP Stack](https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf):
 
