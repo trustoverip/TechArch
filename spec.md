@@ -525,11 +525,53 @@ Figure 14 illustrates a generalization of the pattern in which Endpoint Systems 
 Figure 14: A generalization of how Endpoint Systems and Supporting Systems interact
 
 ## 11. Endpoint System Interoperability
-### 11.1 Interoperability between Endpoints with Decentralized Identifiers
-### 11.2 Interoperability between Endpoints with Decentralized and Other Identifiers
 
+### 11.1 Interoperability between Endpoint Systems Using Decentralized Identifiers
+
+[Section 6.4](#64-toip-identifiers) states that “Endpoint Systems [need to] be able to associate, discover and verify the cryptographic keys associated with a ToIP identifier”. This capability is essential in order for two or more Endpoint Systems to be able to discover and connect with each other over the ToIP Trust Spanning Protocol.
+
+If an Endpoint System is identified with a publicly resolvable decentralized identifier (DID) as defined in [section 6.4](#64-toip-identifiers), this is straightforward because a DID resolver can:
+
+1. Resolve the DID to the authoritative DID document.
+2. Extract the appropriate public key.
+3. Extract the service endpoint URI for the ToIP Trust Spanning Protocol.
+
+If an Endpoint System is identified with a private, pairwise DID — called a **peer DID** — the discovery and exchange of a DID document needs to use an out-of-band interaction (OOBI) protocol. Common examples include QR codes and custom-generated deep links.
+
+### 11.2 Interoperability between Endpoints Using Other Verifiable Identifiers
+
+If an Endpoint System is not identified with a DID, but with some other kind of verifiable identifier (VID) as defined in [section 6.4](#64-toip-identifiers), then a different approach must be used to bootstrap communications using the ToIP Trust Spanning Protocol. This requires enabling discovery and verification of:
+
+1. The authoritative public key for the Endpoint System.
+2. The authoritative service endpoint URI for communicating with the Endpoint System over the ToIP Trust Spanning Protocol.
+
+If the VID is an HTTPS URL, there are at least two solutions:
+
+1. Conversion of the HTTPS URL into a **did:web:** identifier as described in the [ToIP X.509 PKD Interop page](https://wiki.trustoverip.org/display/HOME/X.509+PKD+Interop).
+2. Issuance by a trusted issuer (such as a certification authority) of a verifiable credential whose subject is the HTTPS URL and whose claims assert the authoritative public key and ToIP Trust Spanning Protocol service endpoint URI.
+
+We anticipate that integration of decentralized PKI and X.509 PKI will be a topic of increasing interest and innovation.
 
 ## 12. Integration with the ToIP Governance Stack
+
+As explained in the Introduction, this specification, maintained by the ToIP [Technology Stack Working Group](https://wiki.trustoverip.org/display/HOME/Technology+Stack+Working+Group), is focused entirely on requirements for the ToIP Technology Stack. A separate set of specifications, maintained by the ToIP [Governance Stack Working Group](https://wiki.trustoverip.org/display/HOME/Governance+Stack+Working+Group), defines the requirements for the ToIP Governance Stack. The first generation of the ToIP Governance Architecture Specifications were published in January 2022 and are summarized [here](https://trustoverip.org/news/2022/02/01/the-toip-foundation-releases-its-first-official-governance-specifications/).
+
+Although the ToIP Governance Architecture Specifications consist largely of recommendations about the structure and content of governance documents for ToIP-based digital trust ecosystems, there are a very small but vital set of technical requirements that are essential for “tying the two stacks together”.
+
+In particular, section 3 of the [ToIP Governance Architecture Specification V1.0](https://trustoverip.org/permalink/ToIP-Governance-Architecture-Specification-V1.0-2022-12-21.pdf) specifies a set of **identification requirements** for ToIP-compatible governance frameworks. A high-level summary:
+
+1. The **primary document** for the governance framework MUST be assigned a DID and be retrievable via a DID URL. This DID identifies the governance framework itself as a digital object, and the DID URL allows it to be viewed and verified by any party.
+2. All other **controlled documents** in the governance framework MUST have DID URLs.
+3. The DID URLs for all governance framework documents MUST be **versioned** as the documents are versioned.
+4. The **governing authority**, **administering authority** (if separate from the governing authority), and all **governed parties** in the governance framework MUST be identified with DIDs.
+
+The use of persistent, discoverable, cryptographically verifiable identifiers for all parties and documents governing a digital trust ecosystem makes it much easier to bind technology to policy within a digital trust ecosystem. For example:
+
+* A verifiable credential issued within the ecosystem can include a claim asserting the DID of the authoritative governance framework.
+* The credential can also include the DID of one or more trust registries where a holder or verifier can verify that the DID of the credential issuer is authorized to issue that particular type of credential under that governance framework.
+* A credential asserting certification under the governance framework can include the DID of the governance framework, the DID of the certification authority, the DID of the governed party being certified, and the DID URL of the precise type of certification being awarded.
+
+For additional recommendations about integration of the ToIP Governance Stack with the ToIP Technology Stack, please see the [ToIP Governance Architecture Specification V1.0](https://trustoverip.org/permalink/ToIP-Governance-Architecture-Specification-V1.0-2022-12-21.pdf) and the [ToIP Governance Metamodel Specification V1.0](https://trustoverip.org/permalink/ToIP-Governance-Metamodel-Specification-V1.0-2022-12-21.pdf).
 
 ## 13. References
 
