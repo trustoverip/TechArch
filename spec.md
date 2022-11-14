@@ -48,7 +48,7 @@ The mission of the [Trust over IP (ToIP) Foundation](https://www.trustoverip.org
 
 <img src="/images/ToIPDualStack.png" alt="ToIP Dual Stack" style="width:800px;"/>
 
-**Figure 1: Conceptial diagram of the ToIP stack**
+**Figure 1: Conceptual diagram of the ToIP stack**
 
 This document is the normative specification for the high-level architecture of the ToIP technology stack (the left half of Figure 1).  It is a deliverable of the [Technology Stack Working Group](https://wiki.trustoverip.org/display/HOME/Technology+Stack+Working+Group) at the ToIP Foundation. It is recommended to read this document in conjunction with these three other documents from the ToIP Foundation in the following order:
 
