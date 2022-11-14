@@ -144,3 +144,20 @@ new access controls for community.
 * Setting security policies on the branches and repository.
 * Setting any keys to the repsository.
 * Integrating any new services, such as CICD to the repository.
+
+
+## Editorial process
+The editorial process diagram below describes how different roles interact with each other and what responsibilities they hold in the writing and updating of the specification. In principle, it's the responsibility of the contributors to raise issues in the specification document, and come up with a new change proposal. 
+Changes to the specification are done by forking the repository and making the changes first to their own repository, and creating a Pull Request against the original repository. The pull request is then reviewed by one or more editors. Editors may approve the PR directly, or propose additional changes. In case additional discussion is deemed necessary, a new ad hoc group can be formed to work on the issue. Discussion around issues usually happen in the community meetings or in separately agreed group meetings. Once the PR is approved, it is merged by the maintainers of the repository.
+
+In short, the process to make changes is the following:
+1. Fork repository
+2. Make changes
+3. Create Pull Request
+4. Review Pull Request
+5. Additional Changes
+6. Approve Pull Request
+7. Merge Pull Request
+
+![ToIP Git process](https://user-images.githubusercontent.com/1370528/201668601-8858a595-80c3-4ee3-8f7c-f2821a890c57.png)
+
