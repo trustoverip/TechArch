@@ -42,6 +42,57 @@
 
 *Copyright: 2022 Trust Over IP Foundation*
 
+**TOC**
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+
+**Table of Contents**
+
+- [Trust over IP (ToIP) Technology Architecture Specification](#trust-over-ip-toip-technology-architecture-specification)
+- [1. Introduction](#1-introduction)
+- [2. Terminology](#2-terminology)
+- [3. Motivations](#3-motivations)
+- [4. Audience, Purpose and Scope](#4-audience-purpose-and-scope)
+- [5. Example Use Cases](#5-example-use-cases)
+- [6. Reference Architecture Overview](#6-reference-architecture-overview)
+    - [6.1 Design Goals](#61-design-goals)
+    - [6.2 The Four Layer Pattern](#62-the-four-layer-pattern)
+    - [6.3 High-Level System Architecture](#63-high-level-system-architecture)
+    - [6.4 ToIP Identifiers](#64-toip-identifiers)
+- [7. Endpoint Systems and the Layered Stack](#7-endpoint-systems-and-the-layered-stack)
+    - [7.1 Endpoint Systems](#71-endpoint-systems)
+    - [7.2 Layer 1: Trust Support](#72-layer-1-trust-support)
+    - [7.3 Layer 2: Trust Spanning](#73-layer-2-trust-spanning)
+    - [7.4 Layer 3: Trust Tasks](#74-layer-3-trust-tasks)
+    - [7.5 Layer 4: Trust Applications](#75-layer-4-trust-applications)
+- [8. The ToIP Trust Spanning Protocol](#8-the-toip-trust-spanning-protocol)
+    - [8.1 Overview](#81-overview)
+    - [8.2 Identifiers](#82-identifiers)
+    - [8.3 Messages](#83-messages)
+    - [8.4 Routing](#84-routing)
+    - [8.5 Interface to Layer 1](#85-interface-to-layer-1)
+- [9. Intermediary Systems](#9-intermediary-systems)
+- [10. Supporting Systems](#10-supporting-systems)
+    - [10.1 Overview](#101-overview)
+    - [10.2 Example 1 - A DID Method](#102-example-1---a-did-method)
+    - [10.3 Example 2 - A KERI Witness](#103-example-2---a-keri-witness)
+    - [10.4 Generalization](#104-generalization)
+- [11. Endpoint System Interoperability](#11-endpoint-system-interoperability)
+    - [11.1 Interoperability between Endpoint Systems Using Decentralized Identifiers](#111-interoperability-between-endpoint-systems-using-decentralized-identifiers)
+    - [11.2 Interoperability between Endpoints Using Other Verifiable Identifiers](#112-interoperability-between-endpoints-using-other-verifiable-identifiers)
+- [12. Integration with the ToIP Governance Stack](#12-integration-with-the-toip-governance-stack)
+- [13. References](#13-references)
+- [About the ToIP Foundation](#about-the-toip-foundation)
+- [Appendix A: Consolidated Requirements](#appendix-a-consolidated-requirements)
+- [Appendix B: Consolidated Views of the ToIP Technology Stack](#appendix-b-consolidated-views-of-the-toip-technology-stack)
+    - [Functional Hourglass View](#functional-hourglass-view)
+    - [Sphere-of-Influence View](#sphere-of-influence-view)
+    - [Interaction Pattern View](#interaction-pattern-view)
+- [Appendix C: Mapping of Existing Technologies into the ToIP Technology Stack](#appendix-c-mapping-of-existing-technologies-into-the-toip-technology-stack)
+- [Footnotes](#footnotes)
+    - [^2](#2)
+
+<!-- markdown-toc end -->
+
 # 1. Introduction
 
 The mission of the [Trust over IP (ToIP) Foundation](https://www.trustoverip.org) is to define an overall architecture for Internet-scale digital trust that combines cryptographic assurance at the machine layers (technology) with human accountability at the business, legal, and social layers (governance). Together these two halves form a complete four-layer architecture for decentralized digital trust infrastructure known as the [ToIP stack](https://trustoverip.github.io/toip/glossary#toip-stack). Figure 1 is a conceptual diagram of this stack:
