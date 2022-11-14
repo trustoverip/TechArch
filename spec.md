@@ -42,7 +42,7 @@
 
 *Copyright: 2022 Trust Over IP Foundation*
 
-## 1. Introduction
+# 1. Introduction
 
 The mission of the [Trust over IP (ToIP) Foundation](https://www.trustoverip.org) is to define an overall architecture for Internet-scale digital trust that combines cryptographic assurance at the machine layers (technology) with human accountability at the business, legal, and social layers (governance). Together these two halves form a complete four-layer architecture for decentralized digital trust infrastructure known as the [ToIP stack](https://trustoverip.github.io/toip/glossary#toip-stack). Figure 1 is a conceptual diagram of this stack:
 
@@ -60,7 +60,7 @@ This document is the normative specification for the high-level architecture of 
 
 As with all ToIP deliverables, the ToIP Foundation invites your feedback and suggestions. Please contact us via the [ToIP Foundation website](https://www.trustoverip.org/).
 
-## 2. Terminology
+# 2. Terminology
 
 In this document, the key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL", when appearing in ALL CAPITALS, are to be interpreted as described in [IETF RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119).
 
@@ -74,7 +74,7 @@ All other defined terms are linked to their definitions in the applicable ToIP [
 
 Terms that especially vital to this specification are also explained inline.
 
-## 3. Motivations
+# 3. Motivations
 
 *This section is informative.*
 
@@ -96,7 +96,7 @@ Whether from the perspective of an implementer, a customer, or a policymaker, th
 
 - **Public policy.** A well-defined architecture with clear and concise terminology helps policymakers and legal experts define coherent policies and regulations in a manner that serves the needs of society without constraining technical innovation and competition. 
 
-## 4. Audience, Purpose and Scope
+# 4. Audience, Purpose and Scope
 
 *This section is informative.*
 
@@ -131,17 +131,17 @@ By focusing solely on the Technical Architecture Track, the following are explic
 *NOTE: Due to the public policy implications, the ToIP Foundation is committed to producing a companion document called **ToIP Primer for Policymakers**. This document will guide policymakers, governing authorities, analysts, and other non-technical audiences who need to deeply understand the purpose, uses, and implications of the ToIP stack but do not need (or want) to dive into technical details.*
 
 
-## 5. Example Use Cases
+# 5. Example Use Cases
 
 *This section is informative.*
 
 *NOTE: Work on a set of example use cases illustrating the full breadth of usage of the ToIP stack is underway in the ToIP [Ecosystem Foundry Working Group](https://wiki.trustoverip.org/display/HOME/Ecosystem+Foundry+Working+Group). A summary table of these use cases is planned to be included in the second public review draft (PR2).*
 
-## 6. Reference Architecture Overview
+# 6. Reference Architecture Overview
 
 *This section is informative.*
 
-### 6.1 Design Goals
+## 6.1 Design Goals
 
 A reference architecture of a complex system is an abstract framework consisting of a list of functional subsystems together with the interfaces and protocols needed to define the potential interactions and dependencies between these systems and/or external systems. This reference architecture provides a logical articulation of these interfaces and protocols which can then be translated into specific component specifications as described in Figure 2.
 
@@ -171,7 +171,7 @@ With regard to the second design goal, the ToIP reference architecture shares th
 1. The Hourglass Model
 1. Decentralization
 
-### 6.2 The Four Layer Pattern
+## 6.2 The Four Layer Pattern
 
 Together these considerations lead to the general *four-layer pattern* of a protocol stack summarized in Table 1.
 
@@ -194,7 +194,7 @@ Much of the success of the Internet is attributed to this “hourglass” design
 
 For additional overviews of how the ToIP technology stack implements the hourglass model, see [Appendix B](#appendix-b-consolidated-views-of-the-toip-technology-stack).
 
-### 6.3 High-Level System Architecture
+## 6.3 High-Level System Architecture
 
 The reference architecture of the ToIP stack provides a generalization of different solutions to trust establishment over the Internet (or over other digital networks). This section introduces the basic concepts, requirements and vocabulary with which to consider: a) each functional component, b) the interface definitions and protocols between these components, and c) interoperability of solutions built upon those components. Subsequent sections will describe these components and protocols in more detail.
 
@@ -204,11 +204,11 @@ At the highest level, ToIP interactions occur between three basic types of inter
   1. **Intermediary Systems** may be used to assist in the interactions between the Endpoint Systems. In that context, Intermediary systems are involved in the ToIP Trust Spanning Protocol, and may themselves be Endpoint Systems. Intermediary systems are not a dependency to Endpoint systems' trust relationship. See [Section 9](#9-intermediary-systems).
   1. **Supporting Systems** are typically required to support the definition of Endpoints and trust establishment between Endpoint Systems. Supporting Systems that facilitate the authenticity and autonomy of an Endpoint System are termed “Privileged” Supporting Systems, others are “Unprivileged” (see [Section 10.1](#101-overview)). Supporting Systems are not directly involved in the ToIP Trust Spanning Protocol. See [Section 10](#10-supporting-systems).
 
-The relationships between these systems is shown in Figure 5.
+The relationships between these systems is shown in Figure 4.
 
 <img src="/images/ThreeTypesofSystems.png" alt="Three Types of Systems" style="width:900px;"/>
 
-**Figure 5: The three basic types of component systems in ToIP architecture**
+**Figure 4: The three basic types of component systems in ToIP architecture**
 
 The definition of each system is anchored to its defined (and agreed) locus of control, i.e., who is able to exert control over the operation of that system. Clarity about the locus of control and the dependencies between systems is critical as end-to-end trust is constructed between any two Endpoint Systems. Each system, whether it is classified as an Endpoint System, Intermediary System or Supporting System, defines its own locus of control. An Endpoint System, for example, may be a tiny IoT device, a personal smartphone, or a large capacity service hosted in a cloud. The terms such as 'local or remote' or 'within, internal or outside' an Endpoint System should be understood as being with respect to its locus of control rather than physical location. What matters to the architecture is that it exhibits a consistent locus of control and, therefore, consistent interaction protocols with respect to other systems. 
 
@@ -219,21 +219,21 @@ These subsystems collaborate with each other through three types of consistent T
 
 ToIP Endpoint Systems and their interactions follow the 4-layer design pattern described in [Section 6.2](#62-the-four-layer-pattern). As we move up the stack (to Layers 3 and 4), the roles that may be played by an Endpoint System are often given more context-specific names. For example, at Layer 3, an Endpoint System involved in the Trust Task of exchanging [verifiable credentials](https://www.w3.org/TR/vc-data-model/) may be classified as an “Issuer”, “Holder”, or “Verifier” in that specific interaction context. These higher layer terms are specific to that context and must be consistent with the abstract general terms used in this reference architecture.
 
-Figure 6 shows a high level view of how these three basic types of component systems might interact using the existing infrastructure of the Internet.
+Figure 5 shows a high level view of how these three basic types of component systems might interact using the existing infrastructure of the Internet.
 
 <img src="/images/HighLevelView.png" alt="High level view of ToIP consistent system interactions" style="width:800px;"/>
 
-**Figure 6: High level view of ToIP consistent system interactions**
+**Figure 5: High level view of ToIP consistent system interactions**
 
 The normative requirements for each type of subsystem and interaction across the ToIP layers are specified in the following sections.
 
-### 6.4 ToIP Identifiers
+## 6.4 ToIP Identifiers
 
-Just as IP addresses are the heart of the Internet TCP/IP stack, ToIP identifiers are the heart of the ToIP stack. Figure 7 illustrates the three basic types of ToIP identifiers.
+Just as IP addresses are the heart of the Internet TCP/IP stack, ToIP identifiers are the heart of the ToIP stack. Figure 6 illustrates the three basic types of ToIP identifiers.
 
 <img src="/images/IdentifierTypes.png" alt="Three classes of identifiers" style="width:800px;"/>
 
-**Figure 7: The three classes of identifiers used with ToIP architecture**
+**Figure 6: The three classes of identifiers used with ToIP architecture**
 
 Design Principle #5 ([Cryptographic Verifiability](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)) states that “messages and data structures exchanged between parties should be verifiable as authentic using standard cryptographic algorithms and protocols”. This requires that Endpoint Systems be able to associate, discover and verify the cryptographic keys associated with a ToIP identifier. This specification will refer to identifiers that meet this basic requirement of cryptographic verifiability as verifiable identifiers (VIDs). 
 
@@ -245,10 +245,10 @@ DIDs can be further subdivided into two classes: those whose verification requir
 
 Requirements for ToIP identifiers are covered in [Section 8.2](#82-identifiers).
 
-## 7. Endpoint Systems and the Layered Stack
+# 7. Endpoint Systems and the Layered Stack
 *This section is normative.*
 
-### 7.1 Endpoint Systems
+## 7.1 Endpoint Systems
 
 Endpoint Systems represent ToIP systems that are under a party’s direct control. An Endpoint System's boundary is delineated by its locus of control. A party means the entity that is evaluating, relying on, and benefiting from a trust relationship. In other words, a party is any user of the system without regard to their role in the system. This represents a contrast with the traditional identity and access management (IAM) distinct roles of a user who is making trust assertions and a *relying party* who is relying on those assertions to make a trust decision. In a ToIP system, Endpoint Systems have a symmetric *peer-to-peer* trust relationship in Layer 2 — the trust spanning layer.
 
@@ -265,7 +265,7 @@ Befitting Design Principle #1 ([The End-to-End Principle](https://trustoverip.or
 
 <img src="/images/EndpointSystem.png" alt="Endpoint System" style="width:800px;"/>
 
-**Figure 8: Endpoint System**
+**Figure 7: Endpoint System**
 
 Within an Endpoint System's locus of control, a higher layer uses the functions of a lower layer through an **Interface**. In ToIP architecture, functions within an Endpoint System are decomposed into layers in a vertical stack where layer boundaries are defined by their corresponding Interfaces. In a ToIP Endpoint System, the higher layers of the ToIP protocol stack MUST communicate with the lower layers via defined interfaces. [REQ A.2]
 
@@ -275,7 +275,7 @@ The distinction between an Interface and a Protocol is whether the systems commu
 
 The four layer stack within an Endpoint System is defined in the following sections.
 
-### 7.2 Layer 1: Trust Support
+## 7.2 Layer 1: Trust Support
 
 If a ToIP Endpoint System includes Trust Support Functions *within its locus of control*, then those functions MUST be included at Layer 1 of the Endpoint System. [REQ L1.1] The exact nature of the Trust Support Functions required by any particular Endpoint System may vary significantly depending on the Endpoint System’s physical manifestation and numerous other design goals (e.g. cost, location, convenience, power usage, reliability and so on). For example the Trust Support Functions required for a full-featured smartphone vs. a cloud server vs. an IoT thermostat may be very different. 
 
@@ -297,13 +297,13 @@ Diversity of implementations of Layer 1 Trust Support Functions is *intentional*
 
 *NOTE: For functional, performance, security, or other reasons, a Layer 1 Trust Support Function implementation may use a remote service outside its locus of control, e.g., a distributed ledger, distributed directory, distributed database, distributed file system, or distributed hash table. These systems are Supporting Systems to the Layer 1 implementation; they are not part of Layer 1 itself. See [Section 10.1](#101-overview)*.
 
-### 7.3 Layer 2: Trust Spanning
+## 7.3 Layer 2: Trust Spanning
 
 Layer 2 is the trust spanning layer of the ToIP stack. In keeping with Design Principle #3 ([The Hourglass Model](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)), this means there is only one requirement for Layer 2: A ToIP Endpoint System MUST communicate with another ToIP Endpoint System using the ToIP Trust Spanning Protocol. [REQ L2.1] No other functions are required.
 
 The requirements for the ToIP Trust Spanning Protocol are defined in [Section 8](#8-the-toip-trust-spanning-protocol).
 
-### 7.4 Layer 3: Trust Tasks
+## 7.4 Layer 3: Trust Tasks
 
 Many applications may require more complex trust-building functions than the minimal set offered directly by the ToIP Trust Spanning Protocol. When one of these functions is reusable across multiple contexts that are separated in time, space, or perspective, we call it a Trust Task. Trust Tasks can be standardized as their own higher-level protocols at Layer 3 of the ToIP stack. 
 
@@ -324,7 +324,7 @@ There can be as many Trust Tasks Protocols as are needed by Layer 4 Trust Applic
   - Digital auctions
   - Digital notaries
 
-### 7.5 Layer 4: Trust Applications
+## 7.5 Layer 4: Trust Applications
 
 Layer 4 is an open-ended application layer for any application that needs to engage in trusted interactions. Layer 4 Trust Applications MAY use any number of Layer 3 Trust Task Protocols. [REQ L4.1]. 
 
@@ -332,17 +332,17 @@ If a Layer 4 Trust Application does not use a Layer 3 Trust Task Protocol, it MU
 
 Layer 4 is the layer where humans “touch” the ToIP stack, so this is where Design Principle #8 ([Trust is Human](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)) and #14 ([Trust and Technology have a Reciprocal Relationship](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)) come into play. The human experience of digital trust is so critical that Layer 4 has one more requirement: A Layer 4 Trust Application MUST support any ToIP-defined Trust Affordances relevant to that application. [REQ 4.3]
 
-## 8. The ToIP Trust Spanning Protocol
+# 8. The ToIP Trust Spanning Protocol
 
 *This section is normative.*
 
-### 8.1 Overview
+## 8.1 Overview
 
-This section describes the ToIP Trust Spanning Protocol required at Layer 2 to communicate between any two Endpoint Systems. The overall protocol operation is shown in Figure 9 below.
+This section describes the ToIP Trust Spanning Protocol required at Layer 2 to communicate between any two Endpoint Systems. The overall protocol operation is shown in Figure 8 below.
 
 <img src="/images/SpanningProtocol.png" alt="Overview of the ToIP Spanning Protocol" style="width:800px;"/>
 
-**Figure 9: Overview of the ToIP Spanning Protocol**
+**Figure 8: Overview of the ToIP Spanning Protocol**
 
 The main function of this protocol is to enable universal end-to-end communication among all Endpoint Systems using trusted messages. This architectural choice is based on the following considerations:
 
@@ -354,7 +354,7 @@ This protocol is designed to be universal in the sense that all Endpoint Systems
 
 To achieve ubiquity, this protocol should be kept as simple as possible to ease implementation challenges and allow maximum flexibility on all variants of Endpoint Systems. Thus the requirements in the following sections are not only necessary but sufficient. Strong preference must be given not to add additional functions to this protocol unless they are universally beneficial. Strong preference must also be given to a single common protocol specification for maximum any-to-any interoperability. 
 
-A view of the ToIP protocol stack on an Endpoint System is shown in Figure 10. The component specification for the ToIP Trust Spanning Protocol therefore needs to specify:
+A view of the ToIP protocol stack on an Endpoint System is shown in Figure 9. The component specification for the ToIP Trust Spanning Protocol therefore needs to specify:
   1. How to generate and maintain identifiers with the properties described in [Section 6.4](#64-toip-identifiers).
   1. The common message format that meets the design goals described in [Section 6.1](#61-design-goals).
   1. How lower layer transport protocol(s) can be used to deliver messages between Endpoint Systems.
@@ -362,11 +362,11 @@ A view of the ToIP protocol stack on an Endpoint System is shown in Figure 10. T
 
 <img src="/images/StackOnEndpoint.png" alt="A view of the ToIP protocol stack on an Endpoint System" style="width:800px;"/>
 
-**Figure 10: A view of the ToIP protocol stack on an Endpoint System**
+**Figure 9: A view of the ToIP protocol stack on an Endpoint System**
 
 The following sections enumerate the requirements in each of these four areas.
 
-### 8.2 Identifiers
+## 8.2 Identifiers
 
 A key difference between Internet architecture and ToIP architecture is that the former only needed to identify the network endpoints of devices for data communications. The solution was Internet Protocol (IP) addresses: a global addressing scheme for network endpoints independent of any specific local area network.
 
@@ -398,7 +398,7 @@ Such proofs may require support from one or more Layer 1 Trust Support Functions
 
 Different considerations apply when a ToIP identifier needs to be provably bound to a digital resource, such as a file, photo, or video. This can be accomplished using ToIP identifiers that serve as content-addressable identifiers or self-addressing identifiers that are derived from a cryptographic hash of the subject resource. For example, see [ACDC](https://trustoverip.github.io/tswg-acdc-specification/draft-ssmith-acdc.html).
 
-### 8.3 Messages
+## 8.3 Messages
 
 Messages are the lingua franca of the ToIP Trust Spanning Protocol. To achieve the design goals in [Section 6.1](#61-design-goals), the following requirements must be met:
 
@@ -417,9 +417,9 @@ The ToIP Trust Spanning Protocol MUST enable the composition of higher-level Tru
 
 The ToIP Trust Spanning Protocol MUST support extensible message schema. [REQ 2.13] This enables different Trust Task protocols to be constructed without changing the base format.
 
-### 8.4 Routing
+## 8.4 Routing
 
-Routing of a message from a sender to a receiver proceeds in three steps as shown in Figure 9:
+Routing of a message from a sender to a receiver proceeds in three steps as shown in Figure 8:
 
   1. **Address resolution** takes the ToIP identifier of the receiver and resolves it to: a) the network address of an Endpoint System for the receiver that supports the desired Layer 1 transport mechanism, and b) the associated cryptographic keys. For example, if the ToIP identifier is a DID and the desired transport is HTTP, then a DID resolver resolves the DID following the associated DID method to retrieve the DID document. It then selects: a) the service type associated with the ToIP Trust Spanning Protocol and extracts an HTTP URL to which a connection can be made to deliver the message to the other Endpoint System, and b) the required cryptographic keys.
   1. **Transport** is the Layer 1 mechanism to send the message to the Endpoint System of the receiver or to an Intermediary System which can eventually deliver the message. In the above example, HTTP is the transport. Over the Internet, any transport layer protocol may be a suitable transport. Other contexts may use other transports, e.g. Bluetooth, QR code, or a publish-subscribe messaging system. 
@@ -437,7 +437,7 @@ The ToIP Trust Spanning Protocol MUST support the option to deliver messages via
 
 The ToIP Trust Spanning Protocol MUST support confidentiality with regard to the metadata required for message routing. [REC 2.18]
 
-### 8.5 Interface to Layer 1
+## 8.5 Interface to Layer 1
 
 Given these requirements for the ToIP Trust Spanning Protocol at Layer 2, the Trust Support Function interfaces at Layer 1 should only need to include the following. Note that Layer 3 Trust Tasks or Layer 4 Trust Applications may also need to call these interfaces directly.
 
@@ -446,7 +446,7 @@ Given these requirements for the ToIP Trust Spanning Protocol at Layer 2, the Tr
   1. **Transport** consists of one primitive via which the sender’s Layer 2 implementation can submit a message for transmission and another primitive through which the receiver’s Layer 1 implementation can deliver a message up to Layer 2.
   1. **User binding** is the interface via which a Layer 2 implementation can request and verify a biometric or other authentication information from a user. 
 
-## 9. Intermediary Systems
+# 9. Intermediary Systems
 *This section is normative.*
 
 Intermediary Systems are mediators for facilitating the ToIP Trust Spanning Protocol. Since the Internet itself is routable as long as a ToIP identifier can be resolved to a unique IP address, Intermediary Systems are not absolutely required. However they can be very beneficial in other aspects.
@@ -462,9 +462,9 @@ Intermediary Systems differ from Supporting Systems because they reside between 
 
 <img src="/images/IntermediarySystems.png" alt="The role of Intermediary Systems" style="width:800px;"/>
 
-**Figure 11: The role of Intermediary Systems**
+**Figure 10: The role of Intermediary Systems**
 
-In Figure 11, end-to-end communication between Endpoint Systems A and B are routed through Intermediary Systems X and Y. In this case, all systems implement the Layer 2 protocol as described in [Section 8](#8-the-toip-trust-spanning-protocol). Routing uses “nested envelopes” as follows:
+In Figure 10, end-to-end communication between Endpoint Systems A and B are routed through Intermediary Systems X and Y. In this case, all systems implement the Layer 2 protocol as described in [Section 8](#8-the-toip-trust-spanning-protocol). Routing uses “nested envelopes” as follows:
 
   1. Endpoint System A prepares a message for Endpoint System B and puts it in an inner message envelope addressed to Endpoint System B.
   1. Endpoint System A places the inner message envelope inside an outer message envelope addressed to Intermediary System X.
@@ -478,10 +478,10 @@ This pattern casts one requirement for the use of Intermediary Systems:
 
 A ToIP Intermediary System SHOULD be able to perform the functions of a ToIP Endpoint System for the purpose of routing enveloped messages using the ToIP Trust Spanning Protocol. [REC A.3]
 
-## 10. Supporting Systems
+# 10. Supporting Systems
 *This section is normative.*
 
-### 10.1 Overview
+## 10.1 Overview
 
 An Endpoint System may utilize services from any number of Supporting Systems, either privileged or unprivileged, over the Internet or other networks.
 
@@ -496,37 +496,37 @@ The ToIP protocol stack in an Endpoint System MAY use the services of a Supporti
 
 The following sections illustrated the layered interaction between Endpoint Systems and Supporting Systems using examples of known implementations.
 
-### 10.2 Example 1 - a DID Method
+## 10.2 Example 1 - A DID Method
 
-A DID Method may be implemented based on a distributed ledger, e.g. Hyperledger Indy. An Endpoint System, in this example, may be implemented using a Hyperledger Aries agent software module running on either a mobile device or a cloud platform. The Indy ledger is a Privileged Supporting System and the Aries agent implements layer 2 and layer 3 of the Endpoint System stack. Such a design pattern is illustrated in Figure 12.
+A DID Method may be implemented based on a distributed ledger, e.g. Hyperledger Indy. An Endpoint System, in this example, may be implemented using a Hyperledger Aries agent software module running on either a mobile device or a cloud platform. The Indy ledger is a Privileged Supporting System and the Aries agent implements layer 2 and layer 3 of the Endpoint System stack. Such a design pattern is illustrated in Figure 11.
 
 <img src="/images/IndyAriesExample.png" alt="An example of Hyperledger Indy as a Supporting System" style="width:800px;"/>
 
-**Figure 12: An example of Hyperledger Indy as a Supporting System**
+**Figure 11: An example of Hyperledger Indy as a Supporting System**
 
 A Layer 2 implementation must implement both DID resolution and the ToIP Trust Spanning Protocol. To implement DID resolution in this example, the Aries agent uses a local service (i.e. within its locus of control), i.e. a digital wallet, which relies on, eventually, a KMS function and a secure storage function within the Endpoint System. It also uses a remote service (i.e. outside of its locus of control) — the Indy blockchain — via web service APIs built on top of HTTPS and other web protocols. This remote service protocol consists of three components in the case of Aries-Indy: pool API, anoncred API, and payment API. The web service eventually relies on the Internet Protocol stack for routing, transport and delivery. Collectively, it is a complete Endpoint System to Supporting System Protocol that in this case runs over the web.
 
-### 10.3 Example 2
+## 10.3 Example 2 - A KERI Witness
 
-[KERI](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) offers another example in this design pattern. In KERI, the Endpoint System identifier is either an AID or a did:keri method. A layer 2 implementation will need certain key material and secure storage from the lower layer as well. In addition, it requires additional services that are outside of the Endpoint System's locus of control boundary. The [KERI Witness Pool](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) is an example of such a supporting service as shown in Figure 13. Another example is [KERI Watcher Pool](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf). 
+[KERI](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) offers another example in this design pattern. In KERI, the Endpoint System identifier is either an AID or a did:keri method. A layer 2 implementation will need certain key material and secure storage from the lower layer as well. In addition, it requires additional services that are outside of the Endpoint System's locus of control boundary. The [KERI Witness Pool](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf) is an example of such a supporting service as shown in Figure 12. Another example is [KERI Watcher Pool](https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/KERI_WP_2.x.web.pdf). 
 
 These supporting services differ from local dependencies (e.g. secure storage) because they are outside of an Endpoint System’s locus of control. The access protocol to such supporting services is also different from the ToIP Trust Spanning Protocol as it is a protocol between different types of parties and has a different protocol stack.
 
 <img src="/images/KERIExample.png" alt="An example of a KERI witness as a Supporting System" style="width:800px;"/>     
 
-**Figure 13: An example of a KERI witness as a Supporting System**
+**Figure 12: An example of a KERI witness as a Supporting System**
 
-### 10.4 Generalization
+## 10.4 Generalization
 
-Figure 14 illustrates a generalization of the pattern in which Endpoint Systems and their respective Support Systems interact. This figure makes it clear that the interoperability between Endpoint Systems in each layer is orthogonal to the methods of interaction with respective Supporting Systems.
+Figure 13 illustrates a generalization of the pattern in which Endpoint Systems and their respective Support Systems interact. This figure makes it clear that the interoperability between Endpoint Systems in each layer is orthogonal to the methods of interaction with respective Supporting Systems.
 
 <img src="/images/GeneralizedSupportingSystems.png" alt="A generalization of how Endpoint Systems and Supporting Systems interact" style="width:800px;"/>
 
-Figure 14: A generalization of how Endpoint Systems and Supporting Systems interact
+**Figure 13: A generalization of how Endpoint Systems and Supporting Systems interact**
 
-## 11. Endpoint System Interoperability
+# 11. Endpoint System Interoperability
 
-### 11.1 Interoperability between Endpoint Systems Using Decentralized Identifiers
+## 11.1 Interoperability between Endpoint Systems Using Decentralized Identifiers
 
 [Section 6.4](#64-toip-identifiers) states that “Endpoint Systems [need to] be able to associate, discover and verify the cryptographic keys associated with a ToIP identifier”. This capability is essential in order for two or more Endpoint Systems to be able to discover and connect with each other over the ToIP Trust Spanning Protocol.
 
@@ -538,7 +538,7 @@ If an Endpoint System is identified with a publicly resolvable decentralized ide
 
 If an Endpoint System is identified with a private, pairwise DID — called a **peer DID** — the discovery and exchange of a DID document needs to use an out-of-band interaction (OOBI) protocol. Common examples include QR codes and custom-generated deep links.
 
-### 11.2 Interoperability between Endpoints Using Other Verifiable Identifiers
+## 11.2 Interoperability between Endpoints Using Other Verifiable Identifiers
 
 If an Endpoint System is not identified with a DID, but with some other kind of verifiable identifier (VID) as defined in [section 6.4](#64-toip-identifiers), then a different approach must be used to bootstrap communications using the ToIP Trust Spanning Protocol. This requires enabling discovery and verification of:
 
@@ -552,7 +552,7 @@ If the VID is an HTTPS URL, there are at least two solutions:
 
 We anticipate that integration of decentralized PKI and X.509 PKI will be a topic of increasing interest and innovation.
 
-## 12. Integration with the ToIP Governance Stack
+# 12. Integration with the ToIP Governance Stack
 
 As explained in the Introduction, this specification, maintained by the ToIP [Technology Stack Working Group](https://wiki.trustoverip.org/display/HOME/Technology+Stack+Working+Group), is focused entirely on requirements for the ToIP Technology Stack. A separate set of specifications, maintained by the ToIP [Governance Stack Working Group](https://wiki.trustoverip.org/display/HOME/Governance+Stack+Working+Group), defines the requirements for the ToIP Governance Stack. The first generation of the ToIP Governance Architecture Specifications were published in January 2022 and are summarized [here](https://trustoverip.org/news/2022/02/01/the-toip-foundation-releases-its-first-official-governance-specifications/).
 
@@ -573,17 +573,17 @@ The use of persistent, discoverable, cryptographically verifiable identifiers fo
 
 For additional recommendations about integration of the ToIP Governance Stack with the ToIP Technology Stack, please see the [ToIP Governance Architecture Specification V1.0](https://trustoverip.org/permalink/ToIP-Governance-Architecture-Specification-V1.0-2022-12-21.pdf) and the [ToIP Governance Metamodel Specification V1.0](https://trustoverip.org/permalink/ToIP-Governance-Metamodel-Specification-V1.0-2022-12-21.pdf).
 
-## 13. References
+# 13. References
 
 
-## About the ToIP Foundation
+# About the ToIP Foundation
 
 Founded in May 2020 with 27 original founding member organizations, the ToIP Foundation has now grown to over 400 participating organizations plus over 100 additional individual participants. Our mission is to define an overall architecture for Internet-scale digital trust that combines cryptographic assurance at the machine layers (technology) with human accountability at the business, legal, and social layers (governance).
 
 For more information about ToIP Foundation, please read our [Introduction to ToIP](https://trustoverip.org/permalink/Introduction-to-ToIP-V2.0-2021-11-17.pdf) white paper or visit our website at https://trustoverip.org/.
 
 
-## Appendix A: Consolidated Requirements
+# Appendix A: Consolidated Requirements
 
 For ease of reference, the following table consolidates all normative requirements in this specification. Each requirement is linked to the section in which it appears.
 
@@ -624,9 +624,37 @@ For ease of reference, the following table consolidates all normative requiremen
 |L4.2|If a Layer 4 Trust Application does not use a Layer 3 Trust Task Protocol, it MUST communicate with other Endpoint Systems using the Layer 3 Trust Spanning Protocol|[7.5](#75-layer-4-trust-applications)|
 |L4.3|A Layer 4 Trust Application MUST support any ToIP-defined Trust Affordances relevant to that application.|[7.5](#75-layer-4-trust-applications)|
 
-## Appendix B: Consolidated Views of the ToIP Technology Stack
+# Appendix B: Consolidated Views of the ToIP Technology Stack
 
-## Appendix C: Mapping of Existing Technologies into the ToIP Technology Stack
+The ToIP Technology Architecture Task Force has spent many hours discussing how to produce consolidated views of ToIP architecture that are both relatively easy to understand but still technically accurate. In the end, we agreed that no single diagram is sufficient. Rather different views of the architecture should be taken together to see the whole picture. In this appendix we present several of these views — and [we invite feedback](https://trustoverip.org/our-work/technical-architecture/) on others that might be helpful.
+
+## Functional Hourglass View
+
+Figure B1 is a view of the types of functions that belong at each layer within a single Endpoint System as defined in this specification. It illustrates how the Hourglass Model is implemented as a single trust spanning protocol at Layer 2, with multiple trust support functions below and multiple supported trust task protocols above. It also shows one example (at the far right) of a specific category of Supporting Systems, in this case **verifiable data registries** (VDRs) upon which an Endpoint System can rely as external sources of truth.
+
+<img src="/images/functional-hourglass-view.png" alt="A layer-by-layer view of functions within an Endpoint System" style="width:1000px;"/>
+
+**Figure B1: A layer-by-layer view of functions within an Endpoint System (also showing verifiable data registries as one type of adjacent Supporting System)**
+
+## Sphere-of-Influence View
+
+Figure B2 builds on Figure B1 by identifying those technical capabilities that fall within the purview of ToIP’s technical architecture and those that are outside that boundary and thus do not need to be governed by ToIP component specifications.
+
+<img src="/images/sphere-of-influence-view.png" alt="A view of the ToIP that shows what is inside and outside ToIP’s 'sphere of influence'" style="width:1000px;"/>
+
+**Figure B2: A view of the ToIP that shows what is inside and outside ToIP’s “sphere of influence”**
+
+This view shows how the logical capabilities and components identified in the functional hourglass view can align with dependent solutions that are not governed by the requirements of the ToIP stack. For example, a DID resolver functioning at Layer 2 in an Endpoint System may call a DID ledger functioning as a verifiable data registry. While the DID resolver interface is a ToIP Layer 2 function, the DID ledger called by the associated DID method is a Supporting System that has its own resolution protocol as defined by the DID method.
+
+## Interaction Pattern View
+
+Figure B3 builds on B1 and B2 by showing the interaction patterns between two different Endpoint Systems as well as between an Endpoint System and a set of Supporting Systems (on the far right).
+
+<img src="/images/interaction-pattern-view.png" alt="A layer-by-layer view of functions within an Endpoint System" style="width:1000px;"/>
+
+**Figure B3: A view showing the interaction patterns both within and between two Endpoint Systems (as well as with Supporting Systems on the far right)**
+
+# Appendix C: Mapping of Existing Technologies into the ToIP Technology Stack
 
 Just as the TCP/IP stack did not need to reinvent or replace existing local area networks, but instead added a new inter-networking layer to connect the existing networks, the ToIP stack does not reinvent or replace existing centralized or federated identity and PKI trust infrastructures. It adds a new inter-_trust_ networking layer to connect the existing trust domains.
 
