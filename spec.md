@@ -46,7 +46,6 @@
 
 **Table of Contents**
 
-- [Trust over IP (ToIP) Technology Architecture Specification](#trust-over-ip-toip-technology-architecture-specification)
 - [1. Introduction](#1-introduction)
 - [2. Terminology](#2-terminology)
 - [3. Motivations](#3-motivations)
@@ -87,6 +86,7 @@
     - [Sphere-of-Influence View](#sphere-of-influence-view)
     - [Interaction Pattern View](#interaction-pattern-view)
 - [Appendix C: Mapping of Existing Technologies into the ToIP Technology Stack](#appendix-c-mapping-of-existing-technologies-into-the-toip-technology-stack)
+- [Footnotes](#footnotes)
 
 <!-- markdown-toc end -->
 
