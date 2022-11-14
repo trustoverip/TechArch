@@ -42,7 +42,6 @@
 
 *Copyright: 2022 Trust Over IP Foundation*
 
-**TOC**
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 
 **Table of Contents**
@@ -88,8 +87,6 @@
     - [Sphere-of-Influence View](#sphere-of-influence-view)
     - [Interaction Pattern View](#interaction-pattern-view)
 - [Appendix C: Mapping of Existing Technologies into the ToIP Technology Stack](#appendix-c-mapping-of-existing-technologies-into-the-toip-technology-stack)
-- [Footnotes](#footnotes)
-    - [^2](#2)
 
 <!-- markdown-toc end -->
 
