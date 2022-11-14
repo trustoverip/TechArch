@@ -4,6 +4,8 @@
 
 - Public Review Draft 01 (PR1) — 14 November 2022
 
+For the most recent version of this specification, please see [this ToIP web page](https://trustoverip.org/our-work/technical-architecture/).
+
 **Editors**
 
 ~ [Daniel Bachenheimer](https://www.linkedin.com/in/daniel-bachenheimer-2632202/) (Accenture)
@@ -86,7 +88,6 @@
     - [Sphere-of-Influence View](#sphere-of-influence-view)
     - [Interaction Pattern View](#interaction-pattern-view)
 - [Appendix C: Mapping of Existing Technologies into the ToIP Technology Stack](#appendix-c-mapping-of-existing-technologies-into-the-toip-technology-stack)
-- [Footnotes](#footnotes)
 
 <!-- markdown-toc end -->
 
@@ -623,6 +624,7 @@ For additional recommendations about integration of the ToIP Governance Stack wi
 
 # 13. References
 
+*NOTE: References in this first public review draft (PR1) are provided inline as hyperlinks. In the second public review draft (PR20, they will be added  as separate lists of Normative and Informative References.*
 
 # About the ToIP Foundation
 
