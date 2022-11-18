@@ -31,7 +31,7 @@ For the most recent version of this specification, please see [this ToIP web pag
 ~ [Vikas Malhotra]() (WOPLLI Technologies)
 ~ [Sankarshan Mukhopadhyay]() (Dhiway Networks)
 ~ [Sumabala Nair]() (IBM)
-~ [Vinod Panicker]() (Wipro)
+~ [Vinod Panicker](https://www.linkedin.com/in/vinodpanicker) (Wipro)
 ~ [Scott Perry]() (Schellman)
 ~ [Vladimir Simjanoski]() (Blokverse)
 ~ [P. A. Subrahmanyam]() (CyberKnowledge)
