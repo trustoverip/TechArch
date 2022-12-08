@@ -224,7 +224,7 @@ With regard to the second design goal, the ToIP reference architecture shares th
 
 Together these considerations lead to the general *four-layer pattern* of a protocol stack summarized in Table 1.
 
-| Leyer # | Generic Name | ToIP Name |
+| Layer # | Generic Name | ToIP Name |
 |---------|--------------|-----------|
 | 4       | Applications | Trust Applications |
 | 3       | Supported protocols | Trust Tasks |
