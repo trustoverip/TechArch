@@ -433,9 +433,9 @@ In order to establish trust in ToIP identifiers ([Section 6.4](#64-toip-identifi
 
   - A ToIP identifier SHOULD support rotation of the associated cryptographic keys for the lifetime of the identifier. [REQ L2.6] 
 
-  - A ToIP identifier MAY also support rotation to an entirely different ToIP identifier that can be cryptographically verified to be a synonym of the original ToIP identifier. [REQ 2.7]
+  - A ToIP identifier MAY also support rotation to an entirely different ToIP identifier that can be cryptographically verified to be a synonym of the original ToIP identifier. [REQ L2.7]
 
-  - A ToIP identifier SHOULD support the ability to: a) associate the identifier with the network address of one or more ToIP Systems that can deliver to one or more Endpoint Systems under the locus of control of the ToIP identifier controller, and b) if desired by that controller, enable that association to be discoverable. [REC L2.8]
+  - A ToIP identifier SHOULD support the ability to: a) associate the identifier with the network address of one or more ToIP Systems that can deliver to one or more Endpoint Systems under the locus of control of the ToIP identifier controller, and b) if desired by that controller, enable that association to be discoverable. [REQ L2.8]
 
 Special considerations apply when a ToIP identifier needs to be provably bound to a specific party, i.e., a person or an organization. Proof of such a binding can be a critical factor in establishing a desired level of assurance in the identity of that party. Such proof can be accomplished using multiple mechanisms such as:
 
@@ -456,15 +456,15 @@ The ToIP Trust Spanning Protocol specification MUST define how to construct and 
   - Authenticity: the message was sent from a sender who has control over the ToIP identifier.
   - Integrity: the contents of the message transmitted by the sender are received by the recipient without modification.
   - Confidentiality: the contents of the message are only accessible by authorized parties.
-  - Privacy: the contents of the message are bound to conditions of usage agreed to by the parties. [REC L2.9]
+  - Privacy: the contents of the message are bound to conditions of usage agreed to by the parties. [REQ L2.9]
 
 In a ToIP Endpoint System, an implementation of the ToIP Trust Spanning Protocol MUST support authenticity and integrity. [REQ L2.10]
 
 In a ToIP Endpoint System, an implementation of the ToIP Trust Spanning Protocol MAY support confidentiality and privacy. [REQ L2.11]
 
-The ToIP Trust Spanning Protocol MUST enable the composition of higher-level Trust Tasks (such features as co-protocols). [REQ 2.12] Examples of such features include discovery, threading, timeouts, ACKs, and attachments. However this must be balanced with the requirement to only add additional functions to this protocol if they are universally beneficial.
+The ToIP Trust Spanning Protocol MUST enable the composition of higher-level Trust Tasks (such features as co-protocols). [REQ L2.12] Examples of such features include discovery, threading, timeouts, ACKs, and attachments. However this must be balanced with the requirement to only add additional functions to this protocol if they are universally beneficial.
 
-The ToIP Trust Spanning Protocol MUST support extensible message schema. [REQ 2.13] This enables different Trust Task protocols to be constructed without changing the base format.
+The ToIP Trust Spanning Protocol MUST support extensible message schema. [REQ L2.13] This enables different Trust Task protocols to be constructed without changing the base format.
 
 ## 8.4 Routing
 
@@ -476,15 +476,15 @@ Routing of a message from a sender to a receiver proceeds in three steps as show
 
 These steps lead to the following requirements:
 
-The ToIP Trust Spanning Protocol MUST support resolution of ToIP identifiers to: a) the network addresses of receiving Endpoint Systems, and b) any required cryptographic keys. [REC 2.14]
+The ToIP Trust Spanning Protocol MUST support resolution of ToIP identifiers to: a) the network addresses of receiving Endpoint Systems, and b) any required cryptographic keys. [REQ L2.14]
 
-The ToIP Trust Spanning Protocol MUST support transport of messages via ToIP Layer 1 interfaces. [REC 2.15]
+The ToIP Trust Spanning Protocol MUST support transport of messages via ToIP Layer 1 interfaces. [REQ L2.15]
 
-The ToIP Trust Spanning Protocol MUST support delivery of messages to the Layer 2 interface of the Endpoint System of the ultimate receiver of the message. [REC 2.16]
+The ToIP Trust Spanning Protocol MUST support delivery of messages to the Layer 2 interface of the Endpoint System of the ultimate receiver of the message. [REQ L2.16]
 
-The ToIP Trust Spanning Protocol MUST support the option to deliver messages via Intermediary Systems. [REC 2.17]
+The ToIP Trust Spanning Protocol MUST support the option to deliver messages via Intermediary Systems. [REQ L2.17]
 
-The ToIP Trust Spanning Protocol MUST support confidentiality with regard to the metadata required for message routing. [REC 2.18]
+The ToIP Trust Spanning Protocol MUST support confidentiality with regard to the metadata required for message routing. [REQ L2.18]
 
 ## 8.5 Interface to Layer 1
 
@@ -525,7 +525,7 @@ In Figure 10, end-to-end communication between Endpoint Systems A and B are rout
 
 This pattern casts one requirement for the use of Intermediary Systems:
 
-A ToIP Intermediary System SHOULD be able to perform the functions of a ToIP Endpoint System for the purpose of routing enveloped messages using the ToIP Trust Spanning Protocol. [REC A.3]
+A ToIP Intermediary System SHOULD be able to perform the functions of a ToIP Endpoint System for the purpose of routing enveloped messages using the ToIP Trust Spanning Protocol. [REQ A.3]
 
 # 10. Supporting Systems
 *This section is normative.*
@@ -541,7 +541,7 @@ Each type of Supporting System may have a service access protocol standardized f
 
 An example of a common protocol stack for this purpose is a defined Web Service running on top of HTTPS. However, many types of protocols may be used for different Supporting Systems.
 
-The ToIP protocol stack in an Endpoint System MAY use the services of a Supporting System at any layer. [REC A.4] Such design decisions can be made layer by layer to optimize the functions performed in each layer. 
+The ToIP protocol stack in an Endpoint System MAY use the services of a Supporting System at any layer. [REQ A.4] Such design decisions can be made layer by layer to optimize the functions performed in each layer. 
 
 The following sections illustrated the layered interaction between Endpoint Systems and Supporting Systems using examples of known implementations.
 
