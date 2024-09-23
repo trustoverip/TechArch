@@ -1,23 +1,56 @@
-# Trust over IP (ToIP) Technology Architecture Specification
+# Specification Template
 
-This is the working area for the ToIP Technology Architecture specification. It is a work in progress and should only be referenced as such. A HTML version of the spec (main branch) is automatically generated and available at https://trustoverip.github.io/TechArch. Once the specification is officially adopted by the ToIP Foundation, it will be available in Deliverables area: https://www.trustoverip.org/our-work/deliverables/
+This is the working area for the Trust over IP Technical Architecture Specification
 
-This is a Draft Deliverable of the Technology Architecture Task Force of the Technology Stack Working Group. The purpose is to define the full set of requirements for the technology architecture of the four layers of the ToIP stack. For introductory information about the ToIP stack, please check out:
+## Using this template
 
-- [Introduction to ToIP V2.0](https://www.trustoverip.org/wp-content/uploads/Introduction-to-ToIP-V2.0-2021-11-17.pdf)
-- [Design Principles for the ToIP Stack V1.0](https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf)
+Two ways to use the template:
+* The green `Use this template` button in the upper right. Then select `Create new repository` or
+* When creating a new repository from the `Repository template` menu select `toip/specification-template`
 
-## Contributing
+After setting up your new repository you will need to configure GitHub pages.
 
-To contribute, please first visit the Task Force's [wiki](https://wiki.trustoverip.org/display/HOME/TSWG+Technology+Architecture+Task+Force).
+Under `Settings -> Code and automation -> Pages` ensure the following settings are applied
 
-ToIP Technology Working Group charter requires you be a member of ToIP Foundation and agree to the IPR policy as noted in the above wiki page. A free *Contributor* level membership is available from ToIP.
+* Build and deployment -> Source -> Deploy from a branch
+* Build and deployment -> Branch -> gh-pages
+* Build and deployment -> Branch -> folder -> / (root)
 
-Here are several ways in which you can contribute:
+### Editing locally
 
-1. Attending the Task Force's weekly calls. Join the [slack channel](https://trustoverip.slack.com/archives/C02JT4GEJ75). See detailed information in the [wiki](https://wiki.trustoverip.org/display/HOME/TSWG+Technology+Architecture+Task+Force),
-2. Submitting an issue (review current open issues first to avoid duplication), including suggestions of minor edits,
-3. Submitting major edits to the text as a pull request.
+In the root of the repository run `npm install` to install dependencies.
 
+Run `npm run render` to render the HTML under `docs/index.html` this can then be previewed in your browser.
 
+Run `npm run edit` to watch for changes and re-render the HTML.
 
+Be sure to remove references to `specification-template` in favor of your new specification!
+
+### Experimental PDF generation
+
+To output a PDF (on macOS, requires Python)
+
+`# brew install pandoc`
+`# brew install librsvg homebrew/cask/basictex`
+
+`# python combine.py`
+`# chmod +x pdf.sh`
+`# ./pdf.sh`
+
+#### Contributing
+
+All Trust Over IP Foundation Technical Stack Working Group contributions are done so under the following licenses:
+
+* [Patent and Copyright Grants](CONTRIBUTING.md)
+* [Source Code](SOURCE_CODE.md)
+
+#### Licensing
+
+All Trust Over IP Foundation Technical Stack Working Group deliverables are published under the following licenses:
+
+* [Patent and Copyright Grants](LICENSE.md)
+* [Source Code](SOURCE_CODE.md)
+
+#### Getting involved
+
+Join a community of individuals and organizations solving the toughest technical and human-centric problems in digital trust. https://trustoverip.org/get-involved/membership/
