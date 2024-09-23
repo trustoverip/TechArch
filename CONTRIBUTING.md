@@ -1,66 +1,238 @@
-                                    OWF Contributor License Agreement 1.0 - Copyright and Patent
-                                                    Open Web Foundation
+# Contribution Guide
+
+There are many ways to be a contributor, and we're here to help you on your way!
+You may:
+
+* Join the discussion and share ideas in our [Slack
+  channel](trustoverip.slack.com) and regular
+  [TSWG](https://wiki.trustoverip.org/display/HOME/Technology+Stack+Working+Group?src=contextnavpagetreemode)
+  and
+  [TATF](https://wiki.trustoverip.org/display/HOME/Technology+Architecture+Task+Force)
+  meetings.
+* Raise an [issue](https://github.com/trustoverip/TechArch/issues) or feature
+  request in our issue tracker
+* Help another contributor with one of their questions, or a documentation
+  review
+* Suggest improvements by supplying a [Pull
+  Request](https://github.com/trustoverip/TechArch/pulls) or opening a
+  [Discussion](https://github.com/trustoverip/TechArch/discussions)
+* Evangelize our work together in conferences, podcasts, and social media
+  spaces.
+
+This guide is for you.
+
+## Table Of Contents
+
+* [Contributing](#contributing)
+  * [Basic Flow](#basic-change-flow)
+  * [Advanced Flow](#advanced-change-flow)
+  * [Commits](#commits)
+  * [Branching](#branching)
+  * [Tagging](#tagging)
+  * [Pull Requests](#pull-requests)
+  * [Review](#review)
+* [Issues](#issues)
+* [Labels](#labels)
+  * [Priority Labels](#priority-labels)
+  * [Type Labels](#type-labels)
+  * [Status Labels](#status-labels)
+
+## Contributing
+
+This section is designed to help you make an edit if you aren't familiar with
+using Github and want to make a change to the TechArch repository.
+
+### Basic Change Flow
+
+If you're not familiar with Github and Git, here's a few simple steps you can
+use to get going and to contribute to the repository *without ever touching the
+command line*.
+
+There is also a [Video Walkthrough](https://www.youtube.com/embed/3CuB0wdJaSU) 
+of how to do this if you prefer to learn over video.
+
+1. [Fork the TechArch repo into your
+   account](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+   
+   <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196454640-13428816-918b-43d1-af7b-24c54959f756.png></div>
+   
+   <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196456303-be5ccc86-9f7b-4159-9387-2d4260333516.png></div>
+
+2. Find the file you want to edit. [Click the pen tool on the top right of the
+   file to edit it]([https://www.youtube.com/watch?v=uE2DxUfZjtE](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files)). If you want to add a file, click "Add File". Click "create new branch". [Learn More](https://docs.github.com/en/repositories/working-with-files/managing-files/editing-files)
+   
+   <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196453797-8cf73fee-e032-44d0-a32b-fcdf7dccf3fc.png></div>
+   <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196456484-ac4160a4-657d-4ef3-bca5-21ad0fa9d8e8.png></div>
+
+3. Make your changes. When you are ready, click [Pull
+   Request](https://youtu.be/rgbCcBNZcdQ?t=205) on the bar above the file. Then
+   create `New Pull Request` and choose to set the request to merge to the
+   `TechArch:main` branch. Put any information you want to describe your changes
+   on the description, and you're done! [Learn More](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork).
+   
+   <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196454843-23080862-1f8a-4514-a3e0-59bfb9350adf.png></div>
+   <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/196454824-a20039f9-ab87-4806-b321-891eea222438.png></div>
+
+#### Updating your PR on Changes Requested
+
+If you've gotten some comments about needing to fix a PR, the process is really
+simple. You do NOT need to create a new PR. 
+
+1. Go to the file in **your branch** that you want to edit. 
+2. Click the edit button ( step 2 from when you created the initial edit )
+3. Make edits, but this time, instead of creating a **new** branch, commit to
+   the same branch. Your changes will propogate to the PR. 
+   
+   <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/199773674-443fbf9d-1a2b-4968-87d8-45b9adff21ab.png></div>
+
+4. You may want to re-request review. Click the sync button to do so:
+   
+  <div align="center"><img width=400 src=https://user-images.githubusercontent.com/8604639/199774182-74614cdb-f7ad-4cd0-8a6d-50d9a92fd127.png></div>
+
+
+### Advanced Change Flow
+
+As a more advanced user, there are few ways you can manage your Github
+repository:
+
+1. [You can use the github web
+   editor](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor)
+2. [You can use github desktop](https://desktop.github.com/)
+3. [You can use the
+   cli](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
+4. Something else! Git is extremely powerful if you want to spend the time
+   researching.
+
+### Commits
+
+- [You must sign your
+  commits](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits)
+- Please try to keep your commit history clean. We do not enforce this but it is
+  encouraged.
+
+### Branching:
+
+- Nobody will work directly on the `main` branch. All changes must occur over a
+  PR and off the main branch.
+- We encourage, but do not enforce branching naming using the following schema:
+  `<type>/<description>` ex. `edit/fix-fig4-label`.
+- The main-branch should always have the latest approved changes
+- Custom "feature" branches may be used for special purposes, e.g. for groups to
+  work on a larger section of text
+- Branching will occur on forks, not over the main repository. This is to ensure
+  that the main repository is not cluttered with lots of branches from contributors.
  
-                                            Contributor License Agreement (CLA 1.0)
-                                                (Patent and Copyright Grants)
- 
- 
-1.  The Purpose of this Contributor License Agreement.  This CLA sets forth the terms under which I will participate in and contribute to the development of the Specification. Capitalized terms are defined in the CLA’s last section.
- 
-2.  Copyrights.
- 
-2.1.  Copyright Grant.   I grant to you a perpetual (for the duration of the applicable copyright), worldwide, non-exclusive, no-charge, royalty-free, copyright license, without any obligation for accounting to me, to reproduce, prepare derivative works of, publicly display, publicly perform, sublicense, distribute, and implement any Contribution to the full extent of my copyright interest in the Contribution.
- 
-2.2.  Attribution.  As a condition of the copyright grant, you must include an attribution to the Specification in any derivative work you make based on the Specification.  That attribution must include, at minimum, the Specification name and version number. 
- 
-3.  Patents.
- 
-3.1.  Patent Non-Assert.
- 
-3.1.1. The Promise.  I, on behalf of myself and my successors in interest and assigns, irrevocably promise not to assert my Granted Claims against you for your Permitted Uses, subject to the terms and conditions of Section 3.1.  This is a personal promise directly from me to you, and you acknowledge as a condition of benefiting from it that no rights from me are received from suppliers, distributors, or otherwise in connection with this promise. This promise also applies to your Permitted Uses of any other specifications incorporating all required portions of the Specification.
- 
-3.1.2.  Termination.
- 
-3.1.2.1.  As a Result of Claims by You.  All rights, grants, and promises made by me to you under this CLA are terminated if you file, maintain, or voluntarily participate in a lawsuit against me or any person or entity asserting that its Permitted Uses infringe any  Granted Claims you would have had the right to enforce had you signed this CLA, unless that suit was in response to a corresponding suit first brought against you.
- 
-3.1.2.2.  As a Result of Claims by a Related Entity of Mine.  If a Related Entity of mine files, maintains, or voluntarily participates in a lawsuit asserting that a Permitted Use infringes any Granted Claims it would have had the right to enforce had it signed this CLA, then I relinquish any rights, grants, and promises I have received for the Specification from other signatories of this CLA, unless a) my promise to you was terminated pursuant to section 3.1.2.1, or b) that suit was in response to a corresponding suit first brought by you against the Related Entity.
- 
-3.1.3.  Additional Conditions.  This promise is not an assurance (i) that any of my copyrights or issued patent claims cover an implementation of the Specification or are enforceable or (ii) that an implementation of the Specification would not infringe intellectual property rights of any third party. Notwithstanding the personal nature of my promise, this promise is intended to be binding on any future owner, assignee or exclusive licensee who has been given the right to enforce any Granted Claims against third parties.
- 
-3.1.4. Bankruptcy.  Solely for purposes of Section 365(n) of Title 11, United States Bankruptcy Code and any equivalent law in any foreign jurisdiction, this promise will be treated as if it were a license and you may elect to retain your rights under this promise if I (or any owner of any patents or patent applications referenced herein), as a debtor in possession, or a bankruptcy trustee, reject this non-assert.
- 
-3.2.  Patent License Commitment.  In addition to rights granted in 3.1, on behalf of me and my successors in interest and assigns, I agree to grant to you a no charge, royalty free license to my Granted Claims on reasonable and non-discriminatory terms, where such license applies only to those Granted Claims infringed by the implementation of my Contribution(s) alone or by combination of my Contribution(s) with the Specification, solely for your Permitted Uses.
- 
-4.  No Other Rights. Except as specifically set forth in this CLA, no other express or implied patent, trademark, copyright, or other property rights are granted under this CLA, including by implication, waiver, or estoppel.
- 
-5.  Limited Opt-Out.  I may withdraw my Contribution by providing written notice of that withdrawal within 45 days of submitting that Contribution.  Notice of a Contribution withdrawal must be made, at minimum, in writing using the same communication mechanisms that were used to submit the corresponding Contribution and must include the exact material being withdrawn. Upon providing such valid notice, any obligations I incurred under this CLA for that particular identified Contribution will be null and void.
- 
-6.  Open Web Foundation Agreement ("OWFa") version 1.0 Execution.  I acknowledge that the goal of this CLA is to develop a specification that will be subject to the OWFa version 1.0.  While I have no legal obligation to execute the OWFa version 1.0 for any version of the specification being developed under this CLA, I agree that the selection and terms of the OWFa version 1.0 will not be subject to negotiation.
- 
-7.  Antitrust Compliance.  I acknowledge that I may compete with other participants, that I am under no obligation to implement the Specification, that each participant is free to develop competing technologies and standards, and that each party is free to license its patent rights to third parties, including for the purpose of enabling competing technologies and standards.
- 
-8.  Non-Circumvention.  I agree that I will not intentionally take or willfully assist any third party to take any action for the purpose of circumventing my obligations under this CLA.
- 
-9.  Representations, Warranties and Disclaimers.  I represent and warrant that 1) I am legally entitled to grant the rights and promises set forth in this CLA and 2) I will not intentionally include any third party materials in any Contribution unless those materials are available under terms that do not conflict with this CLA. IN ALL OTHER RESPECTS MY CONTRIBUTIONS ARE PROVIDED "AS IS."  The entire risk as to implementing or otherwise using the Contribution or the Specification is assumed by the implementer and user. Except as stated herein, I expressly disclaim any warranties (express, implied, or otherwise), including implied warranties of merchantability, non-infringement, fitness for a particular purpose, or title, related to the Contribution or the Specification. IN NO EVENT WILL ANY PARTY BE LIABLE TO ANY OTHER PARTY FOR LOST PROFITS OR ANY FORM OF INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER FROM ANY CAUSES OF ACTION OF ANY KIND WITH RESPECT TO THIS CLA, WHETHER BASED ON BREACH OF CONTRACT, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE, AND WHETHER OR NOT THE OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. All of my obligations under Section 3 regarding the transfer, successors in interest, or assignment of Granted Claims will be satisfied if I notify the transferee or assignee of any patent that I know contains Granted Claims of the obligations under Section 3. Nothing in this CLA requires me to undertake a patent search.
- 
-10.  Definitions.
- 
-10.1.  Bound Entities.  “Bound Entities” means the entity listed below and any entities that the Bound Entity Controls.
- 
-10.2.  CLA.  “CLA” means this document, which sets forth the rights, grants, promises, limitations, conditions, obligations, and disclaimers made available for my Contributions to the particular Specification.
- 
-10.3.  Contribution.   “Contribution” means any original work of authorship, including any modifications or additions to an existing work, that I intentionally submit for inclusion in the Specification, which is included in the Specification.  For the purposes of this definition, “submit” means any form of electronic, oral, or written communication for the purpose of discussing and improving the Specification, but excluding communication that I conspicuously designate in writing as not a contribution.
- 
-10.4.  Control.  “Control” means direct or indirect control of more than 50% of the voting power to elect directors of that corporation, or for any other entity, the power to direct management of such entity.
- 
-10.5.  Granted Claims.  "Granted Claims" are those patent claims that I own or control, including those patent claims I acquire or control after the Date below, that are infringed by Permitted Uses. Granted Claims include only those patent claims that are infringed by the implementation of any portions of the Specification where the Specification describes the functionality causing the infringement in detail and does not merely reference the functionality causing the infringement. Granted Claims under this CLA exclude those patent claims that would be infringed by an implementation of the Specification if my Contribution to that Specification were removed.
- 
-10.6.  I, Me, or My.   “I,” “me,” or “my” refers to the signatory below and its Bound Entities, if applicable.
- 
-10.7.  Permitted Uses.  “Permitted Uses” means making, using, selling, offering for sale, importing or distributing any implementation of the Specification 1) only to the extent it implements the Specification and 2) so long as all required portions of the Specification are implemented. Permitted Uses do not extend to any portion of an implementation that is not included in the Specification.
- 
-10.8.  Related Entities.  “Related Entities” means 1) any entity that Controls the Bound Entity (“Upstream Entity”), and 2) any other entity that is Controlled by an Upstream Entity that is not itself a Bound Entity.
- 
-10.9.  Specification.  “Specification” means the Specification identified below as of the date of my last Contribution.
- 
-10.10.  You or Your.  “You,” “you,” or “your” means any person or entity who exercises copyright or patent rights granted under this CLA, and any person or entity you Control.
+### Tagging
+
+- Version tags are used for each release of the document
+- Releases should be versioned and if needed, appended with a pre-release tag,
+  e.g. "v1", "v3-RC1", "v4-IIW39"
+- Versioning should be simple, only major releases numbered, prepended with
+  letter v. e.g. v1, v2, v3.
+- Branch protection rules will exist to not allow a person to directly commit to
+  `main`.
+
+### Pull Requests
+
+The below documents some basic best practices for your pull requests.
+
+- Please make sure to ask an editor to review your Pull Request. 
+- Write descriptive and consistent names.
+- Create a clear PR title and description.
+- Keep PRs short as possible 
+- Try to keep a transparent audit trail of your conversation so people can
+  follow it.
+- Avoid rewrites by getting feedback early.
+- Request additional reviewers to create dialogue.
+- Be precise in your comments about what needs to be fixed.
+
+### Review
+
+- Review of PR's is done by appointed editors. See the
+  [GOVERNANCE](GOVERNANCE.md) file for more information.
+- Issues labeled with `status: needs-review` should contain a PR code OR the
+  change text directly in the issue (for those not Git-savvy)
+- When you create an issue or a PR, please try to tag them appropriately,
+  including adding a `status: needs-review` label to the issue/PR.
+- Every week, the editors will go through the issues and tag them appropriately.
+- If the PR is ready to be merged, it is tagged with `accepted` -label
+- In normal circumstances, any editor may merge changes tagged with label
+  `accepted`
+- The editor can try to merge the PR to the main branch.
+- If PR is not rebased and commit histories are not in sync, the PR can be
+  merged if there are no overlapping changes with the history. In this case it
+  is the merging editor's responsibility to ensure that the merging is clean and
+  no unwanted changes happen.
+- In case of change conflicts, the editor requests the PR creator to rebase
+  against current main branch and resubmit the PR.
+- After review, an `editor` may change the status to `status: last-call`. This
+  would signal a 5 day delay for close.
+- If nobody disagrees with the `status: last-call`, the issue is accepted and
+  merged back into `main`.
+- Sometimes the editor group may agree to a controlled merging process and
+  decide that merging happens only by a selected editor (e.g. release owner) or
+  during editor meetings. This may happen when a release of the document is
+  coming soon and only some specific changes are allowed.
+
+## Issues
+
+- Anyone may raise an issue
+- Every week editors will go through the new issues, and label them.
+- Please provide as much clarity as possible around an issue topic. Ideally, you
+are always answering the following:
+   * what is the issue?
+   * why is it important?
+   * what would trigger closure of the ticket?
+- Issues that are not commented on for over 90 days, and reviewed to not be
+  relevant will be closed by an editor
+- Please do not hesitate to self assign yourself if you would like to address an
+  issue. 
+
+## Labels
+
+### Priority Labels
+
+Priority labels are used to describe the impact and focus of the issue. Higher
+priority means it is more likely to find focus within the group.
+
+| Priority | Label | Usage |
+|----------|----------|--------------------------------------------------------------------------------------------|
+| priority | critical | Progress on this issue is critical to the group's forward progress. |
+| priority | high | It is important for the group to resolve this issue soon. |
+| priority | medium | This issue is important to resolve before the next release. |
+| priority | low | This issue is "nice to have" for the next release, but could be deferred if time runs out. |
+
+### Type Labels 
+
+Type labels are labels the define the nature of the issue and/or the correction
+itself.
+
+| Type | Label | Usage |
+|------|------------|----------------------------------------------------------------------------|
+| type | editorial | The issue only involves wording and not normative content. |
+| type | content | The issue involves normative content; resolution requires group consensus. |
+| type | correction | The issue is fixing a recognized problem in the current version. |
+| type | formatting | The issue involves fixing formatting. |
+| type | figure | The issue involves a figure that it missing or needs to be revised. |
+| type | admin | The issue is administrative and NOT about the deliverable. |
+
+### Status Labels 
+
+Status labels are labels that are used to help identify the current state of the
+issue, so that we may accurately classify the work to do on it.
+
+| Status | Label | Usage |
+|--------|-------------------|-------------------------------------------------------------------------------------------------------------------|
+| status | unassigned | The issue is new and has not yet been assigned to anyone. |
+| status | in-progress | The issue has been assigned and work is in progress. |
+| status | needs-review | A resolution (or concrete step forward) has been proposed and needs review. |
+| status | blocked | Progress is currently blocked; the block should be explained in a comment. |
+| status | on-hold | Progress is currently on hold; the reason should be explained in a comment. |
+| status | deferred | Consensus has been reached that this issue can be deferred to a subsequent version. |
+| status | abandoned | Consensus has been reached that this issue can be abandoned. |
+| status | PR-needed | Consensus has been reached and this issue is now waiting for a PR to be submitted. |
+| status | PR-in-progress | The issue is linked to a PR that is in progress |
+| status | PR-completed | The issue is linked to a PR that is complete and waiting for review. |
+| status | PR-accepted | The issue is linked to a PR that has been accepted and is waiting for merge. |
+| status | PR-merged | The issue is linked to a PR that has been merged; this issue can now be closed. |
+| status | status: last-call | The issue has been resolved by some other mechanism documented in the comments and is now in **5 day last call.** |
