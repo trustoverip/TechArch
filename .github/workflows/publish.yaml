@@ -9,14 +9,14 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-    - run: npm install
-    - run: npm run build
-    - uses: actions-js/push@master
-      with:
-        directory: './docs'
-        message: 'bot: autopublish'
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - run: npm install
+      - run: npm run render
+      - uses: actions-js/push@master
+        with:
+          directory: "./docs"
+          message: "bot: autopublish"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
