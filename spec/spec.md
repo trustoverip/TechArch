@@ -475,14 +475,13 @@ Different considerations apply when a VID needs to be provably bound to a digita
 
 Messages are the lingua franca of the [[xref: toip, ToIP Trust Spanning Protocol]]. To achieve the design goals in [Section 6.1](#61-design-goals), the following requirements must be met:
 
-The [[xref: toip, ToIP Trust Spanning Protocol]] specification MUST define how to construct and format messages that are [[xref: toip, cryptographically verifiable]] to have the following four properties:
+The [[xref: toip, ToIP Trust Spanning Protocol]] specification MUST define how to construct and format messages that are [[xref: toip, cryptographically verifiable]] to have the following three properties:
 
-  - Authenticity: the message was sent from a sender who has control over the VID.
-  - Integrity: the contents of the message transmitted by the sender are received by the recipient without modification.
+  - Authenticity: the message was sent from a sender who has control over the source VID and the contents of the message transmitted by the sender are received by the recipient who has control over the destination VID without modification.
   - Confidentiality: the contents of the message are only accessible by authorized [[xref: toip, parties]].
   - Privacy: the contents of the message are bound to conditions of usage agreed to by the [[xref: toip, parties]]. [REC L2.9]
 
-In a ToIP [[xref: toip, endpoint system]], an implementation of the [[xref: toip, ToIP Trust Spanning Protocol]] MUST support [[xref: toip, authenticity]] and [[xref: toip, integrity]]. [REQ L2.10]
+In a ToIP [[xref: toip, endpoint system]], an implementation of the [[xref: toip, ToIP Trust Spanning Protocol]] MUST support [[xref: toip, authenticity]]. [REQ L2.10]
 
 In a ToIP [[xref: toip, endpoint system]], an implementation of the [[xref: toip, ToIP Trust Spanning Protocol]] MAY support [[xref: toip, confidentiality]] and privacy. [REQ L2.11]
 
@@ -683,8 +682,8 @@ For ease of reference, the following table consolidates all normative requiremen
 |L2.6|A [[xref: toip, VID]] SHOULD support rotation of the associated [[xref: toip, cryptographic keys]] for the lifetime of the identifier.|[8.2](#82-identifiers)|
 |L2.7|A [[xref: toip, VID]] MAY also support rotation to an entirely different VID that can be cryptographically verified to be a synonym of the original VID.|[8.2](#82-identifiers)|
 |L2.8|A [[xref: toip, VID]] SHOULD support the ability to: a) associate the VID with the network address of one or more [[xref: toip, ToIP systems]] that can deliver to one or more [[xref: toip, endpoint systems]] under the locus of control of the [[xref: toip, VID controller]], and, b) if desired by the controller, enable that association to be discoverable.|[8.2](#82-identifiers)|
-|L2.9|The [[xref: toip, ToIP Trust Spanning Protocol]] specification MUST define how to construct and format messages that are [[xref: toip, cryptographically verifiable]] to have the following four properties: (1) [[xref: toip, Authenticity]]: the message was sent from a sender who has control over the VID. (2) [[xref: toip, Integrity]]: the contents of the message transmitted by the sender are received by the recipient without modification. (3) [[xref: toip, Confidentiality]]: the contents of the message are only accessible by authorized [[xref: toip, parties]]. (4) Privacy: the contents of the message are bound to conditions of usage agreed to by the [[xref: toip, parties]].|[8.3](#83-messages)|
-|L2.10|In a ToIP [[xref: toip, endpoint system]], an implementation of the [[xref: toip, ToIP Trust Spanning Protocol]] MUST support [[xref: toip, authenticity]] and [[xref: toip, integrity]].|[8.3](#83-messages)|
+|L2.9|The [[xref: toip, ToIP Trust Spanning Protocol]] specification MUST define how to construct and format messages that are [[xref: toip, cryptographically verifiable]] to have the following three properties: (1) [[xref: toip, Authenticity]]: the message was sent from a sender who has control over the source VID and the contents of the message transmitted by the sender are received by the intended recipient who has control over the destination VID without modification. (2) [[xref: toip, Confidentiality]]: the contents of the message are only accessible by authorized [[xref: toip, parties]]. (3) Privacy: the contents of the message are bound to conditions of usage agreed to by the [[xref: toip, parties]].|[8.3](#83-messages)|
+|L2.10|In a ToIP [[xref: toip, endpoint system]], an implementation of the [[xref: toip, ToIP Trust Spanning Protocol]] MUST support [[xref: toip, authenticity]].|[8.3](#83-messages)|
 |L2.11|In a ToIP [[xref: toip, endpoint system]], an implementation of the [[xref: toip, ToIP Trust Spanning Protocol]] MAY support [[xref: toip, confidentiality]] and privacy.|[8.3](#83-messages)|
 |L2.12|The [[xref: toip, ToIP Trust Spanning Protocol]] MUST enable the composition of higher-level [[xref: toip, trust task protocols]].|[8.3](#83-messages)|
 |L2.13|The [[xref: toip, ToIP Trust Spanning Protocol]] MUST support extensible message schema.|[8.3](#83-messages)|
