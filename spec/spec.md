@@ -225,12 +225,13 @@ With regard to the first design goal, establishing trust between [[xref: toip, p
 
 1. **Authenticity:** is the receiver of a communication able to verify that it originated from the sender and has not been tampered with?[^1]
 2. **Confidentiality:** is the contents of a communication protected so only authorized [[xref: toip, parties]] have access?
-3. **Privacy:** will the expectations of each [[xref: toip, party]] with respect to usage of shared information be honored by the other [[xref: toip, parties]]?
+3. **Metadata Privacy:** is the metadata of a communication protected so that unauthorized parties can not collect metadata for tracking or correlating with other identifying data?[^2]
 
-Note that, in some [[xref: toip, trust relationships]], confidentiality and privacy may be optional. Thus our design goal with the [[xref: toip, ToIP stack]] is to achieve these three properties in the order listed.[^2]
+Note that, in some [[xref: toip, trust relationships]], confidentiality and metadata privacy may be optional. Thus our design goal with the [[xref: toip, ToIP stack]] is to achieve these three properties in the order listed.[^3]
 
 [^1]: With respect to this design goal, authenticity includes **message integrity**, i.e., a communication is not authentic if it has been tampered with in any way. <br>
-[^2]: Another important property of the architecture is **availability**. This is a concern with the design and implementation of operational deployments of the ToIP stack and should be addressed in the associated operational governance frameworks.
+[^2]: In addition to confidentiaility and metadata privacy, additional notions of privacy can be built with trust tasks and applications above the trust spanning layer. <br>
+[^3]: Another important property of the architecture is **availability**. This is a concern with the design and implementation of operational deployments of the ToIP stack and should be addressed in the associated operational governance frameworks.
 
 With regard to the second design goal, the ToIP reference architecture shares the same goal of global scalability as the original Internet architecture. This involves several intertwined considerations that overlap and reinforce each other as summarized by the first four [Design Principles for the ToIP Stack](https://www.trustoverip.org/wp-content/uploads/Design-Principles-for-the-ToIP-Stack-V1.0-2022-01-17.pdf):
 
@@ -380,7 +381,7 @@ Many applications may require more complex trust-building functions than the min
 
 A Layer 3 [[xref: toip, trust task protocol]] MUST communicate either over the Layer 2 [[xref: toip, ToIP Trust Spanning Protocol]] or over another Layer 3 [[xref: toip, trust task protocol]] for all communications related to [[xref: toip, trust establishment]] between [[xref: toip, endpoint systems]]. [REQ L3.1] This is directly analogous to how TCP and UDP communicate over IP, and how HTTP communicates over TCP. A Layer 3 [[xref: toip, trust task]] MAY use other protocols, but only for other purposes (since short-circuiting Layer 2 when establishing trust with other [[xref: toip, endpoint systems]] would undermine the trust guarantees of the ToIP stack). [REQ L3.2]
 
-Note that because [[xref: toip, confidentiality]] and privacy are optional for the Layer 2 [[xref: toip, ToIP Trust Spanning Protocol]], the following requirement applies: A Layer 3 [[xref: toip, trust task protocol]] intended to communicate private data SHOULD support confidentiality and privacy. [REQ L3.3]
+Note that because [[xref: toip, confidentiality]] and metadata privacy are optional for the Layer 2 [[xref: toip, ToIP Trust Spanning Protocol]], the following requirement applies: A Layer 3 [[xref: toip, trust task protocol]] intended to communicate private data SHOULD support confidentiality and MAY also support additional notions of privacy. [REQ L3.3]
 
 There can be as many [[xref: toip, trust task protocol]] as are needed by Layer 4 [[xref: toip, trust applications]]. Some examples of [[xref: toip, trust tasks]] include:
 
@@ -479,11 +480,11 @@ The [[xref: toip, ToIP Trust Spanning Protocol]] specification MUST define how t
 
   - Authenticity: the message was sent from a sender who has control over the source VID and the contents of the message transmitted by the sender are received by the recipient who has control over the destination VID without modification.
   - Confidentiality: the contents of the message are only accessible by authorized [[xref: toip, parties]].
-  - Privacy: the contents of the message are bound to conditions of usage agreed to by the [[xref: toip, parties]]. [REC L2.9]
+  - Metadata Privacy: the metadata related to the message and its transport and delivery is not exposed to unauthorized parties which may use it for tracking or unwanted correlation with other identifying data. [REC L2.9]
 
 In a ToIP [[xref: toip, endpoint system]], an implementation of the [[xref: toip, ToIP Trust Spanning Protocol]] MUST support [[xref: toip, authenticity]]. [REQ L2.10]
 
-In a ToIP [[xref: toip, endpoint system]], an implementation of the [[xref: toip, ToIP Trust Spanning Protocol]] MAY support [[xref: toip, confidentiality]] and privacy. [REQ L2.11]
+In a ToIP [[xref: toip, endpoint system]], an implementation of the [[xref: toip, ToIP Trust Spanning Protocol]] MAY support [[xref: toip, confidentiality]] and metadata privacy. [REQ L2.11]
 
 The [[xref: toip, ToIP Trust Spanning Protocol]] MUST enable the composition of higher-level [[xref: toip, trust tasks]]. [REQ 2.12] Examples of such features include discovery, threading, timeouts, ACKs, and attachments. However this requirement must be balanced with the requirement to only add additional functions to this protocol if they are universally beneficial.
 
@@ -682,9 +683,9 @@ For ease of reference, the following table consolidates all normative requiremen
 |L2.6|A [[xref: toip, VID]] SHOULD support rotation of the associated [[xref: toip, cryptographic keys]] for the lifetime of the identifier.|[8.2](#82-identifiers)|
 |L2.7|A [[xref: toip, VID]] MAY also support rotation to an entirely different VID that can be cryptographically verified to be a synonym of the original VID.|[8.2](#82-identifiers)|
 |L2.8|A [[xref: toip, VID]] SHOULD support the ability to: a) associate the VID with the network address of one or more [[xref: toip, ToIP systems]] that can deliver to one or more [[xref: toip, endpoint systems]] under the locus of control of the [[xref: toip, VID controller]], and, b) if desired by the controller, enable that association to be discoverable.|[8.2](#82-identifiers)|
-|L2.9|The [[xref: toip, ToIP Trust Spanning Protocol]] specification MUST define how to construct and format messages that are [[xref: toip, cryptographically verifiable]] to have the following three properties: (1) [[xref: toip, Authenticity]]: the message was sent from a sender who has control over the source VID and the contents of the message transmitted by the sender are received by the intended recipient who has control over the destination VID without modification. (2) [[xref: toip, Confidentiality]]: the contents of the message are only accessible by authorized [[xref: toip, parties]]. (3) Privacy: the contents of the message are bound to conditions of usage agreed to by the [[xref: toip, parties]].|[8.3](#83-messages)|
+|L2.9|The [[xref: toip, ToIP Trust Spanning Protocol]] specification MUST define how to construct and format messages that are [[xref: toip, cryptographically verifiable]] to have the following three properties: (1) [[xref: toip, Authenticity]]: the message was sent from a sender who has control over the source VID and the contents of the message transmitted by the sender are received by the intended recipient who has control over the destination VID without modification. (2) [[xref: toip, Confidentiality]]: the contents of the message are only accessible by authorized [[xref: toip, parties]]. (3) Metadata Privacy: the metadata related to the message and its transport and delivery is not exposed to unauthorized parties which may use it for tracking or unwanted correlation with other identifying data.|[8.3](#83-messages)|
 |L2.10|In a ToIP [[xref: toip, endpoint system]], an implementation of the [[xref: toip, ToIP Trust Spanning Protocol]] MUST support [[xref: toip, authenticity]].|[8.3](#83-messages)|
-|L2.11|In a ToIP [[xref: toip, endpoint system]], an implementation of the [[xref: toip, ToIP Trust Spanning Protocol]] MAY support [[xref: toip, confidentiality]] and privacy.|[8.3](#83-messages)|
+|L2.11|In a ToIP [[xref: toip, endpoint system]], an implementation of the [[xref: toip, ToIP Trust Spanning Protocol]] MAY support [[xref: toip, confidentiality]] and metadata privacy.|[8.3](#83-messages)|
 |L2.12|The [[xref: toip, ToIP Trust Spanning Protocol]] MUST enable the composition of higher-level [[xref: toip, trust task protocols]].|[8.3](#83-messages)|
 |L2.13|The [[xref: toip, ToIP Trust Spanning Protocol]] MUST support extensible message schema.|[8.3](#83-messages)|
 |L2.14|The [[xref: toip, ToIP Trust Spanning Protocol]] MUST support resolution of VIDs to: a) the network addresses of receiving [[xref: toip, endpoint systems]], and b) any required [[xref: toip, cryptographic keys]].|[8.4](#84-routing)|
@@ -695,7 +696,7 @@ For ease of reference, the following table consolidates all normative requiremen
 | |**ToIP Layer 3 Requirements**| |
 |L3.1|A Layer 3 [[xref: toip, trust task protocol]] MUST communicate either over the Layer 2 [[xref: toip, ToIP Trust Spanning Protocol]] or over another Layer 3 Trust Task Protocol for all communications related to trust establishment between [[xref: toip, endpoint systems]].|[7.4](#74-layer-3-trust-tasks)|
 |L3.2|A Layer 3 [[xref: toip, trust task]] MAY use other protocols, but only for other purposes (since short-circuiting Layer 2 when establishing trust with other [[xref: toip, endpoint systems]] would undermine the trust guarantees of the ToIP stack).|[7.4](#74-layer-3-trust-tasks)|
-|L3.3|A Layer 3 [[xref: toip, trust task protocol]] intended to communicate private data SHOULD support [[xref: toip, confidentiality]] and privacy.|[7.4](#74-layer-3-trust-tasks)|
+|L3.3|A Layer 3 [[xref: toip, trust task protocol]] intended to communicate private data SHOULD support [[xref: toip, confidentiality]] and MAY also support additional notions of privacy.|[7.4](#74-layer-3-trust-tasks)|
 | |**ToIP Layer 4 Requirements**| |
 |L4.1|Layer 4 [[xref: toip, trust applications]] MAY use any number of Layer 3 [[xref: toip, trust task protocols]].|[7.5](#75-layer-4-trust-applications)|
 |L4.2|If a Layer 4 [[xref: toip, trust application]] does not use a Layer 3 [[xref: toip, trust task protocol]], it MUST communicate with other [[xref: toip, endpoint systems]] using the Layer 2 [[xref: toip, ToIP Trust Spanning Protocol]].|[7.5](#75-layer-4-trust-applications)|
