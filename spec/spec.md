@@ -416,8 +416,6 @@ This section describes the [[xref: toip, ToIP Trust Spanning Protocol]] required
 
 **Figure 11: Overview of the ToIP Trust Spanning Protocol**
 
-TODO-WENJING-FIX THIS FIGURE TO USE "VID" INSTEAD OF "AID/DID"
-
 The main function of this protocol is to enable universal end-to-end communication among all [[xref: toip, endpoint systems]] using trusted messages. This architectural choice is based on the following considerations:
 
   - Existing Internet, local network, and mesh network infrastructure already supports universal end-to-end communication through various types of transport mechanisms.
@@ -537,8 +535,6 @@ Examples of useful [[xref: toip, intermediary systems]] include:
 
 **Figure 13: The role of intermediary systems**
 
-TODO-WENJING-UPDATE "DID" TO "VID" IN FIGURE 13
-
 In Figure 13, end-to-end communication between [[xref: toip, endpoint systems]] A and B are routed through [[xref: toip, intermediary systems]] X and Y. In this case, all systems implement the Layer 2 protocol as described in [Section 8](#8-the-toip-trust-spanning-protocol). Routing uses “nested envelopes” as follows:
 
   1. [[xref: toip, Endpoint system]] A prepares a message for [[xref: toip, endpoint system]] B and puts it in an inner message envelope addressed to [[xref: toip, endpoint system]] B.
@@ -598,8 +594,6 @@ Figure 16 illustrates a generalization of the pattern in which [[xref: toip, end
 <img src="./images/GeneralizedSupportingSystems.png" alt="A generalization of how endpoint systems and supporting systems interact" style="width:800px;"/>
 
 **Figure 16: A generalization of how endpoint systems and supporting systems interact**
-
-TODO-WENJING-UPDATE "DID" TO "VID" IN FIGURE 16
 
 ## Endpoint System Interoperability
 
