@@ -79,12 +79,9 @@ dist
 nbproject/
 # VSCode
 .vscode/
-docs/index.html
 .DS_Store
 out.md
 out.pdf
-docs/fonts
-docs
 node_modules
 *.bak
 *.tmp
