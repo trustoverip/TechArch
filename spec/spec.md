@@ -52,25 +52,25 @@ For the most recent version of this specification, please see [this ToIP web pag
 
 The mission of the [Trust over IP (ToIP) Foundation](https://www.trustoverip.org) is to define an overall architecture for Internet-scale digital trust that combines cryptographic assurance at the machine layers (technology) with human accountability at the business, legal, and social layers (governance). Together these two halves form a complete four-layer architecture for decentralized digital trust infrastructure known as the [[xref: toip, ToIP Stack]]. Figure 1 is a conceptual diagram of the basic structure of this "dual stack":
 
-![Figure 1: ToIP Stack Basic Structure](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/toip-stack-basic-structure.png)
+![Figure 1: ToIP Stack Basic Structure](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/toip-stack-basic-structure.png)
 
 **Figure 1: Conceptual diagram of the ToIP stack**
 
 The ToIP stack is a model for implementing interoperable [[xref: toip, digital trust ecosystems]]. Each ecosystem implements the elements it requires from the [[xref: toip, ToIP Technology Stack]] and publishes an [[xref: toip, ecosystem governance framework]] based on the [[xref: toip, ToIP Governance Architecture Specification]]. Figure 2 illustrates the relationship of the ToIP model with an ecosystem instance.
 
-![Figure 2: ToIP Stack with an Ecosystem Instance](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/toip-stack-with-ecosystem-instance.png)
+![Figure 2: ToIP Stack with an Ecosystem Instance](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/toip-stack-with-ecosystem-instance.png)
 
 **Figure 2: The relationship of the ToIP model with an ecosystem instance**
 
 Each ecosystem will have its own specific policies defined by its purpose, context, and objectives. However digital trust ecosystems do not stand alone in the digital world any more than biological ecosystems stand alone in the real world. People, businesses, and even governments operate within and across many different ecosystems. As shown in figure 3, the purpose of the ToIP model is to enable the interconnection and interoperability of many different digital trust ecosystems around the world the same way the Internet enabled the interconnection of many different local data networks around the world.
 
-![Figure 3: The ToIP model enables interoperability of digital trust ecosystems](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/connecting-interoperable-ecosystems.png)
+![Figure 3: The ToIP model enables interoperability of digital trust ecosystems](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/connecting-interoperable-ecosystems.png)
 
 **Figure 3: The ToIP model enables interoperability of digital trust ecosystems**
 
 The mission of the ToIP Foundation is two fold: 1) develop (or reference) the technical specifications required for the four layers of the ToIP Technology Stack, and 2) develop the [[xref: toip, governance framework]] models and artifacts required for the ToIP Governance Stack. Figure 4 illustrates examples of key components on both sides.
 
-![Figure 4: A more detailed view of key components on both sides of the ToIP stack](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/toip-stack-full-detail.png)
+![Figure 4: A more detailed view of key components on both sides of the ToIP stack](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/toip-stack-full-detail.png)
 
 **Figure 4: A more detailed view of key components on both sides of the ToIP stack**
 
@@ -120,7 +120,7 @@ The purpose of is specification is to define a reference architecture for the te
 
 The goal of these architectural [[xref: toip, requirements]] is to inform subsequent development stages as summarized in Figure 5:
 
-![ToIP Development Stages](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/toip-tech-stack-dev-stages.png)
+![ToIP Development Stages](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/toip-tech-stack-dev-stages.png)
 
 **Figure 5: The planned progression of development stages for the ToIP Technology Stack**
 
@@ -257,7 +257,7 @@ The best-known example of this four-layer pattern is the TCP/IP Internet protoco
 
 Much of the success of the Internet is attributed to this [[xref: toip, Hourglass Model]] in which the [[xref: toip, spanning layer protocol]] maximizes interoperability by providing a common way for all the higher level layers to communicate with all the lower level layers. This is why the design of the [[xref: toip, trust spanning layer]] should be “as simple as possible but no simpler”. Figure 6 illustrates how this same hourglass design applies to the four ToIP layers.
 
-![The four layer pattern of the Hourglass Model](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/hourglass-model.png)
+![The four layer pattern of the Hourglass Model](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/hourglass-model.png)
 
 **Figure 6: The four layer pattern of the Hourglass Model**
 
@@ -275,7 +275,7 @@ At the highest level, ToIP interactions occur between three basic types of inter
 
 The relationships between these systems is shown in Figure 7.
 
-![Three Types of Systems](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/ThreeTypesofSystems.png)
+![Three Types of Systems](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/ThreeTypesofSystems.png)
 
 **Figure 7: The three basic types of component systems in ToIP architecture**
 
@@ -290,7 +290,7 @@ ToIP [[xref: toip, endpoint systems]] and their interactions follow the 4-layer 
 
 Figure 8 shows a high level view of how these three basic types of component systems might interact using the existing infrastructure of the Internet.
 
-![High level view of ToIP consistent system interactions](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/HighLevelView.png)
+![High level view of ToIP consistent system interactions](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/HighLevelView.png)
 
 **Figure 8: High level view of ToIP consistent system interactions**
 
@@ -300,7 +300,7 @@ The normative requirements for each type of subsystem and interaction across the
 
 Just as IP addresses are the heart of the Internet [[xref: toip, TCP/IP stack]], [[xref: toip, cryptographically verifiable]] identifiers (VIDs) are the heart of the ToIP stack. Figure 9 illustrates a basic taxonomy of these identifiers.
 
-![A basic taxonomy of verifiable identifier (VID) types](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/verifiable-identifier-types.png)
+![A basic taxonomy of verifiable identifier (VID) types](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/verifiable-identifier-types.png)
 
 **Figure 9: A basic taxonomy of verifiable identifier (VID) types**
 
@@ -335,7 +335,7 @@ Common examples of [[xref: toip, endpoint systems]] include:
 
 Befitting Design Principle #1 ([The End-to-End Principle](https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf)), [[xref: toip, endpoint systems]] are the ultimate targets of the requirements of ToIP architecture. They are likely to be much larger in number — by several magnitudes — compared to [[xref: toip, intermediary systems]] or [[xref: toip, supporting systems]]. They implement most of the functions in ToIP architecture and represent the biggest challenge for interoperability and scalability.
 
-![Endpoint system](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/EndpointSystem.png)
+![Endpoint system](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/EndpointSystem.png)
 
 **Figure 10: Endpoint system**
 
@@ -412,7 +412,7 @@ Layer 4 is the layer where humans “touch” the ToIP stack, so this is where D
 
 This section describes the [[xref: toip, ToIP Trust Spanning Protocol]] required at Layer 2 to communicate between any two [[xref: toip, endpoint systems]]. The overall protocol operation is shown in Figure 11 below.
 
-![Overview of the ToIP Trust Spanning Protocol](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/SpanningProtocol.png)
+![Overview of the ToIP Trust Spanning Protocol](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/SpanningProtocol.png)
 
 **Figure 11: Overview of the ToIP Trust Spanning Protocol**
 
@@ -432,7 +432,7 @@ A view of the ToIP protocol stack on an [[xref: toip, endpoint system]] is shown
   3. How lower layer transport protocol(s) can be used to deliver messages between [[xref: toip, endpoint systems]].
   4. Any required support from ToIP Layer 1.
 
-![A view of the ToIP protocol stack on an endpoint system](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/StackOnEndpoint.png)
+![A view of the ToIP protocol stack on an endpoint system](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/StackOnEndpoint.png)
 
 **Figure 12: A view of the ToIP protocol stack on an [[xref: toip, endpoint system]]**
 
@@ -531,7 +531,7 @@ Examples of useful [[xref: toip, intermediary systems]] include:
 
 [[xref: toip, Intermediary systems]] differ from [[xref: toip, supporting systems]] because they reside between [[xref: toip, endpoint systems]] and are visible to the [[xref: toip, endpoint systems]].
 
-![The role of intermediary systems](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/IntermediarySystems.png)
+![The role of intermediary systems](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/IntermediarySystems.png)
 
 **Figure 13: The role of intermediary systems**
 
@@ -571,7 +571,7 @@ The following sections illustrated the layered interaction between [[xref: toip,
 
 A [[xref: toip, DID method]] may be implemented based on a distributed ledger, e.g. Hyperledger Indy. An [[xref: toip, endpoint system]], in this example, may be implemented using a Hyperledger Aries agent software module running on either a mobile device or a cloud platform. The Indy ledger is a privileged [[xref: toip, supporting system]] and the Aries agent implements layer 2 and layer 3 of the [[xref: toip, endpoint system]] stack. Such a design pattern is illustrated in Figure 14.
 
-![An example of Hyperledger Indy as a Supporting System](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/IndyAriesExample.png)
+![An example of Hyperledger Indy as a Supporting System](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/IndyAriesExample.png)
 
 **Figure 14: Example of Hyperledger Indy as a Supporting System**
 
@@ -583,7 +583,7 @@ A Layer 2 implementation must implement both [[xref: toip, DID resolution]] and 
 
 These supporting services differ from local dependencies (e.g. secure storage) because they are outside of an [[xref: toip, endpoint system]]’s locus of control. The access protocol to such supporting services is also different from the [[xref: toip, ToIP Trust Spanning Protocol]] as it is a protocol between different types of parties and has a different protocol stack.
 
-![An example of a KERI witness as a Supporting System](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/KERIExample.png)
+![An example of a KERI witness as a Supporting System](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/KERIExample.png)
 
 **Figure 15: Example of a KERI witness as a supporting system**
 
@@ -591,7 +591,7 @@ These supporting services differ from local dependencies (e.g. secure storage) b
 
 Figure 16 illustrates a generalization of the pattern in which [[xref: toip, endpoint systems]] and their respective [[xref: toip, supporting systems]] interact. This figure makes it clear that the interoperability between [[xref: toip, endpoint systems]] in each layer is orthogonal to the methods of interaction with respective [[xref: toip, supporting systems]].
 
-![A generalization of how endpoint systems and supporting systems interact](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/GeneralizedSupportingSystems.png)
+![A generalization of how endpoint systems and supporting systems interact](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/GeneralizedSupportingSystems.png)
 
 **Figure 16: A generalization of how endpoint systems and supporting systems interact**
 
@@ -704,7 +704,7 @@ The ToIP Technology Architecture Task Force has spent many hours discussing how 
 
 Figure B1 is a view of the types of functions that belong at each layer within a single [[xref: toip, endpoint system]] as defined in this specification. It illustrates how the [[xref: toip, Hourglass Model]] is implemented as a single [[xref: toip, trust spanning protocol]] at Layer 2, with multiple trust support functions below and multiple supported [[xref: toip, trust task protocols]] above. It also shows one example (at the far right) of a specific category of [[xref: toip, supporting systems]], in this case [[xref: toip, verifiable data registries]] (VDRs) upon which an [[xref: toip, endpoint system]] can rely as external sources of truth.
 
-![A layer-by-layer view of functions within an endpoint system](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/functional-hourglass-view.png)
+![A layer-by-layer view of functions within an endpoint system](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/functional-hourglass-view.png)
 
 **Figure B1: A layer-by-layer view of functions within an endpoint system (also showing verifiable data registries as one type of adjacent supporting system)**
 
@@ -712,7 +712,7 @@ Figure B1 is a view of the types of functions that belong at each layer within a
 
 Figure B2 builds on Figure B1 by identifying those technical capabilities that fall within the purview of ToIP’s technical architecture and those that are outside that boundary and thus do not need to be governed by ToIP component specifications.
 
-![A view of the ToIP Technology Stack that shows what is inside and outside ToIP's 'sphere of influence'](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/sphere-of-influence-view.png)
+![A view of the ToIP Technology Stack that shows what is inside and outside ToIP's 'sphere of influence'](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/sphere-of-influence-view.png)
 
 **Figure B2: A view of the ToIP Technology Stack that shows what is inside and outside ToIP's "sphere of influence"**
 
@@ -722,7 +722,7 @@ This view shows how the logical capabilities and components identified in the fu
 
 Figure B3 builds on B1 and B2 by showing the interaction patterns between two different [[xref: toip, endpoint systems]] as well as between an [[xref: toip, endpoint system]] and a set of [[xref: toip, supporting systems]] (on the far right).
 
-![A layer-by-layer view of functions within an [[xref: toip, endpoint system]]](https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/interaction-pattern-view.png)
+![A layer-by-layer view of functions within an [[xref: toip, endpoint system]]](https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/interaction-pattern-view.png)
 
 **Figure B3: A view showing the interaction patterns both within and between two endpoint systems (as well as with supporting systems on the far right)**
 
