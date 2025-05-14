@@ -376,21 +376,21 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
 <h2 id="introduction"><a class="toc-anchor d-print-none" href="#introduction" >#</a> Introduction</h2>
 <p>The mission of the <a path-0="www.trustoverip.org"href="https://www.trustoverip.org" >Trust over IP (ToIP) Foundation</a> is to define an overall architecture for Internet-scale digital trust that combines cryptographic assurance at the machine layers (technology) with human accountability at the business, legal, and social layers (governance). Together these two halves form a complete four-layer architecture for decentralized digital trust infrastructure known as the <a class="x-term-reference term-reference" data-local-href="#term:toip:toip-stack"
               href="##term:toip-stack">ToIP Stack</a>. Figure 1 is a conceptual diagram of the basic structure of this “dual stack”:</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/toip-stack-basic-structure.png" alt="Figure 1: ToIP Stack Basic Structure"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/toip-stack-basic-structure.png" alt="Figure 1: ToIP Stack Basic Structure"></p>
 <p><strong>Figure 1: Conceptual diagram of the ToIP stack</strong></p>
 <p>The ToIP stack is a model for implementing interoperable <a class="x-term-reference term-reference" data-local-href="#term:toip:digital-trust-ecosystems"
               href="##term:digital-trust-ecosystems">digital trust ecosystems</a>. Each ecosystem implements the elements it requires from the <a class="x-term-reference term-reference" data-local-href="#term:toip:toip-technology-stack"
               href="##term:toip-technology-stack">ToIP Technology Stack</a> and publishes an <a class="x-term-reference term-reference" data-local-href="#term:toip:ecosystem-governance-framework"
               href="##term:ecosystem-governance-framework">ecosystem governance framework</a> based on the <a class="x-term-reference term-reference" data-local-href="#term:toip:toip-governance-architecture-specification"
               href="##term:toip-governance-architecture-specification">ToIP Governance Architecture Specification</a>. Figure 2 illustrates the relationship of the ToIP model with an ecosystem instance.</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/toip-stack-with-ecosystem-instance.png" alt="Figure 2: ToIP Stack with an Ecosystem Instance"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/toip-stack-with-ecosystem-instance.png" alt="Figure 2: ToIP Stack with an Ecosystem Instance"></p>
 <p><strong>Figure 2: The relationship of the ToIP model with an ecosystem instance</strong></p>
 <p>Each ecosystem will have its own specific policies defined by its purpose, context, and objectives. However digital trust ecosystems do not stand alone in the digital world any more than biological ecosystems stand alone in the real world. People, businesses, and even governments operate within and across many different ecosystems. As shown in figure 3, the purpose of the ToIP model is to enable the interconnection and interoperability of many different digital trust ecosystems around the world the same way the Internet enabled the interconnection of many different local data networks around the world.</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/connecting-interoperable-ecosystems.png" alt="Figure 3: The ToIP model enables interoperability of digital trust ecosystems"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/connecting-interoperable-ecosystems.png" alt="Figure 3: The ToIP model enables interoperability of digital trust ecosystems"></p>
 <p><strong>Figure 3: The ToIP model enables interoperability of digital trust ecosystems</strong></p>
 <p>The mission of the ToIP Foundation is two fold: 1) develop (or reference) the technical specifications required for the four layers of the ToIP Technology Stack, and 2) develop the <a class="x-term-reference term-reference" data-local-href="#term:toip:governance-framework"
               href="##term:governance-framework">governance framework</a> models and artifacts required for the ToIP Governance Stack. Figure 4 illustrates examples of key components on both sides.</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/toip-stack-full-detail.png" alt="Figure 4: A more detailed view of key components on both sides of the ToIP stack"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/toip-stack-full-detail.png" alt="Figure 4: A more detailed view of key components on both sides of the ToIP stack"></p>
 <p><strong>Figure 4: A more detailed view of key components on both sides of the ToIP stack</strong></p>
 <p>This document is the normative specification for the high-level architecture of the <a class="x-term-reference term-reference" data-local-href="#term:toip:toip-technology-stack"
               href="##term:toip-technology-stack">ToIP Technology Stack</a> (the left half of Figure 4).  It is a deliverable of the <a path-0="wiki.trustoverip.org"path-1="display"path-2="HOME"path-3="Technology+Stack+Working+Group"href="https://wiki.trustoverip.org/display/HOME/Technology+Stack+Working+Group" >Technology Stack Working Group</a> at the ToIP Foundation. It is recommended to read this document in conjunction with these other documents from the ToIP Foundation in the following order:</p>
@@ -443,7 +443,7 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
 </ul>
 <p>The goal of these architectural <a class="x-term-reference term-reference" data-local-href="#term:toip:requirements"
               href="##term:requirements">requirements</a> is to inform subsequent development stages as summarized in Figure 5:</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/toip-tech-stack-dev-stages.png" alt="ToIP Development Stages"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/toip-tech-stack-dev-stages.png" alt="ToIP Development Stages"></p>
 <p><strong>Figure 5: The planned progression of development stages for the ToIP Technology Stack</strong></p>
 <p>For more information about the interrelationship and progression of these four stages, please see this page on the ToIP website: <a path-0="trustoverip.org"path-1="our-work"path-2="evolution-of-the-toip-stack"path-3=""href="https://trustoverip.org/our-work/evolution-of-the-toip-stack/" >Evolution of the ToIP Stack</a>.</p>
 <p>The scope of this specification is limited to the Technical Architecture Stage above, i.e., to defining the normative architectural requirements needed to guide the Component Specification Stage. Success will be achieved if these requirements are sufficient to produce the component specifications needed to implement the architecture and prepare for the Interoperability Testing Stage.</p>
@@ -873,7 +873,7 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
               href="##term:hourglass-model">Hourglass Model</a> in which the <a class="x-term-reference term-reference" data-local-href="#term:toip:spanning-layer-protocol"
               href="##term:spanning-layer-protocol">spanning layer protocol</a> maximizes interoperability by providing a common way for all the higher level layers to communicate with all the lower level layers. This is why the design of the <a class="x-term-reference term-reference" data-local-href="#term:toip:trust-spanning-layer"
               href="##term:trust-spanning-layer">trust spanning layer</a> should be “as simple as possible but no simpler”. Figure 6 illustrates how this same hourglass design applies to the four ToIP layers.</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/hourglass-model.png" alt="The four layer pattern of the Hourglass Model"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/hourglass-model.png" alt="The four layer pattern of the Hourglass Model"></p>
 <p><strong>Figure 6: The four layer pattern of the Hourglass Model</strong></p>
 <p>For additional overviews of how the ToIP technology stack implements the <a class="x-term-reference term-reference" data-local-href="#term:toip:hourglass-model"
               href="##term:hourglass-model">Hourglass Model</a>, see <a href="#appendix-b-consolidated-views-of-the-toip-technology-stack" >Appendix B</a>.</p>
@@ -896,7 +896,7 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
               href="##term:toip-trust-spanning-protocol">ToIP Trust Spanning Protocol</a>. See <a href="#10-supporting-systems" >Section 10</a>.</li>
 </ol>
 <p>The relationships between these systems is shown in Figure 7.</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/ThreeTypesofSystems.png" alt="Three Types of Systems"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/ThreeTypesofSystems.png" alt="Three Types of Systems"></p>
 <p><strong>Figure 7: The three basic types of component systems in ToIP architecture</strong></p>
 <p>The definition of each system is anchored to its defined (and agreed) locus of control, i.e., who is able to exert control over the operation of that system. Clarity about the locus of control and the dependencies between systems is critical as end-to-end trust is constructed between any two <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-systems"
               href="##term:endpoint-systems">endpoint systems</a>. Each system, whether it is classified as an <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-system"
@@ -928,14 +928,14 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
               href="##term:holder">holder</a>, or <a class="x-term-reference term-reference" data-local-href="#term:toip:verifier"
               href="##term:verifier">verifier</a> in that specific interaction context. These higher layer terms are specific to that context and must be consistent with the abstract general terms used in this reference architecture.</p>
 <p>Figure 8 shows a high level view of how these three basic types of component systems might interact using the existing infrastructure of the Internet.</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/HighLevelView.png" alt="High level view of ToIP consistent system interactions"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/HighLevelView.png" alt="High level view of ToIP consistent system interactions"></p>
 <p><strong>Figure 8: High level view of ToIP consistent system interactions</strong></p>
 <p>The normative requirements for each type of subsystem and interaction across the ToIP layers are specified in the following sections.</p>
 <h3 id="verifiable-identifiers"><a class="toc-anchor d-print-none" href="#verifiable-identifiers" >#</a> Verifiable Identifiers</h3>
 <p>Just as IP addresses are the heart of the Internet <a class="x-term-reference term-reference" data-local-href="#term:toip:tcp/ip-stack"
               href="##term:tcp/ip-stack">TCP/IP stack</a>, <a class="x-term-reference term-reference" data-local-href="#term:toip:cryptographically-verifiable"
               href="##term:cryptographically-verifiable">cryptographically verifiable</a> identifiers (VIDs) are the heart of the ToIP stack. Figure 9 illustrates a basic taxonomy of these identifiers.</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/verifiable-identifier-types.png" alt="A basic taxonomy of verifiable identifier (VID) types"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/verifiable-identifier-types.png" alt="A basic taxonomy of verifiable identifier (VID) types"></p>
 <p><strong>Figure 9: A basic taxonomy of verifiable identifier (VID) types</strong></p>
 <p>Design Principle #5 (<a path-0="trustoverip.org"path-1="permalink"path-2="Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf"href="https://trustoverip.org/permalink/Design-Principles-for-the-ToIP-Stack-V1.0-2022-11-17.pdf" >Cryptographic Verifiability</a>) states that “messages and data structures exchanged between parties should be verifiable as authentic using standard cryptographic algorithms and protocols”. This requires that <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-systems"
               href="##term:endpoint-systems">endpoint systems</a> be able to associate, discover and verify the <a class="x-term-reference term-reference" data-local-href="#term:toip:cryptographic-keys"
@@ -1007,7 +1007,7 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
               href="##term:endpoint-systems">endpoint systems</a> are the ultimate targets of the requirements of ToIP architecture. They are likely to be much larger in number — by several magnitudes — compared to <a class="x-term-reference term-reference" data-local-href="#term:toip:intermediary-systems"
               href="##term:intermediary-systems">intermediary systems</a> or <a class="x-term-reference term-reference" data-local-href="#term:toip:supporting-systems"
               href="##term:supporting-systems">supporting systems</a>. They implement most of the functions in ToIP architecture and represent the biggest challenge for interoperability and scalability.</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/EndpointSystem.png" alt="Endpoint system"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/EndpointSystem.png" alt="Endpoint system"></p>
 <p><strong>Figure 10: Endpoint system</strong></p>
 <p>Within an <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-system"
               href="##term:endpoint-system">endpoint system</a>'s locus of control, a higher layer uses the functions of a lower layer through an <strong>interface</strong>. In ToIP architecture, functions within an <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-system"
@@ -1112,7 +1112,7 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
 <p>This section describes the <a class="x-term-reference term-reference" data-local-href="#term:toip:toip-trust-spanning-protocol"
               href="##term:toip-trust-spanning-protocol">ToIP Trust Spanning Protocol</a> required at Layer 2 to communicate between any two <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-systems"
               href="##term:endpoint-systems">endpoint systems</a>. The overall protocol operation is shown in Figure 11 below.</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/SpanningProtocol.png" alt="Overview of the ToIP Trust Spanning Protocol"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/SpanningProtocol.png" alt="Overview of the ToIP Trust Spanning Protocol"></p>
 <p><strong>Figure 11: Overview of the ToIP Trust Spanning Protocol</strong></p>
 <p>The main function of this protocol is to enable universal end-to-end communication among all <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-systems"
               href="##term:endpoint-systems">endpoint systems</a> using trusted messages. This architectural choice is based on the following considerations:</p>
@@ -1136,7 +1136,7 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
               href="##term:endpoint-systems">endpoint systems</a>.</li>
 <li>Any required support from ToIP Layer 1.</li>
 </ol>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/StackOnEndpoint.png" alt="A view of the ToIP protocol stack on an endpoint system"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/StackOnEndpoint.png" alt="A view of the ToIP protocol stack on an endpoint system"></p>
 <p><strong>Figure 12: A view of the ToIP protocol stack on an <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-system"
               href="##term:endpoint-system">endpoint system</a></strong></p>
 <p>The following sections enumerate the requirements in each of these four areas.</p>
@@ -1298,7 +1298,7 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
               href="##term:supporting-systems">supporting systems</a> because they reside between <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-systems"
               href="##term:endpoint-systems">endpoint systems</a> and are visible to the <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-systems"
               href="##term:endpoint-systems">endpoint systems</a>.</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/IntermediarySystems.png" alt="The role of intermediary systems"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/IntermediarySystems.png" alt="The role of intermediary systems"></p>
 <p><strong>Figure 13: The role of intermediary systems</strong></p>
 <p>In Figure 13, end-to-end communication between <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-systems"
               href="##term:endpoint-systems">endpoint systems</a> A and B are routed through <a class="x-term-reference term-reference" data-local-href="#term:toip:intermediary-systems"
@@ -1371,7 +1371,7 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
               href="##term:endpoint-system">endpoint system</a>, in this example, may be implemented using a Hyperledger Aries agent software module running on either a mobile device or a cloud platform. The Indy ledger is a privileged <a class="x-term-reference term-reference" data-local-href="#term:toip:supporting-system"
               href="##term:supporting-system">supporting system</a> and the Aries agent implements layer 2 and layer 3 of the <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-system"
               href="##term:endpoint-system">endpoint system</a> stack. Such a design pattern is illustrated in Figure 14.</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/IndyAriesExample.png" alt="An example of Hyperledger Indy as a Supporting System"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/IndyAriesExample.png" alt="An example of Hyperledger Indy as a Supporting System"></p>
 <p><strong>Figure 14: Example of Hyperledger Indy as a Supporting System</strong></p>
 <p>A Layer 2 implementation must implement both <a class="x-term-reference term-reference" data-local-href="#term:toip:did-resolution"
               href="##term:did-resolution">DID resolution</a> and the <a class="x-term-reference term-reference" data-local-href="#term:toip:toip-trust-spanning-protocol"
@@ -1388,7 +1388,7 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
 <p>These supporting services differ from local dependencies (e.g. secure storage) because they are outside of an <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-system"
               href="##term:endpoint-system">endpoint system</a>’s locus of control. The access protocol to such supporting services is also different from the <a class="x-term-reference term-reference" data-local-href="#term:toip:toip-trust-spanning-protocol"
               href="##term:toip-trust-spanning-protocol">ToIP Trust Spanning Protocol</a> as it is a protocol between different types of parties and has a different protocol stack.</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/KERIExample.png" alt="An example of a KERI witness as a Supporting System"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/KERIExample.png" alt="An example of a KERI witness as a Supporting System"></p>
 <p><strong>Figure 15: Example of a KERI witness as a supporting system</strong></p>
 <h3 id="generalization"><a class="toc-anchor d-print-none" href="#generalization" >#</a> Generalization</h3>
 <p>Figure 16 illustrates a generalization of the pattern in which <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-systems"
@@ -1396,7 +1396,7 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
               href="##term:supporting-systems">supporting systems</a> interact. This figure makes it clear that the interoperability between <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-systems"
               href="##term:endpoint-systems">endpoint systems</a> in each layer is orthogonal to the methods of interaction with respective <a class="x-term-reference term-reference" data-local-href="#term:toip:supporting-systems"
               href="##term:supporting-systems">supporting systems</a>.</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/GeneralizedSupportingSystems.png" alt="A generalization of how endpoint systems and supporting systems interact"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/GeneralizedSupportingSystems.png" alt="A generalization of how endpoint systems and supporting systems interact"></p>
 <p><strong>Figure 16: A generalization of how endpoint systems and supporting systems interact</strong></p>
 <h2 id="endpoint-system-interoperability"><a class="toc-anchor d-print-none" href="#endpoint-system-interoperability" >#</a> Endpoint System Interoperability</h2>
 <h3 id="interoperability-between-endpoint-systems-using-decentralized-identifiers"><a class="toc-anchor d-print-none" href="#interoperability-between-endpoint-systems-using-decentralized-identifiers" >#</a> Interoperability between Endpoint Systems Using Decentralized Identifiers</h3>
@@ -1767,11 +1767,11 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
               href="##term:supporting-systems">supporting systems</a>, in this case <a class="x-term-reference term-reference" data-local-href="#term:toip:verifiable-data-registries"
               href="##term:verifiable-data-registries">verifiable data registries</a> (VDRs) upon which an <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-system"
               href="##term:endpoint-system">endpoint system</a> can rely as external sources of truth.</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/functional-hourglass-view.png" alt="A layer-by-layer view of functions within an endpoint system"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/functional-hourglass-view.png" alt="A layer-by-layer view of functions within an endpoint system"></p>
 <p><strong>Figure B1: A layer-by-layer view of functions within an endpoint system (also showing verifiable data registries as one type of adjacent supporting system)</strong></p>
 <h3 id="sphere-of-influence-view"><a class="toc-anchor d-print-none" href="#sphere-of-influence-view" >#</a> Sphere-of-Influence View</h3>
 <p>Figure B2 builds on Figure B1 by identifying those technical capabilities that fall within the purview of ToIP’s technical architecture and those that are outside that boundary and thus do not need to be governed by ToIP component specifications.</p>
-<p><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/sphere-of-influence-view.png" alt="A view of the ToIP Technology Stack that shows what is inside and outside ToIP's 'sphere of influence'"></p>
+<p><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/sphere-of-influence-view.png" alt="A view of the ToIP Technology Stack that shows what is inside and outside ToIP's 'sphere of influence'"></p>
 <p><strong>Figure B2: A view of the ToIP Technology Stack that shows what is inside and outside ToIP’s “sphere of influence”</strong></p>
 <p>This view shows how the logical capabilities and components identified in the functional Hourglass View can align with dependent solutions that are not governed by ToIP’s requirements. For example, a <a class="x-term-reference term-reference" data-local-href="#term:toip:did-resolver"
               href="##term:did-resolver">DID resolver</a> functioning at Layer 2 in an <a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-system"
@@ -1787,7 +1787,7 @@ customElements.define("slide-panels",class extends HTMLElement{static get observ
               href="##term:endpoint-system">endpoint system</a> and a set of <a class="x-term-reference term-reference" data-local-href="#term:toip:supporting-systems"
               href="##term:supporting-systems">supporting systems</a> (on the far right).</p>
 <p><a class="x-term-reference term-reference" data-local-href="#term:toip:endpoint-system"
-              href="##term:endpoint-system">endpoint system</a><img src="https://raw.githubusercontent.com/trustoverip/TechArch/refs/heads/main/images/interaction-pattern-view.png" alt="A layer-by-layer view of functions within an "></p>
+              href="##term:endpoint-system">endpoint system</a><img src="https://raw.githubusercontent.com/kordwarshuis/TechArch/refs/heads/main/images/interaction-pattern-view.png" alt="A layer-by-layer view of functions within an "></p>
 <p><strong>Figure B3: A view showing the interaction patterns both within and between two endpoint systems (as well as with supporting systems on the far right)</strong></p>
 <h2 id="appendix-c-mapping-of-existing-technologies-into-the-toip-technology-stack"><a class="toc-anchor d-print-none" href="#appendix-c-mapping-of-existing-technologies-into-the-toip-technology-stack" >#</a> Appendix C: Mapping of Existing Technologies into the ToIP Technology Stack</h2>
 <p>Just as the TCP/IP stack did not need to reinvent or replace existing local area networks, but instead added a new inter-networking layer to connect them, the ToIP stack does not reinvent or replace existing centralized or federated identity systems and PKI trust infrastructures. The ToIP stack adds a new inter-<em>trust</em> networking layer to connect the existing trust domains.</p>
