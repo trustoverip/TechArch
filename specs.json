@@ -2,19 +2,37 @@
   "specs": [
     {
       "title": "ToIP Technical Architecture Specification",
+      "description": "Create technical specifications in markdown. Based on the original Spec-Up, extended with Terminology tooling",
+      "author": "Trust over IP Foundation",
       "spec_directory": "./spec",
+      "spec_terms_directory": "terms-definitions",
       "output_path": "./docs",
-      "markdown_paths": ["spec.md"],
+      "markdown_paths": [
+        "spec.md"
+      ],
       "logo": "https://raw.githubusercontent.com/trustoverip/logo-assets/master/logos/ToIP-Logo-Color-SolidDimensional-Horizontal-LightOnDark.svg",
       "logo_link": "https://github.com/trustoverip/specification-template",
-      "external_specs": [
-        { "toip": "https://trustoverip.github.io/ctwg-main-glossary/" }
-      ],
+      "favicon": "https://raw.githubusercontent.com/trustoverip/spec-up-t/refs/heads/master/src/install-from-boilerplate/boilerplate/static/favicon.ico",
       "source": {
         "host": "github",
         "account": "trustoverip",
         "repo": "tswg-tech-architecture-spec"
-      }
+      },
+      "external_specs": [
+        {
+          "external_spec": "test-1",
+          "gh_page": "https://blockchainbird.github.io/spec-up-xref-test-1/",
+          "url": "https://github.com/blockchainbird/spec-up-xref-test-1",
+          "terms_dir": "spec/term-definitions"
+        },
+        {
+          "external_spec": "test-2",
+          "gh_page": "https://blockchainbird.github.io/spec-up-xref-test-2/",
+          "url": "https://github.com/blockchainbird/spec-up-xref-test-2",
+          "terms_dir": "spec/term-definitions"
+        }
+      ],
+      "katex": false
     }
   ]
 }
